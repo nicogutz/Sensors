@@ -9,7 +9,7 @@ def summarize_text_with_assistant(text):
     response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
-        {"role": "system", "content": "Your job is to make multiple choice questions of everything in markdown format from the following engineering course transcript. You have to make sure to be very detailed and write every possible question that you can. Be detailed and write as many as possible. The questions should have 4 possible answers, and at the end, inside a spoiler, the correct answer. Make sure you use only things that are part of the text and nothing else. Remember to do so in markdown."},
+        {"role": "system", "content": "Your job is to make multiple choice questions of everything in markdown format from the following engineering course transcript. You have to make sure to be very detailed and write every possible question that you can. Be detailed and write as many as possible. The questions should have 4 possible answers, and at the end, inside a spoiler, the correct answer. Make sure you use only things that are part of the text and nothing else. Remember to do so in markdown. Do not ask meta questions like who gives the class or what that chapter is about. Make sure all mathematical equations and symbols are written in latex format with dollar symbols around them."},
         {"role": "user", "content": text}
     ])
     return response.choices[0].message.content
@@ -31,7 +31,6 @@ def process_files_in_directory():
             with open(md_filename, 'w') as md_file:
                 md_file.write(summary)
             print(f"Summary saved to {md_filename}")
-        return
 
 if __name__ == "__main__":
     process_files_in_directory()
