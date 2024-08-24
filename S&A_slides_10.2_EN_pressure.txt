@@ -1,0 +1,439 @@
+
+SENSORS AND ACTUATORS
+Session 10.2
+Pressure sensors and MEMS
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about … Force sensors
+Session 10.2 (Se. 4, 2.E):
+• Pressure sensors
+• MEMS
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+Pressure sensors
+After force sensors, we go to pressure. What is the relation between both?
+Pressure is force on a certain surface (F/A in N/m2).
+3
+Introduction to pressure sensors: Types
+1. Absolute pressure 𝑃 = 0 𝑃𝑎
+(cid:2868)
+2. Gage pressure 𝑃 = 101.325 𝑃𝑎
+(cid:2868)
+3. Differential pressure 𝑃 −𝑃
+(cid:2869) (cid:2870)
+4
+There are different manners to measure pressure:
+• We can first use the absolute pressure. We can measure the pressure
+above the 0 Pa pressure (the vacuum pressure). This is a theoretic
+system, because we cannot really measure the 0 Pa in a system.
+• The gage pressure is used much more. In it, we open the end of the
+reference pressure as shown in the figure. It will measure atmospheric
+pressure (the surroundings) and in the other input we can put the pressure
+that needs to be measured. Thus, we measure the pressure above the
+environment pressure.
+• In sensor technology, we will mostly use the third type, the differential
+pressure measurement. We can access both sides of the membrane to
+provide the measurement. Then, we can measure relative pressure.
+4
+Introduction to pressure sensors: Measuring Principles
+5
+There are different ways to measure pressure but they will have in common
+that they will need an electrical output.
+In most of the cases, we will put certain pressure and it will provoke a
+displacement, which can be measured with a displacement sensor.
+For instance, if we look at a, we have an input pressure that will cause a
+motion to the membrane. This displacement could be measured with the
+standard displacement sensors we have already discussed. Will it be a linear
+relation? We do not know.
+In the second one, b, we see a pressure input into a membrane that has two
+domes (like for a loudspeaker). The pressure will provoke a displacement.
+The membrane will be deformed.
+An interesting example is shown in f (a c pressure sensor), where putting
+pressure at the input will provoke the c to slightly open.
+Finally in h, we have a spiral situation, in which with the pressure the spring
+will open a bit and provoke a rotational displacement sensors.
+These are manners to transduce pressure into displacement.
+Let’s dig into some types of sensors.
+5
+Piezo electric pressure sensor
+P
+6
+This is one of the most simplistic sensors to measure pressure. We put a
+pressure on the top side, and we have a crystal. If you remember, this crystal
+(piezoelectric) material will not work with DC pressure but only with AC (e.g.,
+vibration).
+One example of application of this sensor is an electronic stethoscope, which
+is a crystal microphone. It will measure varying pressure or vibration (the
+heart rate). Sound is always a pressure variation, which is very good for this
+case.
+How would it work, you put the sensor on the heart or the carotid, it can
+measure two things: the total pressure and the movement of the skin (on the
+lower frequencies (below 10 Hz)), even on the heart. If in an APEX, we
+cancel the sound frequencies, we can see the waveform of the beating of the
+heart. Moreover, if we cancel these ones, and we only focus on the higher
+frequencies, we could even listen to the murmourof the blood stream
+through the heart.
+Thus, this sensor is not really providing a measurement, but rather a source
+of listening so that the doctor can provide a subjective diagnosis of the heart.
+6
+Capacitive pressure sensor (1)
+1 capacitor = Absolute measurement 2 capacitor = Differential measurement
+7
+We are interested to provide a value of the absolute measurement of the
+pressure. This is what the capacitive pressure sensor does.
+We have the membrane, in which we put some pressure, the capacitor will
+change in value. Of course, this is just one capacitor, and as we have
+already seen in multiple occasions, absolute measurements are prone to
+errors, dust, humidity, making the measurement wrong.
+This is what we see in the second figure, in it we see the two membranes at
+both sides, that can be put under pressure, and the membrane in the middle
+that can be moved, making a differential capacitor for displacement
+measurement, such as the one we already discussed. How could we
+measure against atmospheric pressure? We could just leave open one side.
+7
+Capacitive pressure sensor (2)
+8
+Here we see a small animation of how it works with one capacitor. These can
+be integrated in integrated circuits, such as we will see later in this session. If
+the pressure changes the capacity changes.
+8
+Capacitive pressure sensor (3)
+9
+And here we see how it would be shown both for the single capacitor case
+as well as for the differential.
+9
+Membrane pressure sensor: Center displacement
+Linear? NO!
+𝑦
+Young’s Modulus 𝐵𝑈𝑇 𝑤ℎ𝑎𝑡 𝑖𝑓 (cid:3030) <0.1
+𝑡
+Thickness Displacement
+center 𝑦 (cid:3030) (cid:2871) 𝑦 (cid:3030)
+0.488 ≪
+16𝐸𝑡(cid:2872) 𝑦 𝑦 (cid:2871) 𝑡 𝑡
+(cid:3030) (cid:3030)
+𝑃 = +0.488
+3𝑅(cid:2872)(1−𝑣(cid:2870)) 𝑡 𝑡 16𝐸𝑡(cid:2872) 𝑦
+(cid:3030)
+𝑃 =
+3𝑅(cid:2872)(1−𝑣(cid:2870)) 𝑡
+Radius Poisson’s
+constant Linear for small 𝑦 (cid:3030)
+Convex
+Concave
+10
+We can also create a pressure sensor with strain gages.
+Imaging we have a membrane and we fix it to a ring. Then, if we put
+pressure on it, it will be deformed.
+We will see on the top a convex deformation, and next to the edges a
+concave deformation.
+Now we can look at the peak (the middle of the membrane). Here, we can
+see the formula that relates the pressure and the displacement of the center
+of the membrane.
+What do we see in this formula?
+• Young’s modulus.
+• The thickness of the membrane
+• Poisson’s constant
+• The radius of the membrane
+• The displacement of the center.
+Thus, we have a relation between the pressure and the displacement of the
+center of the membrane.
+Is this relation linear? Not at all, right?
+Let’s see what is the situation in the case that relation of the displacement to
+the thickness is smaller than 0.1. The displacement is less than 10% of the
+thickness of the membrane. In this case, the component on y/t cube will be
+negligible and the relation becomes linear!
+10
+Membrane pressure sensor: Stress measurement
+3𝑃𝑅(cid:2870)𝑣 1 3 𝑟 (cid:2870)
+𝑆 = +1 − +1
+(cid:3045) 8𝑡(cid:2870) 𝑣 𝑣 𝑅
+Radial 3𝑃𝑅(cid:2870)𝑣 1 1 𝑟 (cid:2870)
+Tang. 𝑆 = +1 − +3
+(cid:3047) 8𝑡(cid:2870) 𝑣 𝑣 𝑅
+Convex
+Concave
+𝑒 𝑃𝑅(cid:2870)(1−𝑣(cid:2870)) 𝑚𝑉
+(cid:2868)
+=820 ( )
+𝐸 𝐸𝑡(cid:2870) 𝑉
+(cid:3032)(cid:3051)
+11
+It is also possible to measure the pressure by means of the stress on the
+membrane.
+We will have a concave deformation at the outer part of the membrane and a
+convex deformation towards the middle.
+In such a membrante, we will have two types of stress, radial and tangential,
+which can be modelled with these formulas.
+At the edge, when we have a concave behavior, both will be negative.
+Towards the center, where we will have a convex behavior, they will be
+positive. This can be seen in the figures.
+In this case, we have the stress in function of the pressure, where the
+components are very similar and we have r as the variable.
+Now, in order to measure these displacements we will want to set some
+strain gages in the points in which they get the best sensitivity.
+Moreover, we want to place the strain gages in a manner that two of them
+are having a positive displacement and the other two a negative one so that
+they work properly in the wheatstonebridge.
+Let’s look for the maximum negative value looking at the curves. We will
+have the maximum negative value in the radial stress at the edges, right?
+This means that we will want to set the negative strain gages (1 and 3) in the
+radial direction at the edges. They will measure the maximum negative
+stress
+On the other hand, in the center we should have the same value in terms of
+radial or tangential stress. This means we could put them in the radial or the
+tangential direction. However, if we place them in the radial direction, they
+could overlap with the other gages. Thus, we can put them in the tangential
+11
+and measure the tangential stress.
+Actually, nowadays, there are manufacturers that will create these type
+of strain gage foils with the gages placed in the correct directions for
+membrane pressure measurement. At the edges, we measure the radial
+stress, and two in the middle are measuring the tangential stress. We
+can put this foil on top of the membrane with a special adhesive.
+Moreover, the manufacture usually gives already output voltage related
+to the pressure.
+11
+Piezoresistive pressure sensor: Concept
++ n-type
+- p-type
+12
+Piezoresistive pressure sensors are mebranesystems where the strain
+gages have piezoresistive materials integrated (like semiconductors). This is
+an integrated sensor where the diaphragm has the material.
+In the second figure we see a clear illustration. We can see the p-types with
+the negative gages. This means that if we increase the pressure, the
+resistance drops. In the middle, we see the positive gages (n), which
+measure the tangential stress. They are 8 of them, which can be put on a
+Wheatstone bridge. We will have increasing and decreasing pressure.
+12
+Piezoresistive pressure sensor: Silicon Micromachined
+13
+This concept can be integrated in a very nice very simple sensor to measure
+pressure with piezoresistive materials with MEMs as we will see next.
+13
+Optical pressure sensor
+•Linear for small (𝑦 ⁄𝑑)for fixed membranes.
+(cid:3030)
+•Second photodiode is reference.
+•Also used as “null balance pressure transducer”
+•Totally isolated
+14
+This is a special sensor used in medical and industrial environments.
+We have a membrane, and an input to measure pressure. Moreover, we
+have an LED and two photo diodes.
+How does it work?
+If we have a pressure applied to the membrane, it will move (displace) up
+and down.
+The higher the membrane rises (higher the pressure), the less light that the
+bottom photo diode will detect.
+A measurement of the current going through this photodiode will provide a
+measurement of the pressure. Maybe even a linear measurement.
+Why do we need the upper photodiode?
+It will measure all the light coming out of the LED.
+Thus, it provides the absolute value to be able to calculate a ratio, i.e., the
+relative value. Therefore, we can eliminate any kind of degradation of the
+LED source.
+In summary:
+• It is quite linear for small displacement
+• Second photodiode is a reference.
+• It can be used as a null balanced pressure transducer
+• The most important thing is that they can be made without any copper
+wire, they can be isolated. It is also called a full galvanic system. This is
+very good for instance for medical purposes. If we want to put a sensor
+inside a person’s body. We cannot put anything that has any kind of
+copper wire.
+14
+Micro Electro-Mechanical Systems
+We have been discussing from time to time about Micro Electro-Mechanical
+Systems (MEMS) because the sensors can be actually integrated in MEMS.
+Now that we have had a view at displacement, velocity, accelerometers,
+force and pressure sensors, we can have a brief look about what these are.
+This is a new technology (10-15 years old) but nowadays a lot of sensors are
+made upon this technologies.
+15
+MEMS Accelerometers
+16
+Remember from a couple of sessions ago the accelerometer, where we had
+the mass, the spring and a displacement sensor. In the figure, the sensor is
+a differential capacitor.
+The mass is attached to the middle part of the differential capacitor. Thus, if
+we have a movement the membrane of the diff capacitor also moves, it
+changes the values of the capacitor and that change is linear with the
+displacement.
+16
+MEMS Accelerometer
+17
+This accelerometer can be implemented into a chip. The capacitor
+displacement sensor is very easy to integrate into a MEMs chip. Moreover, it
+can use electrostatic forces to bring the mass back to place again.
+17
+MEMS accelerometer: Shapes and Sizes
+• ADXL50, with an overall size of 500 x 625 µm.
+• 42 silicon fingers are 100 µm in length with a 2 µm gap and a total capacitance of
+0,1 pF.
+• As the limiting resolution of the sense amplifier is 20x10-18 pF
+• A beam displacement of 20x10-12m can be measured.
+18
+To give an idea of what type of sizes we are talking about for the
+accelerometer.
+The overall size is half mmx half mm., where we have 42 silicon fingers.
+The displacement is in picometer.
+This is a very special chip technology. We need very special techniques. In
+IMEC they are specialized in it. These accelerometers are very verycheap
+and very verysmall so MEMS can be used for regular activities.
+18
+MEMS: Microscopic
+M
+Sensor
+19
+Here you can see a zoomed in microscopic view of this technology where we
+can have the mass and the sensors in the lines.
+19
+MEMS in car industry (1)
+FEATURES
+• Wide sensor range: 50 g to 500 g
+• Adjustable filter bandwidth: 100 Hz to 800 Hz
+• Configurable communication protocol
+• 2-wire, current mode bus interface
+• Selectable sensor data resolution: 8 bit or 10 bit
+• Continuous auto-zero
+• Fully differential sensor and interface circuitry
+• High resistance to EMI/RFI
+• Sensor self-test
+• 5.0 V to 14.5 V operation
+APPLICATIONS
+• Crash sensing
+20
+MEMs are also used in the car manufacturing industry. As you can see some
+characteristics. They can be applied for self-testing sensors such as for
+airbags.
+20
+MEMS in car industry: Null-Balance- (Servo-) Type
+Accelerometers
+MEMs- Micro-Electro-
+mechanical systems
+Case
+Mass
+Relative
+Displacement
+sensor
+Displacement Amplifier
+accelerometer
+Mechanical
+Electrical coil connection
+Base
+21
+One example of such self-test sensors is the null-balance accelerometer.
+A chip where a mass is moving is not very easy. This will need to be done by
+means of MEMs.
+We can see the mass, we have a displacement sensor, and we have a
+spring which is an electric spring (a coil as you can see with a core inside).
+Now, if we put a current into a coil by F=Bli, we generate a Force. The higher
+the current, the more force I put on the core. And it pushes up or down.
+If the acceleration moves up, the mass is pushed down into the coil and the
+relative displacement sensor will generate a voltage.
+That voltage is used to convert into the current and into the coil. Thus, it
+gives a counter Force up. Therefore, my mass will not really change position.
+The signal output of the sensor actually will be proportional to the force and
+displacement.
+Why would these accelerometers be used? What is their benefit? It is a null-
+balance accelerometer because the mass is put back to 0 directly after
+moving it.
+• These sensors can be very verysmall because they have no
+displacement (nearly nothing).
+• Moreover, they are very good for a self-test:
+• Interrupt the connection from the output of the displacement
+sensor and the amplifier.
+• Put an input voltage to the amplifier (Vi).
+• Vi will go to the coil in form of current, a force will be generated and
+a displacement will be measured.
+• The output of the displacement sensor V0 should be equal to the
+input Vi.
+21
+• This is a very good system that could be used in airbags for
+self-testing.
+21
+MEMS in car industry (2)
+22
+We can use this in a crash sensor. We could place such sensors in the front
+to detect the car crashing with the measurement of the displacement
+22
+MEMS: 2 axis accelerometers
+Second generation 2 axis accelerometer
+23
+It is also possible to have two axis accelerometers, which will work on the
+same way.
+23
+MEMS: Capacitive accelerometers
+24
+This is also another type of mems technology with another type of capacitive
+sensor. In it, the displacement is angular rather than longitudinal.
+24
+MEMS: Piezoresistive accelerometers
+25
+This is an example with piezoresistive materials, as we use in strain gages. If
+the mass moves (accelerates) we get an effect on the resistive strain gage.
+We would put the strain gage on the four arms. How do we make them
+positive and negative? Two of them will be p and the others will be n, as we
+saw before also with pressure sensors.
+25
+MEMS: Vibration sensor
+26
+This is another interesting example for vibration. The acceleration is
+horizontal, with a differential capacitor also horizontal. In this case we can
+induce an electrostatic force that could pull the spring to make it less or more
+sensitive to the vibration. Thus, it is a variable sensor for the sensitivity and
+the range.
+26
+MEMS: Gyroscopes - Definition
+When the sensitive element rotates about a particular fixed-
+body axis, which is called sensitive axis, the resulting Coriolis
+force causes the proof mass to move in a different mode
+27
+Gyroscopes measures angular velocity. Here we will have angular velocity
+independent on where we are.
+What is the working principle? When the sensitive element rotates about a
+particular fixed body axis, the Coriolis force causes the proof mass to move
+in a different mode.
+By having a movement in one direction, a force perpendicular to the direction
+appears.
+27
+MEMS: Gyroscopes – Example 1
+sensors mems
+28 28
+We need a movement, we can do that by vibrating. As long as it is moving
+but we are not turning the chip, there is no Coriolis. Capacitors are not
+changing. Once we start moving (rotating), we will get Coriolis. As the
+movement is oscillating, the output will be also oscillating. The blue angles
+are the Coriolis forces perpendicular to the direction of movement.
+28
+MEMS: Gyroscopes – Example 2
+29
+This is a tuning fork. When we rotatewe will see the force.
+29
+MEMS: Capacitive pressure sensors
+30
+We have already seen this one today as a pressure sensor.
+30
+MEMS: Piezoresistive pressure sensor
+31
+We can also do the same with piezoresistive of the pressure sensors, as we
+also just saw
+31
+MEMS closing
+32
+MEMS are difficult to build because they are very small and difficult to solder.
+Thus, there are manufacturers selling pcbboards with the integrated sensor
+to be able to directly use (such a Development Kit).
+32
+Any questions?
+33
+33

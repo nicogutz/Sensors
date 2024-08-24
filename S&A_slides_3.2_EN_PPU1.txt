@@ -1,0 +1,414 @@
+
+SENSORS AND ACTUATORS
+Session 3.2
+Basic Understanding of Switch-Mode Power
+Electronic Converters in Electric Drives
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Previously on Sensors & Actuators …DC ECM Motors
+Four Quadrant Operation Electronically Commutated Motor (ECM) Drive or Brushless DC
+Back-emf and torque Always two phases are on
+𝑒 =4.𝑁.𝐵.𝑙.𝑟.𝜔 =𝑘 .𝜔
+(cid:3017)(cid:3009)(cid:2879)(cid:3017)(cid:3009) (cid:3046) (cid:3040) (cid:3006) (cid:3040)
+T em= 2N sB flrI T em= 2N sB flrI T em0 Nm 𝑇 (cid:3032)(cid:3040) (cid:3017)(cid:3009)(cid:2879)(cid:3017)(cid:3009) =4.𝑁 (cid:3046).𝐵.𝑙.𝑟.𝐼=𝑘 (cid:3021).𝐼
+2
+2
+And now for something “completely” different…
+Week Session Date Content Chpt.
+W1 1.1 27/09 Introduction to the course, Introduction to Magnetic circuits Ac. 5
+1.2 29/09 No Class
+W2 2.1 04/10 Magnetic circuits and electromechanical conversions Ac. 5,6
+2.2 06/10 DC-Motor Drives Ac. 7
+W3 3.1 11/10 DC-Motor and Electronically-Commutated (ECM) Drives Ac. 7
+3.2 13/10 Basic Understanding of Switch-Mode Power Electronic Converters in Drives 1 Ac. 4
+W4 4.1 18/10 Basic Understanding of Switch-Mode Power Electronic Converters in Drives 2 Ac. 4
+4.2 20/10 Introduction to AC Motors and Space Vectors Ac. 9
+W5 5.1 25/10 Sinusoidal Permanent Magnet AC (PMAC) Drives, LCI-Synchronous Motor Drives, Ac. 10
+and Synchronous Generators
+5.2 27/10 Induction Motors: Balanced, Sinusoidal Steady State Operation Ac. 11
+3
+3
+Today’s session is about …
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+Session 3.2 (Chp. 4):
+• Introduction to PPUs
+• Converter switching example for DC motors
+• Pulse Width Modulation (PWM)
+• Switching cycle model
+• Implementation of PWM
+• Converter for a DC Motor Drive: Voltage and Current
+• Exercise
+4
+4
+Overview of Power Processing Units (PPU)
+5
+What you see over here is an schematic of the system used to drive a motor.
+At the left side we have the utility
+At the right side the load which includes the motor.
+One important thing is that whether we have a DC or an AC machine, we will
+always make a conversion to DC voltage. This is what we see in the middle.
+The capacitor Vd. This means that conv 1 converts a possible AC voltage
+into DC voltage.
+In this lecture and the next, we will discuss the converter 2. This starts from
+a DC voltage (Vd) and converts it to the signal needed for the motor.
+As you remember from the previous lecture, we will need this converter to
+create any voltage (even negative ones as in the case that we want to drive
+backwards). So, let’s start from an example that I showed last lecture.
+5
+How does Conv 2 look like?
+Typical pattern:
+1. 𝑇(cid:2878)on, 𝑇(cid:2879)on
+(cid:3002) (cid:3003)
+2. 𝑇(cid:2878)on, 𝑇(cid:2878)on
+(cid:3002) (cid:3003)
+3. 𝑇(cid:2878)on, 𝑇(cid:2879)on
+(cid:3002) (cid:3003)
+4. 𝑇(cid:2879)on, 𝑇(cid:2879)on
+(cid:3002) (cid:3003)
+6
+What we see here is the converter circuit that we already saw in the previous
+lecture and that we will use to drive a DC motor. We see the line voltage, the
+ac to dc rectifier (conv1 in the previous slide) and the capacitor Vd.
+The main function from the capacitor is to keep the voltage constant.
+The current can fluctuate but the voltage needs to stay constant.
+Finally, we see the full bridge (Conv 2). It consists of 4 transistors and 4
+diodes in 2 switching power poles. The diodes are there to make sure that
+there is always a path for the current. This is needed because we are driving
+an electric motor which has inductive behavior. Inductive behavior means
+that the current does not change quickly, so there is a need for a safety path
+for the current. For now, we can ignore the pwm, we will talk about it later.
+Finally, what we see at the end of the figure is the model of the motor. We
+keep it general as for a DC motors.
+Now about the transistors. We have two poles of transistors (TA and TB).
+One important fact: we can never have the two TAs or the two TBs closed at
+the same time or we would have a short-circuit. Thus, in practice there will
+always be one transistor in pole A and one in pole B connected. Now we can
+see a typical sequence of switching. First, the upper left transistor (A+) and
+the bottom right transistors (B-) are on and the other two are off. Let’s revisit
+those 1 by 1 to show the path for the current.
+6
+T + on, T - on (S2)
+A B
+7
+In this situation, we have TA+ and TB-on. How does the current go?
+First, it starts at the capacitor, the current flows from –to +. DC currents can
+go through capacitors, not electrons but currents. Why is that? For every
+electron entering the capacitor an electron leaves from the other side
+allowing the current to flow.
+Now the current leaves the capacitor, goes to the right, and it sees two
+diodes that are reversed, and TB+ that is off. So, it only has one path
+through TA+.
+As TA-is off, so there is only one possibility for the current, it goes to the
+motor. It provides the necessary torque for the load and we have a closed
+loop when the current comes out of the motor.
+It sees that TB-is on so it follows this path and flows back to the capacitor.
+If we have this situation on the whole time, we drive the motor at full speed.
+Because what we do is that Vdgoes to the motor. But it will not but the case
+at all times so we will need ways to reduce the voltage provided by the
+motor.
+7
+T + on, T + on (S1)
+A B
+8
+Now, the two upper transistors are on. What is the path of the current?
+Let’s start from the assumption that due to the inductive behavior there is a
+current in the motor. Thus, we start with the current flowing from TA+ to the
+motor and back from it.
+As the two –transistors and diodes are switched off, the current cannot go to
+ground.
+There could be two possible path BUT the transistor is the wrong direction,
+and the current needs to go from emitter to collector and not the other way
+around. So, the only possibility is the diode.
+The current continues through the diode and through transistor TA+ so we
+have a closed loop.
+8
+T + on, T - on (S2)
+A B
+9
+Now we go back to situation 1. It is important to note that the speed of the
+switching is very high. Unlike the previous situation in this one we have a
+current coming from the power supply. Thus, there no continuous current
+from the power supply, but there is a continuous current from the motor.
+9
+T - on, T - (s3)
+A B
+10
+Finally, we go to the last situation, where the lower two transistors are on.
+Again, we have the situation were there is a current from the motor. So, how
+will it continue?
+As transistor TB- is on, it will go through the transistor to the ground. It will
+not return to the power supply because there is no path for it.
+Thus, it will continue through the diode.
+From this situation we go back to situation 1. This sequence of
+configurations is very common where the transistors will be switched on and
+off at very high speed. The speed will determine the voltage provided to the
+motor.
+10
+Transition Sequence
+S3
+S1
+S2
+11
+This is a typical transition sequence between these three situations. We start
+from the upper A transistor on and the lower transistor B on, then the current
+comes from the power supply to the motor. Then, we can switch to the
+situation where the two upper transistors are on. The current is already
+flowing through the motor and it does not go back to the capacitor. As
+alternative we could go to the two transistors off. As such, the motor is either
+getting the full voltage of the power supply or nothing. How do we do the
+switching? Using PWM!
+11
+Pulse Width Modulation (PWM)
+12
+The trick of the regulation of the voltage is PWM. Look at the voltage at the
+entrance of the motor Va. We want to generate a certain average voltage at
+Va. PWM switches from all voltage to nothing as such that the average Va
+becomes the desired voltage. The desired voltage will be defined then by the
+duty cycle (i.e., the ratio of time that the switch is connected to the power
+supply within the switching period).
+12
+PWM (2)
+(cid:3021)
+duty ratio: 𝑑 = (cid:3296)(cid:3291) 𝑣 = 𝑑 .𝑉
+(cid:3028) (cid:3028) (cid:3028) (cid:3031)
+(cid:3021)
+(cid:3268)
+13
+Here at the left we have the dc power supply and the switch that has a
+certain duty cycle. On the top right we see a switching interval Ts (40-50
+micro seconds) and the time that the switch is on (Tup). Translated into the
+previous circuit a 1 means that the upper transistor is switched on, a 0
+means that the lower transistor is switched on.
+So, if the upper transistor is switched on, then the voltage at vais equal to
+vd. If the lower transistor is on, then we are at 0 voltage. But the important
+thing is that the average voltage is constant.
+Let’s talk equations! What is the duty cycle? The duty cycle is the time that
+the upper transistor is up Tup divided by the total duration of the switching
+interval. Then the average voltage is equal to the duty ratio times the input
+voltage. As the duty cycle goes from 0 to 1, the average voltage can go from
+0 to the maximum voltage Vd.
+13
+Power flow through the switching power-pole
+14
+In this slide, the positions of diode and transistor look a bit different but they
+are in parallel so it is the same and in the first example. What this slide
+shows is the part of the path of the current. First, the situation in the middle
+(b) the current il is positive, going to the motor. There is a current left to right
+meaning that if the upper transistor is on, the current goes from the supply to
+the motor and if the lower transistor it on, then the current goes through the
+diode. In c, we see the reverse situation il is negative, either there is a
+current going to the capacitor (regenerative mode) or the car is driving in
+reverse. The most important take is that you know the path of the current
+and through which components it goes.
+14
+Bidirectional switching power pole
+15
+This is a very similar exercise. At the left we can see the switch, in the
+middle (b) we look at the situation when the upper transistor is closed and in
+c is the other way around.
+15
+Switching-cycle model
+𝑣 = 𝑑 .𝑉
+(cid:3028)(cid:3015) (cid:3028) (cid:3031)
+𝑖 = 𝑑 .𝑖(cid:3365)
+(cid:3031)(cid:3028) (cid:3028) (cid:3028)
+16
+Actually a switch can also be considered a transformer, where the duty cycle
+is the transformer factor. As such, the equations of average voltage and
+current can also be seen.
+16
+How do we implement PWM?
+(cid:3028)(cid:3015) (cid:3028) (cid:3031)
+(cid:3030)(cid:3047)(cid:3045)(cid:3039),(cid:3028)
+(cid:3031)
+(cid:3047)(cid:3045)(cid:3036)
+(cid:3031)
+(cid:3030)(cid:3047)(cid:3045)(cid:3039),(cid:3028)
+(cid:3047)(cid:3045)(cid:3036)
+(cid:3017)(cid:3024)(cid:3014) (cid:3030)(cid:3047)(cid:3045)(cid:3039),(cid:3028)
+17
+There are different ways of implementing PWM.
+Nowadays it is possible to implement PWM by means of software in a
+microcontroller which opens and closes logic gates.
+But the most traditional one and explained in the book is through analogue
+signals. This is the situation we see in this slide. On top we have a triangular
+wave that has a certain frequency (i.e., the switching frequency -10-40 KHz).
+This triangular wave has also an amplitude vtri.
+The voltage of that wave is compared to a control voltage (vctrl), which is
+either constant (DC motors) or sinusoidal (AC motors) but at a much lower
+frequency (10Hz-50Hz). If the voltage of the control is lower than the
+triangular voltage, the switch is on. On the other hand, if the controller
+voltage is higher the switch is off.
+Let’s see the equations: The average voltage vais the duty cycle times Vd.
+The duty cycle is calculated as Vctrlover the Vtri(the amplitude). Now, we
+can change the order of Vdand the control voltage because Vdand the
+amplitude of Vtriare constants. Their ratio is actually the pwmconstant.
+Thus, we end up with the final formula. This means that our average voltage
+is just the control voltage times a constant. This constant is relatively very big
+(Vdis the order of 100 V) so it can be considered an amplification. In fact, a
+PWM has been called as a non-linear amplifier and we will use it to model
+the power supplies in the next chapters.
+17
+PWM block diagram
+18
+So, like we were saying, the system can be represented as a block diagram
+which shows what the PWM does to convert a relatively low voltage into a
+very high one that will be input to our motor.
+18
+PPUs for DC and AC motors
+19
+On the left side we see the situation for a DC motor. In the right one, we see
+the situation for an AC motor because we need 3 phases. Each of these
+switches is composed by two transistors and two diodes. For most of the
+cases we focus on the situation on the left (DC) and in next lecture we will
+add some things on the AC case.
+19
+Converter for a DC Motor drive - Voltage
+𝑉 𝑣
+(cid:3031) (cid:3042)
+𝑣 = +
+(cid:3028)(cid:3015)
+2 2
+𝑉 𝑣
+(cid:3031) (cid:3042)
+𝑣 = −
+(cid:3029)(cid:3015)
+2 2
+𝑣 = 𝑣 − 𝑣
+(cid:3042) (cid:3028)(cid:3015) (cid:3029)(cid:3015)
+= 𝑑 − 𝑑 .𝑉
+(cid:3028) (cid:3029) (cid:3031)
+20
+At the left, we see two switches instead of one. Remember that every switch
+consists of two transistors and two diodes. As we have two power poles (a
+and b), how do we choose the two duty ratios?
+There is an extra additional degree of freedom, because obtaining vofrom a
+and b can be done in different ways.
+The most typical path to take to achieve this is shown in b.
+In it, we first calculate a voltage that needs to go through each pole. We start
+from a common mode for both poles (half way of the power supply). This
+means vd/2 in both a and b. Plus the desired voltage over two at node a
+minus the desired voltage over two at node b. Therefore, we can have the
+following equations.
+First, vais equal to half the input voltage plus half the desired voltage.
+Second, vbis half the input voltage minus half of the desired voltage.
+Finally, v0 is the difference between node a and node b. This means that the
+vois the difference between the duty cycles at a and b.
+For example, if Vdis 100V and we want a desired voltage of 50 V. We will
+have 50V for common voltage plus 25 V in node a and 50 minus 25 in node
+b. This means that there is 75V at node a, 25 V at node b and we have 50 V
+(va-vb) across the motor (v0).
+20
+Wave forms
+S1
+T +on, T +on
+A B
+S2
+T +on T -on
+A B
+S3
+T - on, T -on
+A B
+21
+These are the wave forms of the previous example. 2 switches = 2 control
+voltages. What we see here are the instantaneous voltages. As explained
+before, we supply in all the possible paths is an all or nothing (the full
+voltage or 0 V).
+At the bottom we see the instantaneous voltage that is applied to the motor
+and we end up with an average voltage as we calculated before.
+There is one advantage to this approach: accuracy. We could for instance
+close the transistors of one pole all the time and only work with the other
+pole, but the advantage of playing with two poles is that we have a
+seemingly higher switching speed. The advantage of a higher switching
+speed is accuracy. The average voltage is more accurately obtained as there
+are some possible fluctuations in the current. There is a disadvantage:
+efficiency. Every time we switch we need to turn on/off a transistor we have
+some power loss. There needs to be a trade off.
+Now about the speed of the switch of the motor, we see that the motor
+seems to be switching twice as fast than a and b. This is an advantage of
+this approach as well.
+Now we can link these figures to the first figure we showed at the beginning
+of the lecture.
+• From 0 to the first db.Ts/2, both a and b are on (qa=qb= 1). This means
+that their upper transistors are up, there is no current from the power
+supply to the motor and we apply no voltage across the motor (S1).
+• The second situation can be found next. Qa= 1 but qb= 0 this means that
+the upper transistor of A is on and the lower transistor in b is on. This
+means that there is maximum voltage across the motor.
+• Same way, when a and b are off, there is again no voltage across the
+motor (S3).
+21
+Let’s look at the current
+𝑖 = 𝑑 .𝑖(cid:3365)
+(cid:3031)(cid:3028) (cid:3028) (cid:2868)
+𝑖 = −𝑑 .𝑖(cid:3365)
+(cid:3031)(cid:3029) (cid:3029) (cid:2868)
+𝑖(cid:3365) = 𝑖 + 𝑖 = 𝑑 − 𝑑 .𝑖
+(cid:3031) (cid:3031)(cid:3028) (cid:3031)(cid:3029) (cid:3028) (cid:3029) (cid:2868)
+22
+We have talked quite a lot about the voltages, let’s now look at the currents.
+We see here how all the currents are defined but let’s try to find the relation
+between all of them. If you remember, we are considering the power poles as
+transformers so the current going through the first switch for the left power
+pole is duty ratio times the current that the motor needs. So, while the io
+current is continues (there is always a current running through the motor) ida
+is intermittent and a fraction of it. No problem for a capacitor. Same for b.
+Why do we have a minus sign? We can see it from the figure. If the b switch
+is closed, the current goes in the other direction of the io, from there the
+minus sign. Now, if we combine them, we have the relation between the
+input current and the motor current.
+22
+Example
+Suppose we have a power supply V = 300 V. How do we obtain a desired
+d
+voltage of 𝒗 = 𝟕𝟓 𝑽 ?
+𝟎
+23
+23
+Example
+Suppose we have a power supply V = 300 V. How do we obtain a desired
+d
+voltage of 𝒗 = 𝟕𝟓 𝑽 ?
+𝟎
+𝑣 (cid:3028)(cid:3015) = 𝑉 2(cid:3031) +𝑣 2(cid:2868) = 30 20𝑉 + 75 2𝑉 = 187,5 𝑉 𝑑 (cid:3028) = 𝑣 𝑉(cid:3028) (cid:3031)(cid:3015) = 1 38 07 0,5 𝑉𝑉 = 0,625
+(𝑑 + 𝑑 = 1)
+(cid:3028) (cid:3029)
+𝑉 𝑣 300𝑉 75𝑉 𝑣 112,5𝑉
+(cid:3031) (cid:2868) (cid:3029)(cid:3015)
+𝑣 = − = − = 112,5 𝑉 𝑑 = = = 0,375
+(cid:3029)(cid:3015) 2 2 2 2 (cid:3029) 𝑉 300𝑉
+(cid:3031)
+24
+24
+Example
+Suppose we have a power supply V = 300 V. How do we obtain a desired
+d
+voltage of 𝒗 = 𝟕𝟓 𝑽 ?
+𝟎
+𝑣 (cid:3028)(cid:3015) = 𝑉 2(cid:3031) +𝑣 2(cid:2868) = 30 20𝑉 + 75 2𝑉 = 187,5 𝑉 𝑑 (cid:3028) = 𝑣 𝑉(cid:3028) (cid:3031)(cid:3015) = 1 38 07 0,5 𝑉𝑉 = 0,625
+(𝑑 + 𝑑 = 1)
+(cid:3028) (cid:3029)
+𝑉 𝑣 300𝑉 75𝑉 𝑣 112,5𝑉
+(cid:3031) (cid:2868) (cid:3029)(cid:3015)
+𝑣 = − = − = 112,5 𝑉 𝑑 = = = 0,375
+(cid:3029)(cid:3015) 2 2 2 2 (cid:3029) 𝑉 300𝑉
+(cid:3031)
+Suppose 𝒊(cid:3365) = 𝟖 𝑨, calculate 𝒊(cid:3365) 𝒊𝒔 𝒕𝒉𝒆𝒓𝒆 𝒂 𝒃𝒂𝒍𝒂𝒏𝒄𝒆 𝒊𝒏 𝒕𝒉𝒆 𝒑𝒐𝒘𝒆𝒓,𝑷 = 𝑷 ?
+𝟎 𝒅 𝒅 𝟎
+𝑖(cid:3365) = 𝑑 − 𝑑 .𝑖(cid:3365) = 0,625−0,375 .8 𝐴 = 2𝐴
+(cid:3031) (cid:3028) (cid:3029) (cid:2868)
+𝑃 = 𝑉 .𝑖(cid:3365) = 300𝑉.2𝐴 = 600 𝑊
+(cid:3031) (cid:3031) (cid:3031)
+𝑃 = 𝑣 .𝑖(cid:3365) = 75𝑉.8𝐴 = 600 𝑊
+(cid:2868) (cid:3042) (cid:2868)
+25
+25
+Any questions?
+26
+26

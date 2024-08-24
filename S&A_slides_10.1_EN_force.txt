@@ -1,0 +1,609 @@
+
+SENSORS AND ACTUATORS
+Session 10.1
+Force sensors
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about … Force sensors
+Session 10.1 (Se. 3):
+• Introduction to Force
+• Elastic force transducer: load cell and bending
+• Other force sensors
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+How to measure force?
+• It can be balanced again gravitation force
+• Acceleration can be measured of a known mass
+• It can produce an hydraulic pressure which is measured
+• It can develop a displacement on an elastic material
+3
+Now, how can we measure force? Force can be measured in a number of
+ways:
+• First, thanks to the gravity force, we can balance the force we want to
+measure against the gravitation. If we know the mass and the gravity
+acceleration, we can calculate the gravitational force.
+• Second, we can measure force through the acceleration. If we know the
+mass, according to Newton’s first law (F=ma), and we can measure the
+acceleration, we can calculate the force needed to displace this mass.
+• Third, some transducer can transduce force intro pressure, which we can
+then measure. This is the example of both sensors shown, where the
+hydraulic load cell and the pneumatic load cell convert pressure into force.
+• BUT, the most used method to measure force is the force that can develop
+a displacement on an elastic material. What is an elastic material? (a
+spring for instance). Here you can find a very typical example, we have a
+spring (spring constant k) and we have a linear variable differential
+transformer to measure the displacement. This session we will dedicate it
+mostly to this elastic force transducer
+3
+Elastic Force transducer
+Force F
+𝑥(𝑗ω) 𝐾
+=
+𝐹(𝑗ω) (𝑗ω⁄ω )(cid:2870)+(2ζ𝑗ω⁄ω )+1
+Mass (cid:3041) (cid:3041)
+Relative
+displacement
+transducer Where:
+Displ.
+Spring Damping B x • 𝐾 = (cid:2869) = 𝑠𝑡𝑎𝑡𝑖𝑐 𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦
+𝐾 (cid:3046) (cid:3012) (cid:3294)
+(cid:3012)
+• ω = (cid:3294) = 𝑢𝑛𝑑𝑎𝑚𝑝𝑒𝑑 𝑛𝑎𝑡𝑢𝑟𝑎𝑙 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦
+(cid:3041)
+(cid:3014)
+(cid:3003)
+• ζ = = 𝑑𝑎𝑚𝑝𝑖𝑛𝑔 𝑐𝑜𝑒𝑓𝑓𝑖𝑐𝑖𝑒𝑛𝑡
+(cid:2870) (cid:3012) (cid:3014)
+(cid:3294)
+4
+How does an elastic force transducer look like? It looks a bit like the
+accelerometer if you remember from last session.
+Now we do not move the sensor anymore but we just put a force on the
+mass, the spring shrinks and we get a displacement. We might also need a
+damping to control how much the spring shrinks as of course this is a second
+order system.
+4
+Elastic Force transducer: Load cell
+Force transducers with strain gages
+Force sensors under tension or
+compression
+5
+This is the most used force sensor, the load cell.
+We have a steel bar, and the force is transduced to the compression of that
+steel bar.
+This compression is sensed by four strain gages (all around).
+If you look closely, the strain gage 1 is positioned vertically while the strain
+gage 2 is horizontal. Why do we need that? If we put the four strain gages in
+the same direction and we compress.
+We can put the four gages on a Wheatstone bridge. What will happen? The
+effect on the four gages will be the same and we will not have an output. If
+you remember, in order to have a good sensor, we needed two resistors to
+increase and two to decrease. This is not possible here if we have all gages
+in the same direction.
+Thus, two of them are horizontal, and two are vertical. Why is this the
+solution? If we put a force in the vertical direction, the vertical gages will be
+compressed. What happens to the horizontal ones? According to poisson,
+with steel having a poisson’sconstant of 0.3, the horizontal will expand itself
+(1 mm shrink will provoke a 0.3mm expansion on the horizontal).
+Thus, in this way we have two elements that increase and two elements that
+decrease.
+However they do not increase and decrease in the same way, right?
+They have a different sensitivity two by two. Thus, we need to calculate the
+sensitivity of this sensor.
+5
+Elastic Force transducer: Load cell – Sensitivity (1)
+Let’s calculate an example based on Strain gage load cell
+The load-sensing member:
+Width and depth 1cm
+Steel: E = 200 GPa
+𝑣=0.3
+4 active arm strain gage bridge with oriented elements as in:
+GF=2
+𝑉 =10V
+(cid:3032)(cid:3051)
+6
+We can calculate the sensitivities through this example.
+We have a load sensing member with this width and depth and this poisson
+value.
+Be careful, that we will have two poissonconstants, one of the steel bar,
+which we will need to understand the elongation of the gage, and we will
+have the poissonconstant of the strain gage. But, this one is already
+included in the GF of the strain gage.
+We also have the GF of the strain gages and an excitation voltage on the
+wheastonebridge of 10 V.
+6
+Elastic Force transducer: Load cell – Sensitivity (2)
+The load-sensing member:
+Width and depth 1cm
+Steel: E = 200 GPa
+Calculation of the sensitivity of the bridge:
+𝑉 𝑅 𝑅 𝑣=0.3
+(cid:2868) (cid:2871) (cid:2872)
+= − 4 active arm strain gage bridge
+𝑉 𝑅 +𝑅 𝑅 +𝑅
+Under stress: (cid:3032)(cid:3051) (cid:2871) (cid:2870) (cid:2869) (cid:2872) with oriented elements as in:
+GF=2
+𝑅 =𝑅 =𝑅 →𝑅+Δ𝑅 𝑅 =𝑅 =𝑅 →𝑅−𝑣Δ𝑅
+(cid:2869) (cid:2871) (cid:2870) (cid:2870) 𝑉 =10V
+(cid:3032)(cid:3051)
+𝑉 𝑅+Δ𝑅 𝑅 −𝑣Δ𝑅
+(cid:2868)
+= −
+𝑉 𝑅+Δ𝑅+𝑅−𝑣Δ𝑅 𝑅+Δ𝑅+𝑅−𝑣Δ𝑅
+(cid:3032)(cid:3051)
+𝑅 𝑅
+𝑉 Δ𝑅(1+𝑣) (cid:2869) (cid:2870)
+(cid:2868)
+=
+𝑉 (cid:3032)(cid:3051) 2𝑅+Δ𝑅(1−𝑣) 𝑉 (cid:3032)(cid:3051) 𝑉 (cid:3003) - 𝑉 (cid:2868) + 𝑉 (cid:3002)
+Now: 2𝑅 ≫ Δ𝑅(1−𝑣)
+𝑅 (cid:2872) 𝑅 (cid:2871)
+So:
+𝑉 Δ𝑅(1+𝑣) Δ𝑅(1+𝑣)
+(cid:2868)
+= =
+𝑉 2𝑅 𝑅 2
+(cid:3032)(cid:3051)
+7
+The sensitivity will be the output voltage divided by the force in this case.
+First, we can calculate V0/Vex as we calculated it in the displacement
+wheatstonebridge. Va-Vb, which comes to down to the first equation.
+Now we have a force and a compression, as such R1 and R3 become 𝑅+
+Δ𝑅. What happens with R2 and R4. Actually they will reduce but not in the
+same manner, but multiplied by the poissonconstantof steel, as they are
+horizontal.
+If we put all of these in the formula, we have this new relation.
+Now, of course, Δ𝑅 will be much smaller than 2R. Thus, it can just be
+eliminated.
+If you remember from the strain gages, we had delta R over 2R. Now, by
+changing the direction of two out of the four strain gages we add a factor
+which will increase the sensitivity by the factor nu.
+7
+Elastic Force transducer: Load cell – Sensitivity (3)
+𝑉 Δ𝑅(1+𝑣) Δ𝑅(1+𝑣) The load-sensing member:
+(cid:2868)
+= = Width and depth 1cm
+𝑉 2𝑅 𝑅 2
+(cid:3032)(cid:3051)
+Steel: E = 200 GPa
+Calculation of the sensitivity of the load cell: 𝑣=0.3
+Δ𝑅
+4 active arm strain gage bridge
+=𝐺𝐹ε
+𝑅 with oriented elements as in:
+Δ𝑅 𝐹
+=𝐺𝐹 GF=2
+𝑅 𝐴𝐸
+𝑉 =10V
+(cid:3032)(cid:3051)
+(cid:3023) (cid:3023) ((cid:2869)(cid:2878)(cid:3049))
+Sensitivity of the load cell: (cid:3116) = 𝐺𝐹 (cid:3280)(cid:3299)
+(cid:3007) (cid:3002)(cid:3006) (cid:2870)
+R R
+In this case, (cid:3023)(cid:3116) =2 (cid:2869)(cid:2868) ((cid:2869)(cid:2878)(cid:2868).(cid:2871)) =650𝑛𝑉/𝑁 𝑉 (cid:3032)(cid:3051) 𝑉 (cid:3003) - 𝑉 (cid:2868) + 𝑉 (cid:3002)
+(cid:3007) (cid:2870)(cid:2868)(cid:2868) (cid:2870)
+R
+R
+This setup has a rather low sensitivity but a high maximum load!
+8
+This is then, the change in voltage related to the change in resistance and
+we need to find a way to relate it to the force.
+From the gage factor we know that the change in resistance is equal to the
+GF times the strain. The strain is the force divided by the area times Young’s
+modulus. Thus, the sensitivity of the load cell will be as shown.
+Now we can have a look at the formula.
+How can we increase the sensitivity?
+• We can increase the GF (by changing the material of the strain gage)
+• We can increase the excitation voltage, but this is not that easy, as it will
+increase the temperature and the dissipation power.
+• We cannot change the poissonfactor.
+• We can reduce the area of the load cell
+• We could use other materials with smaller young’s modulus, more elastic.
+Now, what is the influence of the temperature now?
+• We do not have a dependance on the resistance.
+• The GF will be temperature sensitive but only a bit.
+• The excitation voltage should be temperature stable but this is a problem.
+How to solve this? We will just measure it. Nowadays, there are data
+acquisition systems that can measure the excitation voltage in an
+analogue output as well as the output voltage. If we know both, we can
+eliminate the influence of the temperature. It is a rational measurement.
+• The area will not change with temperature.
+• The Young’s modulus will change by temperature. The elasticity will
+change with temperature, but it is ok.
+With these values, the sensitivity is 650nV/N. This could be a question of the
+8
+exam.
+That rather low sensitive, will give a very small output. Thus, we will
+need very strong force to have a noticeable output.
+8
+Elastic Force transducer: Load cell – Sensitivity (4)
+• At load of 100 kg or 10000N (10KN) ->Output is 6.5 mV:
+• Acceptable
+• Above the noise
+• Still it has to be amplified
+• The maximum load?
+ε = 0.2% = 0.0002
+(cid:3040)(cid:3028)(cid:3051)
+𝐹 = ε 𝑥𝐴𝑥𝐸 = 0.0002𝑥1𝑥200 = 40000𝑁 = 40 𝐾𝑁
+(cid:3040)(cid:3028)(cid:3051) (cid:3040)(cid:3028)(cid:3051)
+Low sensitive sensor but with a very high range
+9
+What would happen if we have a load of 100 Kg or 10KN? then the output
+would be 6.5 mV. Bellow that it will drown into the noise.
+How can we calculate the maximum load? We know the maximum strain of
+steel to be 0.2%, right?
+The maximum force would be 40KN, which is equivalent to 4000Kg (4 tons)
+These are load cells for trucks.
+This is a low sensitive sensor but with a very big range
+9
+Elastic Force transducer: Load cell – Compensation Young’s
+modulus
+Force sensors under tension or compression
+R1
+R2
+R(t onb)
+R(t elast)
+e(out)
+R4 R3 e(ex)
+R(t elast)
+10
+The old fashion way to cope with the change in the young’s modulus due to
+the temperature, we can add two resistors at the excitation voltage, which
+will be temperature dependent and will just change the excitation voltage.
+Nowadays, it is possible to just measure the temperature. As if we know the
+temperature and the dependance in the Young modulus, we can calculate
+and compensate the correction.
+10
+Elastic Force transducer: Load cell – Temperature effect (1)
+• Using Wheatstone bridges will compensate for the change in resistance:
+o Even with only 1 strain gage, we can use a dummy gage (strain gage in place of fixed
+resistor) in the same arm to compensate
+• GF is temperature dependent
+o temperature coefficients of 0.01 %/K, its distorting effect on the measurement result is usually
+relatively small.
+o A computational compensation (for temp measurement) is also feasible.
+• Modulus of elasticity is temperature dependent
+o Typical value for steel is approx. -0.02%/K
+o In experimental stress analysis effect is ignored (Calibration and compensation)
+• Excitation voltage causes the strain gage to heat up in comparison with the meas. body
+o Depending on thermal conductivity (mes. body), heat conductance is more/less absorbed
+o If poor conduction, result may be a difference in temperature
+11
+The main issue of these load cells is then
+temperature.
+• First, if we have the four resistors in the
+wheatstone, we will not have an impact.
+However, what if we have only one strain
+gage? then the SG will not be compensated.
+The SG will experience a change of
+temperature. In that case, we will use a
+dummy gage in the same arm. A dummy gage
+is a strain gage used in place of a fixed resistor.
+Temperature compensation is achieved when
+this dummy gage is mounted on a piece of
+material similar to the specimen which
+undergoes the same temperature changes as
+does the specimen, but which is not exposed
+to the same or opposite strain. Quarter
+bridges can have temperature compensation if
+11
+a dummy gage is used.
+• Second, GF is temperature dependent, but
+not much, as you remember from the
+displacement sensors. If we are within the
+1% accuracy, this is not much. If we need a
+higher accuracy, and it will affect, we can
+just measure and do a compensation.
+• Third, the modulus of elasticity (Young) is
+temperature dependent. Within a certain
+range, it can be ignored, if higher needed
+then it can be also compensated.
+• Fourth, the excitation voltage is dependent. The solution is to
+measure it.
+11
+Elastic Force transducer – Load cell -Temperature effect (2)
+• Adhesive creep
+As temp increases, adhesives become soft -> no transfer 100% of the strain
+o
+Comparable with declining gage factor-> observe temp limits
+o
+• In conclusion: If we know the temperature, we can always correct
+12
+Something we cannot cope with or compensate is the creep. But glueingthe
+strain gage to the bar, we add a maximum temperature range. At a certain
+temperature, it can be more elastic. The total strain on the bar will not be the
+same as the strain gage. Thus, we will need to observe the temperature
+limits.
+In conclusion, if we know the temperature, and the strain measured, we can
+just calculate the correction factor.
+12
+Elastic Force transducer: Under bending
+1
+3
+F
+2
+4
+13
+Suppose that instead of compressing, we would bend the strain gage to get
+the force. we fix the substractin one end and put a force on the other. And
+the strain gages on top and below the surface. SG 1 and 3 will become
+longer (positive strength) while 2 and 4 will become shorter. This is great,
+because the elongation will be equal to the compression.
+You can also see here illustrations of what happens in such an elastic
+transducer. Moreover, these sensors are pretty small as you can see there.
+13
+Elastic Force transducer: Under bending – Strain
+• The load 𝐹 produces a moment 𝑀 = 𝐹𝐿 at a gage location (𝐿)that results in the following strains:
+(cid:3029)
+σ
+(cid:3029)
+ε = −ε = ε = −ε =
+(cid:2869) (cid:2870) (cid:2871) (cid:2872) 𝐸
+o ε: strain
+F
+o σ (cid:3029): stress (𝑁⁄𝑚(cid:2870)) or 𝑃𝑎 𝑀 (cid:3029)
+L
+o E: modulus of elasticity 𝑁⁄𝑚(cid:2870) or 𝑃𝑎
+𝑀 𝐹𝐿
+(cid:3029)
+σ = =
+(cid:3029) 𝑍 𝑍
+o 𝑀 (cid:3029): moment (𝑁𝑚)
+o 𝑍: section modulus (𝑚(cid:2871))
+o F: force (N)
+o L: distance between the strain gage and the force on the beam (m)
+14
+Now we can try to calculate first the strain to then calculate the sensitivity.
+The strains will be the same for all the strain gages with different signs. We
+will need to calculate the bending stress sigma b.
+Sigma is the bending moment divided by Z.
+The bending moment will be defined as the Force times L, where L is the
+distance to the beginning of the plank and the point where the momentum is
+calculated (not the length of the full bar).
+Z will depend on the structure of the sensors.
+14
+Elastic Force Transducer: Under bending – Section modulus
+15
+Here we can see the section modulus for different structures. For a full bar
+for instance is like shown in the first row. You will not need to know these
+section modulus by heart for the exam. If you need it, it will be given to you.
+15
+Elastic Force transducer: Under bending – Output Voltage &
+Sensitivity
+So, for a solid beam:
+σ 𝐹𝐿 6𝐹𝐿
+(cid:3029)
+ε= = =
+𝐸 𝐸𝑍 𝐸𝑏ℎ(cid:2870)
+Δ𝑅
+We have a full bridge (4 SG): 𝑉 (cid:2868) =𝑉 (cid:3032)(cid:3051) 𝑅 𝑉 (cid:2868):output voltage; 𝑉 (cid:3036):input or excitation voltage (V)
+Δ𝑅
+=𝐺𝐹ε
+𝑅
+6𝐿
+𝑉 =𝑉 𝐺𝐹 𝐹
+(cid:2868) (cid:3032)(cid:3051) 𝐸𝑏ℎ(cid:2870)
+𝑉 6𝐿
+Sensitivity: (cid:2868) =𝑉 𝐺𝐹
+𝐹 (cid:3032)(cid:3051) 𝐸𝑏ℎ(cid:2870)
+16
+Now we can calculate the output voltage.
+We can put the Z in the strain.
+We know we have a full bridge with four SG, the output voltage relates to the
+excitation voltage times the relative change of R.
+And we know that AR/R is equal to GF times the strain.
+What would be the sensitivity? Vo/F
+Again we can see what are the dependance of the sensitivity of the different
+factor.
+• The GF
+• The excitation voltage
+• The length (the longer we make it the best)
+• The width and height. If they decrease we will have a more sensitive
+because it will be more elastic.
+16
+Elastic Force Transducer – Under bending – Exercise
+The load-sensing member:
+• Width: 1cm; Thickness: 1mm
+• Distance from force impact to the middle strain gage: 5cm
+• Steel: E = 200 Gpa
+2 active arm strain gage:
+• GF = 2
+• 𝑉 = 10𝑉
+(cid:3032)(cid:3051)
+We assume 𝑅 = 𝑅 = 𝑅, 2 SG →
+(cid:3023)(cid:3116)
+=
+(cid:2940)(cid:3019)
+(cid:2869) (cid:2870)
+(cid:3023)(cid:3280)(cid:3299) (cid:2870)(cid:3019)
+17
+17
+Elastic Force Transducer – Under bending –Exercise - solution
+Calculation of the sensitivity of the bridge:
+𝑉 𝑅 𝑅
+(cid:2868) (cid:3020)(cid:3008)(cid:2870) (cid:2870)
+= −
+𝑉 𝑅 +𝑅 𝑅 +𝑅
+(cid:3032)(cid:3051) (cid:3020)(cid:3008)(cid:2869) (cid:3020)(cid:3008)(cid:2870) (cid:2869) (cid:2870)
+Under stress and 𝑅 =𝑅 :
+(cid:2869) (cid:2870)
+𝑉 𝑅+Δ𝑅 1 The load-sensing member:
+(cid:2868)
+= − • Width: 1cm; Thickness: 1mm
+𝑉 𝑅+Δ𝑅+𝑅−Δ𝑅 2
+(cid:3032)(cid:3051) • Distance from force impact to the middle
+𝑉 (cid:2868) 𝑅+Δ𝑅 𝑅 strain gage: 5cm
+= −
+𝑉 2𝑅 2𝑅 • Steel: E = 200 Gpa
+(cid:3032)(cid:3051) 2 active arm strain gage:
+𝑉 Δ𝑅 6𝐿 • GF = 2
+(cid:2868) = =𝐺𝐹 𝐹⁄2 • 𝑉 =10𝑉
+𝑉 2𝑅 𝐸𝑏ℎ(cid:2870) (cid:3032)(cid:3051)
+(cid:3032)(cid:3051) We assume 𝑅 =𝑅 =𝑅
+(cid:2869) (cid:2870)
+Sensitivity of the beam load cell with 2 active elements (cid:3023) (cid:3007)(cid:3116) =𝑉 (cid:3032)(cid:3051)𝐺𝐹 (cid:3006)(cid:3029)(cid:2871)(cid:3013)
+(cid:3035)(cid:3118)
+2 SG → (cid:3023)(cid:3023) (cid:3280)(cid:3116) (cid:3299)=(cid:2940) (cid:2870)(cid:3019)(cid:3019)
+In this case, the sensitivity is: 1.5mV/N This results in a high sensitivity but with a small maximum force
+18
+We have two strain gages on the top and bottom. If I only use two we have a
+V0/Vex as deltaR/2R. You can see that in the book or when we discussed
+the strain gages.
+We then can obtain the sensitivity.
+We have an output of 1.5mV/N. This is a very sensitive sensor
+18
+Elastic Force Transducer – Exercise - Sensitivity (5)
+Sensitivity of the beam load cell with 2 active elements
+(cid:3023)(cid:3116)
+=𝑉 𝐺𝐹
+(cid:2871)(cid:3013)
+(cid:3007) (cid:3032)(cid:3051) (cid:3006)(cid:3029)(cid:3035)(cid:3118)
+In this case, the sensitivity is: 1.5mV/N
+This results in a high sensitivity but with a small maximum force
+The load-sensing member:
+• Width: 1cm; Thickness: 1mm
+• Distance from force impact to the middle
+At a load of 10gr (0.1 N), the output is 0.15mV, which is acceptable. strain gage: 5cm
+• Steel: E = 200 Gpa
+The maximum load would only be around 6N (600gr) 2 active arm strain gage:
+• GF = 2
+• 𝑉 =10𝑉
+(cid:3032)(cid:3051)
+We assume 𝑅 =𝑅 =𝑅
+(cid:2869) (cid:2870)
+2 SG → (cid:3023)(cid:3116) =(cid:2940)(cid:3019)
+(cid:3023)(cid:3280)(cid:3299) (cid:2870)(cid:3019)
+19
+The range will be very small but with very high sensitivity.
+19
+Elastic Force Transducer: Other applications
+F
+rekstrookjes
+1 2 4 3
+1 2
+E(ex)
+F
+4 3 E(out)
+20
+This is also a load cell, very useful in industry. We have forces on the top
+and the bottom and the strain gages on the top. This is again a bending
+elastic force transducer. When the forces apply, they will bend to the middle
+in a way that SG 1 and 3 get elongated and 2 and 4 get shrunk. This system
+is used in weighing scales. It has also a mechanical safety mechanism, the
+air gap, which will close whenever the force is just getting too far.
+20
+Elastic Force transducer: Piezo-resistive materials
+F
+Range: 10N-20.000N and
+R1 more
+n
+Accuracy: 1%
+zijaanzicht
+R2
+Temperature 0,005%
+p-gediffundeerde laag
+dependence:
+R3 Zero shift: 0,01%
+n
+R1
+bovenaanzicht
+21
+It is also possible to do the bending elastic force transducer with piezo-
+resistive materials. If you remember piezo-resistive materials
+(semiconductors) had very high GF, where there was a slight dependance
+with temperature. Using four p materials (positive) for the four SG we can
+create a system that has a very high GF, and therefore high sensitivity.
+21
+Elastic Force transducer: LVDT
+Range: 0,1N tot 5.000N
+Accuracy: 0,2%
+Temperature Very small
+dependence:
+22
+In the center we have an LVDT (the 3 coils and the inner core). What is the
+elastic element is a spring, which are screwed at both sides of the LVDT. If
+they get stressed, the core will be able to measure the displacement. What is
+one of the best things about this system? With one LVDT, we can change the
+sensitivity of the system just by changing the springs. Moreover, we could
+have a preset screwing the two springs.
+22
+Elastic Force Transducer: Piezoelectric
+Bovenzijde
+Behuizing
+onder voorspanning
+piëzoelektrische
+schijven
+geleidingspen
+instelbare
+voorspanningsschroef Behuizing
+onder voorspanning
+basis Range: from 1000N tension -5000N compression
+tot 4000N tension-16.000N compression
+Accuracy: 1%
+Maximal frequency: 10KHz-300KHz
+Cross axes sensitivity to 10% (big!)
+23
+Even piezo electrics can be used for elastic force measurements. Of course,
+this will only be for AC forces.
+23
+Piezoelectric Force transducer: Piezoelectric impedance head
+basisbevestiging
+𝐹𝑜𝑟𝑐𝑒
+𝑍 =
+𝑉𝑒𝑙𝑜𝑐𝑖𝑡𝑦
+Accelerometer
+massa
+piëzo-elektrische
+schijven
+uitgangsconnector
+uitgangsconnector
+kracht
+versnelling
+piëzo-elektrische
+schijven
+Force
+aangedreven zijde
+24
+This system is used on aerodynamic measurements. It is the piezoelectric
+impedance head. For instance, to understand the aerodynamic
+characteristics of the car, it would measure the force we need to keep the car
+in place. The lower the force, the more aerodynamic. Thus, it will be the
+Force divided by the velocity.
+How do we measure? Instead of having two separated sensors, one for
+velocity. We will have two piezoelectric materials. For the upper part you
+might recognize the accelerometer of previous class. It measures
+acceleration. Bellow, we have the one that will measure force. How do we
+get the velocity? We need to integrate the acceleration.
+24
+Force sensitive resistor FSR (1)
+25
+This one is described as a force sensor, but it could also be considered a
+pressure sensor. When we push the resistance is reduce. Thus, we are
+putting some pressure.
+It is composed by an elastomer with conductor elements inside. When we
+press, the resistance changes on it.
+The relation between force and resistance can be seen as well.
+It is not linear at all, it only gives an idea of the force.
+These sensors are not used very often, because they have a very large time
+constant. It is not for changing forces (not for dynamic)
+25
+Force sensitive resistor FSR (2)
+• High resistance dynamic range
+• Low cost
+• Low accuracy (10%)
+26
+Here you can see how it looks on reality. It is very low cost, but not very
+accurate.
+It could be used to do something creative, like putting it under a tile on the
+floor that could trigger a light.
+26
+Any questions?
+27
+27

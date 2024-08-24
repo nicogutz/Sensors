@@ -1,0 +1,491 @@
+
+SENSORS AND ACTUATORS
+Session 7.2
+Motion sensors 1
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about …
+Session 7.2 (Se. 2AB):
+• Definition of Motion Sensors
+• Potentiometers
+• Strain Gages
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+What are motion sensors?
+“Electromechanical transducers that
+convert motion quantities into
+electrical quantities”
+3
+We will start the analysis of sensors with the displacement sensors, which
+are one of the most common types and most simple sensor. These sensors
+convert motion quantities into electrical quantities. Can anyone of you think
+about a very simple type of motion sensor? A potentiometer converts motion
+(turning of a wheel) into value of resistance and therefore output voltage.
+3
+Why do we start with displacement sensors?
+T
+p
+x
+x
+4
+Why do we start with motion or displacement sensors?
+Well, actually thereason is that they are the most simplistic form of
+measurement where a lot of other sensors (which we will discuss in the
+remainder of the course) are actually composedinside by motion sensors.
+In the figure you can see some examples of those.
+Such are the cases of a pressure sensor, a bellows. If we put some pressure
+in the input, it will provoke a displacement, this displacement can be
+translated into voltage/resistance.
+In the bimetallic element, an increase of temperature will provoke the bar to
+bend. Temperature is transduced into movement. Same for the torsion bar
+and the accelerometer, where the torque is transformed into angular motion
+(remember actuators) or into linear movement (the mass-spring system
+already described in systems and control theory).
+4
+Type of motion sensors
+• Resistive potentiometers
+• Strain gage (strain gauge)
+• Inductive sensors
+• Capacitive Sensors
+• Piezoelectric sensors
+• Optical sensors
+• Hall effect sensors
+• Ultrasonic sensors
+5
+There are a plethora of motion sensors, where we will slowly explore the
+most interesting and important types in this and the next lectures.
+5
+Type of displacement sensors
+• Resistive potentiometers
+• Strain gage (strain gauge)
+• Inductive sensors
+• Capacitive Sensors
+• Piezoelectric sensors
+• Optical sensors
+• Hall effect sensors
+• Ultrasonic sensors
+6
+We will start with resistive potentiometers
+6
+Resistive potentiometer
+• “A displacement is changed into resistance”
+• Translational vs rotational Translational Rotational
+• Range from 10Ω to 1MΩ (2-500 mm) (10°to +50 rot)
+• Excitation usually DC but sometimes AC
+• Mostly linear and proportional model
+• Structure and material
+Carbon (cheap, not for very freq. usage)
+o
+Wire wound (wire, resolution not zero)
+o
+Conducting plastics (very low friction coef., expensive)
+o
+• Problems of potentiometers: Friction & resolution
+7
+• A resistive potentiometer is a device in which a displacement is changed
+into resistance.
+• This displacement can be either translational such as in the first figure or
+rotational, such as in the second one. In fact, the second type of
+potentiometer should look familiar to you. In it, the turning mechanism is
+translated into a resistance value. We can also have rotational
+potentiometers with multiturn structures. In them, we need to go further
+than 360 degrees and the potentiometer allows for more rotations.
+• Ranges for the translational system is from 2mm to 50cm while for the
+rotational is 10 degrees to 50 rotations. Thus, it is very easy to implement.
+The resistance range is very broad, from 10 ohm to 1M Ohm.
+• Of course, we cannot use the value of the resistance in our data
+acquisition, but we will need to have an input excitation voltage so that the
+resistance can be translated into a voltage fell on the resistor. As such, it
+works as a voltage divider. This can be easily seen from the translational
+system. Thus, we need an excitation voltage. In most of the cases, a DC
+voltage will be used, where we input DC voltage to obtain the divided DC
+voltage. Sometimes, however, we can use AC. Why is this? Well, when
+we have very small signals, we will need to amplify themand it is actually
+easierto amplify an AC signal than a DC one. DC signals have a lot of
+interference (like it could happen with the offset of an amplifier).
+• How is the transfer function of this potentiometer? Actually, itis a linear
+and proportional model, where the voltage grows proportional to the
+motion or displacement.
+• This is the inside of such a potentiometer. The wiper turns around and the
+resistance takes certain value.
+• What type of material do we need to have this change on the resistance.
+• The most simpleand most used material is actually carbon
+7
+material. Carbon has the property of having a certain
+resistance. It is not a very good conductor or a very good
+insulator. It is something between the two. It is important to
+know that carbon is not a semi conductor. A very good
+property of carbon is that it is self lubricating which helps with
+a very low friction coefficient. As we have a mechanical
+component, there is some friction causing some erosion. So,
+the lower the friction coefficient, the lower the erosion, the
+longer the life time. Unfortunately, carbon does not have a
+friction coefficient of 0, so it will wear out with time. It is also
+very cheap. When do we use carbon? When we need
+something that is not used very often (the wheel of a radio)
+• Another material that can be used is a wire wound. It is a wire
+which has a certain resistance. It is not a copper wire,
+because copper has a very low resistance. It is mostly used
+for power potentiometers. One very interesting property of
+these potentiometers is the resolution. As the wiper moves
+back and forth over the different resistance wires, the voltage
+will be changing in steps. This is a difference as compared
+with the carbon potentiometer, which are analogue, meaning
+the resolution is 0.
+• The best material in an application as a sensor which needs to
+last long are the conducting plastics. It is a composite material
+with extremely low friction coefficient. One of the lowest
+friction coefficient is Tefflon. It is used in potentiometers. First,
+the friction coefficient is so low that you do not need force to
+turn it. If the friction is so low, the erosion is nearly non-
+existentand the life-time is very veryhigh. However, it is
+expensive.
+• To sum up, the problems of potentiometers come in the form of
+friction and resolution.
+7
+Resistive potentiometer characteristics in sensors
+• Linear ideal (voltage vs displacement)
+• Friction (depending on the material)
+• Hysteresis
+• Noise voltage
+• Relative large displacement (from mm to meters)
+• Maximal excitation voltage:
+𝑒 = 𝑃 𝑅
+(cid:3032)(cid:3051) (cid:3040)(cid:3028)(cid:3051) (cid:3043)(cid:3042)(cid:3047)
+8
+For the case of sensors, we will focus on:
+• Almost always linear potentiometers, there are some logarithmic
+potentiometers (such as for sound)but we will not use those.
+• We will have friction depending on the used material.
+• We will also have some hysteresis, as we saw in the previous session.
+The wiper (mechanical system) can have some hysteresis because it can
+give you another value if you turn it in different directions.
+• Another disadvantage is noise. As it is a mechanical movement, it can
+produce some noise in the voltage while turning it. Of course, resistors
+always produce noise, the higher the temperature, the higher the noise.
+However, when the wiper moves, it can provoke some extra noise
+• A big advantage is its relativelarge displacement. We can have
+displacement from millimeters to very large distances.
+• Finally, we will need to take care of the maximum excitation voltage. When
+we input an excitation voltage to the potentiometer, it will heat up (due to
+Jules law). The heat has two disadvantages: (1) because it heats up, it will
+change the resistance; (2)If so, the output could change. However, if the
+change is an absolute change of the resistance, it could be that it does not
+change the relative portion of the resistance we are taking. Moreover, we
+cannot exceed the maximal excitation voltage because it is the maximum
+power that the potentiometer can dissipate. Why would we want very high
+excitation voltage? Well, the higher the excitation voltage the bigger the
+signal to noise ratio which will help on the data acquisition. Howeverwe
+will not be able to exceed the maximum excitation voltage, because it is
+the maximum that the potentiometer can handle.
+8
+Resistive potentiometers: Structure of a multiple turn
+potentiometer
+9
+This is the design of a multiple turn potentiometer. We can see the rod, the
+plastic wiper block and the conductive plastic film. When the rod, rotates, the
+wiper block moves along the plastic and the resistance changes.
+9
+Resistive potentiometers: Connection to the data acquisition (1)
+Non linear when loaded
+𝑒 1
+(cid:2868)
+=
+𝑒 (cid:3032)(cid:3051) (𝑥1 (cid:3036)(cid:3041))+( 𝑅𝑅 (cid:3040)(cid:3043) )(1 − 𝑥𝑥 (cid:3047)(cid:3036) (cid:3042)(cid:3041) (cid:3047))
+𝑥
+(cid:3047)(cid:3042)(cid:3047)
+For
+(cid:3019)(cid:3291)
+=0 (unloaded)
+(cid:3019)(cid:3288)
+𝑒 𝑥
+(cid:3048)(cid:3036)(cid:3047) (cid:3036)(cid:3041)
+=
+𝑒 𝑥
+(cid:3032)(cid:3051) (cid:3047)(cid:3042)(cid:3047)
+10
+We will need to connect the potentiometer to the data acquisition system,
+such as what we have in this figure. Ideally, the Rp is proportional to the
+displacement xi, as we have shown before.
+However, the data acquisition equipment will have a certain internal
+resistance Rm. This means that the more realistic equivalent circuit has two
+resistors in parallel and it is not linear anymore.
+Thusthe proportionality does not hold anymore, and the relation between
+input and output voltage looks like this (you can try to solve it at home).
+Now, if Rm is infinite, and therefore Rp/Rm equals 0, we will have the ideal
+formula of proportionality. However, this is not going to be the case, as Rm it
+will never be infinite. As we can see in the figure, as the relation increases,
+the potentiometer curve becomes less and less linear.
+How can we try to solve this? First, we can first try to make it as big as
+possible. Second, we can try to compensate it.
+10
+Resistive potentiometers: Connection to the data acquisition (2)
+• We can compensate the effect with electronics
+• We can compensate it with the computer, if we know the relations and all the
+values, we can just calculate it and “linearize” it a posteriori.
+11
+How do we compensate the effect? We can add a linearizing resistor and
+making sure that this resistor is of the same value as the input impedance of
+the data acquisition system. As such we can get this graph. In it we can see
+that without the Rin, the curve is very much non linear, but adding the Rin,
+we can somehow counter the effect.
+Another option is to linearize it by means of calculations. If we know all the
+relationships and values, we can just calculate the voltage change provoked
+by the displacement.
+11
+Resistive potentiometers: Examples (1)
+12
+Here are typical potentiometers which you might have seen it in electronic
+classes.
+12
+Resistive potentiometers: Examples (2)
+13
+Here we see a plastic potentiometer. These are for professional applications
+13
+Resistive potentiometers: Examples (3)
+14
+We can also have very long potentiometers such as the one on the left. On
+the right we see a very special type of potentiometer, it is actually a2-
+directional potentiometer (composed by 2 potentiometer). It is the stick of a
+joystick
+14
+Type of displacement sensors
+• Resistive potentiometers
+• Strain gage (strain gauge)
+• Inductive sensors
+• Capacitive Sensors
+• Piezoelectric sensors
+• Optical sensors
+• Hall effect sensors
+• Ultrasonic sensors
+15
+15
+Resistive Strain Gages
+When a thin wire (ex:25µm) is stretched (displacement) the
+electrical resistance is changed due to 3 effects:
+• The length increases
+• The diameter is decreased
+• Piezo-resistive effect
+16
+What is a strain gage? When a thin wire is stretched, the resistance changes
+due to
+• the increase in the length (the longer the material, the higher the
+resistance),
+• the decrease in diameter (a thinner wire means higher resistance),
+• The specific resistance of my material can also change because the
+structure inside the wire can change. This is called the piezo-resistive
+effect.
+Thus, we have again a resistive sensor, where displacement is changed into
+a resistive effect.
+16
+Resistive Strain Gages: Behavior
+17
+Of course, if we stretch the wireit will have some limitations.
+In the figure we see strain vs stress. We see a linear area called the elastic
+zone, that leads to saturation (or yield point).
+We should stay in the elastic zone, where we will have a proportional linear.
+If we go over that point, we enter in the plastic region, werethe strain will not
+go back to the initial length.
+The maximum strain of a steel wire, for instance, is about 0.2%. If we have a
+wire of 1m long, we can stretch maximum 2 millimeter.
+17
+Resistive Strain gages: Equations for change in resistance
+• Resistance of material:
+𝑅 = (cid:2977)(cid:3013) 𝐴:𝐴𝑟𝑒𝑎 𝑚(cid:2870) ;L:Length m ; ρ ρ′ 𝐴 𝐴−𝑑𝐴
+(cid:3002)
+𝐿 𝐿+𝑑𝐿
+ρ:𝑅𝑒𝑠𝑖𝑠𝑡𝑖𝑣𝑖𝑡𝑦 Ωm ;R:Resistance (Ω)
+• Poisson’s ratio:
+(cid:3279)(cid:3253) (cid:3279)(cid:3253)
+𝑣 = − (cid:3253) = − (cid:3253)
+(cid:3279)(cid:3261) (cid:2965)
+(cid:3261)
+• Differential change in R
+(cid:2977)(cid:3031)(cid:3013)(cid:2878)(cid:3013)(cid:3031)(cid:2977) (cid:3002) (cid:2879) (cid:2977)(cid:3013)(cid:3031)(cid:3002)
+𝑑𝑅 = (1)
+(cid:3002)(cid:3118)
+18
+Now, how does the resistance change when we stretch the gage.
+First, we have the value of the resistance of the material, which should be:
+the length, multiplied by the resistivity of the material (rho), divided by the
+area. So, we have a dependance on the length, the resistivity and the area.
+Now, what happens if the strain gage gets stretched? What changes?
+Actually, everythingis dependent on this elongation according to the rules we
+just stablished. Thus, length, area, and resistivity will change. How? It is
+difficult to say, we can slowly go through the equations.
+To understand what happens to the area, we can define the poisson’sratio,
+which is a measure of the poissoneffect (the deformation of a material in
+directions perpendicular to the specific direction of loading). Applying this, v
+(or the ratio) is equal to the increment of diameter, divided by the increment
+of length. Where we can name dL/L as epsilon or strain
+Moreover, we can calculate the derivative of the resistance, taking in to
+account de changes on the three variables, which will also be dependent
+among one another. As such, we get this derivative of the resistor.
+18
+Resistive Strain gages: does the volume change?
+𝑉 =𝐴𝐿 →𝑑𝑉 =𝐴𝑑𝐿+𝐿𝑑𝐴 (2)
+And 𝑑𝑉=𝑛𝑒𝑤 𝑣𝑜𝑙𝑢𝑚𝑒 −𝑜𝑙𝑑 𝑣𝑜𝑙𝑢𝑚𝑒 →𝑑𝑉 = 𝐿+𝑑𝐿 𝐷+𝑑𝐷
+(cid:2870)(cid:2976)
+−AL
+(cid:2872)
+(cid:2870)
+π 𝑑𝐷
+𝑑𝑉 = 𝐷(cid:2870)𝐿 1+ ε 1 − −𝐴𝐿
+4 𝐷
+𝑑𝑉 =𝐴𝐿 1+ε 1 −𝜀𝑣 (cid:2870)−𝐴𝐿
+𝑑𝑉 =𝐴𝐿 1+ε 1 −2ε𝑣−(𝜀𝑣 (cid:2870))−𝐴𝐿
+(ε𝑣)(cid:2870)≪ ≪1
+𝑑𝑉 =𝐴𝐿−2𝐴𝐿ε𝑣+𝐴𝐿ε−2𝐴𝐿ε(cid:2870)𝑣−𝐴𝐿
+2𝐴𝐿ε(cid:2870)𝑣 =𝑣𝑒𝑟𝑦 𝑠𝑚𝑎𝑙𝑙
+𝑑𝑉=𝐴𝐿ε 1−2𝑣 (3)
+𝑆𝑜,𝑖𝑓 𝑑𝑉 =0 →𝑣 =0.5 𝑓𝑜𝑟 𝑓𝑙𝑢𝑖𝑑𝑠 𝑓𝑜𝑟 𝑒𝑥𝑎𝑚𝑝𝑙𝑒
+0≤𝑣 ≤0.5 𝑒𝑙𝑠𝑒 𝑣𝑜𝑙𝑢𝑚𝑒 𝑤𝑜𝑢𝑙𝑑 𝑑𝑒𝑐𝑟𝑒𝑎𝑠𝑒!
+19
+Now, the area changes, the length changes. Does the Volume change? We
+can try to understand this.
+Volume is area times length. And the differential of volume is then AdL+ LdA
+Additionally, we can define the differential of volume as the difference
+between the new volume and the old volume. We can rearrange the
+equation a bit and substitute by the poissonratio.
+Now, I said in thrprevious slide, the strain or epsilon is a very small number
+(0.2% for steel), this means that we can assume that epsilon times the
+poissonratio squared will be very verysmall (smaller than 1). Thus, we can
+just discard it in the calculation and get the next equation.
+For the same reason, the term on epsilon square is very small and can be
+ignored. Then the two AL cancel eachothersout. This means that the volume
+change is dependanton the area, length, the strain and the poissonratio.
+Now we can try to look at this and analysewhat we are seeing. Imagine we
+use a fluid as a strain gage. If we change the length, would the volume
+change ? No, right? Because the area will just increase, because of the
+fluidity and the volume stay the same. This means that if the dV= 0 (no
+change) -> the poissonratio has tobe 0.5
+What about if v> 0.5 -> is that possible? If that’s the case the differential
+would be negative and the volume would decrease, which is also not
+possible.
+Thusv needs to be smaller than 0.5. Can it be negative? No! because it
+would measnthat if we pull a wire the diameter will increase.
+19
+In summary, the poissonconstant needs to be between 0 and 0.5 and if
+it is a fluid, it needs to be 0.5.
+19
+Resistive Strain gages: Gage factor
+Combining equations (2) and (3) 𝑑𝑉 =𝐴𝑑𝐿+𝐿𝑑𝐴=𝐴𝐿ε(1−2𝑣)
+𝑠𝑜 𝐿𝑑𝐴= −2𝑣𝐴𝑑𝐿 𝑖𝑛 (1)
+ρ𝑑𝐿+𝐿𝑑ρ 𝐴+2ρ𝑣𝐴𝑑𝐿
+𝑑𝑅 =
+𝐴(cid:2870)
+ρ𝑑𝐿 1+2𝑣 +𝐿𝑑ρ
+𝑑𝑅=
+𝐴
+𝑑𝑅 𝑑𝐿(1+2𝑣)
+=
+𝑅 𝐿
+𝑑𝑅 𝑑ρ 1 : R Change due to increasing length
+𝑅 ρ 2𝑣: R change due to decreasing area
+𝐺𝐹 = =1+2𝑣+
+𝑑𝐿 𝑑𝐿 (cid:3279)(cid:3225)
+(cid:3225): R change due to piezo resistive effect
+𝐿 𝐿 (cid:3279)(cid:3261)
+(cid:3261)
+Gage Factor
+(sensitivity of the strain gage)
+20
+Now we can continue with the rest of the calculations. Where we combine
+equations 2 and 3 and substitute LdAfrom (1).
+We get to the Gage factor or sensitivity of the strain gage) which is the
+relative variation of resistance to the relative length variation (the strain).
+It is composed of three parts. First there is a 1 because there is a
+proportional relation between the change in length and the change in
+resistance. The next one is 2 times the nu or poissonconstant, which is due
+to the decreasing area. Finally, the relative change in resistivity due to the
+change in length. This is something more difficult to calculate. Some
+materials will have a strong piezo resistive effect overpowering the other
+factors.
+20
+Resistive strain gages: Tips to take home
+• GF and known: The displacement can be
+calculated
+• The relative deviation of the resistance is proportional to the
+(cid:3031)(cid:3019) (cid:3031)(cid:3013)
+relative deviation of displacement, times the GF (
+(cid:3019) (cid:3013)
+• Example: Steel
+(cid:3031)(cid:3019) (cid:3031)(cid:3013) (cid:3031)(cid:3013) (cid:3031)(cid:3019)
+𝐺𝐹 = 2 = 𝐺𝐹 , and we know that the max = 0.2% → = 0.4%
+(cid:3046)(cid:3047)(cid:3032)(cid:3032)(cid:3039)
+(cid:3019) (cid:3013) (cid:3013) (cid:3019)
+21
+If we know the GF and the relative change of resistance, we can calculate
+the strain (relative change in length)
+Moreover, the relative deviation of resistance will be proportional to the
+relative deviation of displacement.
+Now imagine steel, which has a GF of around 2., and we know from before
+that steel has a maximum strain of 0.2% which I said before, then the
+maximum change in resistance is about 0.4% which is very verysmall.
+21
+Resistive Strain gages: Example
+Material Composition Gage factor Temperature
+coeff*10-
+5(/°C)
+Constantan Ni45 Cu55 2.1 +/-2
+Isoelastic Ni36 Cr8 (Mn,Si,Mo)4 3.52-3.6 +17
+Fe32
+Karma Ni74 Cr20 Fe3 Cu3 2.1 +2
+Manganin Cu84 Mn12 Ni4 0.3-0.47 +/-2
+Alloy479 Pt92 W8 3.6-4.4 +24
+Ni Ni100 -12 to-20 670
+Ni-Cr Ni80 Cr20 2.1-2.63 10
+Si p-type 100-170 70 to700
+Si n-type -100 to-140 70 to700
+Ge p-type 102
+Ge n-type -150
+22
+Now we can discuss the Gage factors of some materials. Constantan, which
+is a material composed by niqueland cupper has a GF of 2.1, why shall we
+use this material? Because the temperature coefficient is very verysmall. If
+the temperature would change, also the resistor change. It could happen that
+if the resistor change to apply is very small, the temperature has a bigger
+temperature change than the one provoked by the strain and we need to
+avoid this. Thus, we need to keep the temperature coefficient as low as
+possible.
+If we need materials that have a longer elongation range, we have other
+materials such as the isoelastic. The GF is higher and the temperature coeff.
+Is still ok.
+One interesting case is the Nickel, which has a negative GF. How is this
+possible? Remember that the GF is 1 + 2v + change in resistivity. 1 and 2v
+are positive numbers, right? So, the factor comes from the change in
+resistivity. This means that Nickel has a very strong negative piezo-electric
+effect. Moreover, the temperature coefficient is very high.
+We can also see the case of the semiconductor Sillicon, which has a very
+high GF. This gives us the opposite behaviour. A very strong piezo-resistive
+effect.
+These are then piezo-resistive materials, because the strain is mainly
+dependent on the piezo-resistivity. And we could create sensors with a
+strong piezo-resistive effect or anti-piezo-resistive.
+Unfortunaly, they also have very high temperature coefficient. This could
+however, be countered within the sensor, as we could have a measurement
+22
+of temperature and compensate it.
+22
+Resistive Strain gages: Temperature coefficient & GF
+• GF is temperature dependent
+• Typical temperature coefficient: 0.01%/K (100ppm/K)
+• Its distorting effect is relatively small and can be ignored
+• Except for high accurate measurement systems
+23
+We were discussing about the temperature dependance of the resistor itself.
+But, what about the GF, how is that one affected by the temperature
+change? We would want it to be very stable. The gage factor is in fact
+dependent on temperature. However, the effect is very small and can be
+ignored except for very high precissionand very accurate measurements.
+23
+Any questions?
+24
+24

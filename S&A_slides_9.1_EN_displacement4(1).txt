@@ -1,0 +1,670 @@
+
+SENSORS AND ACTUATORS
+Session 9.1
+Motion sensors: Capacitive, piezoelectric and
+optical
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is (STILL) about …Displacement sensors
+Session 9.1 (Se. 2B/2.2):
+• Capacitive sensors
+• Piezoelectric sensors
+• Optical encoders
+• Hall effect magnetic sensors
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+Capacitive sensors
+3
+Definition of Capacitance
+Where:
+𝐴: Surface of the parallel plates
+𝑥: Distance between plates
+ε :Dielectrical constant
+(cid:3045)
+4
+So farwe have had resistive and inductive displacement sensors. Today we
+are going to discuss capacitive displacement sensors. In them, we can again
+modify some of the components and get a change in the capacitance.
+We see in the equation that capacitors are proportional to the area, to the
+electrical permittivity or dialectricconstant and inversely proportional to the
+distance between the two plates.
+We could again play with those three parameters to understand
+displacement. In practice, the most simplistic manner of changing the value
+of the capacitance will be by changing the distance between the two plates.
+4
+Basic capacitive sensors: A possible arrangement for a single
+capacitive displacement sensor
+𝑉 (𝑗ω) 𝑍 (𝑗ω)
+(cid:2868) (cid:3033)
+= −
+𝑉(𝑗ω) 𝑍 (𝑗ω)
+(cid:3036) (cid:3036)
+x
+1
+Conductive plates (cid:3415) 𝑗ω𝐶
+(cid:3051)
+= −
+1
+(cid:3415)
+𝑗ω𝐶
+(cid:3036)
+𝐶(cid:3051)
+𝐶
+(cid:3036)
+= −
+𝐶
+(cid:3051)
+𝐶(cid:3051)
+- After introducing 𝐶 :
+Low Pass (cid:3051)
+𝐶(cid:3036)
++
+𝑉(cid:2868)
+Demodulator Filter
+𝐶 (cid:3036)𝑉 (cid:3036)(𝑗ω)
+Sine 𝑉 (cid:2868) 𝑗ω = 𝑥
+𝑉(cid:3036)(50KHz) ε (cid:2868)ε (cid:3045)𝐴
+𝑉 = 𝐾𝑥
+(cid:2868)
+5
+Here we can see a very simple example, where Cxis the capacitor that we
+will use to measure the displacement. This circuit actually shows the way in
+which capacitor microphones work.
+Sounds are pressure waves. These are travelling at the speed of sound on
+top of the pressure around us. At the other side there needs to be a receptor,
+which will be a membrane. It would be the ear (ear drum) for instance but in
+this case is the microphone. So, if we talk into the microphone, the
+membrane of the microphone will vibrate at the same rate and the same
+amplitude as the one that we are producing with the voice. So, we need a
+kind of membrane. We can take a capacitor: a fixed plate and a kind of a
+conducting membrane and we can measure the capacitor in front of that
+membrane. If I can detect the value of that capacitor, I will be able to have a
+certain displacement sensor.
+Here in the figure, we see something along those lines. We have the
+capacitor (Cx) with the moving plate (the front one) and the fixed one. Now,
+we will be able to measure the capacitance Cx.
+In order to do that, we will need an AC excitation voltage, an input capacitor
+Ci, and the Operational amplifier. In the feedback we can put out
+displacement sensor.
+Now, we can check the equations. As we are dealing with AC components,
+we analysethe circuit in the frequency domain.
+First, what is the output input relationship here? It is the output impedance
+divided by the input one. Do not forget the negative sign (–) because we are
+using the inverted OA input.
+If we make some calculations, we get to this formula, where the amplitude of
+5
+the sinusoidal output wave will be a constant K, multiplied by the
+displacement x. Thus, it will be proportional to the displacement of my
+capacitor.
+This is a very simple set up, not very commonly used but it gives
+already an idea on how the proportionality works.
+Moreover, there is an issue with it. Imagine, there is some moist, some
+dust, or some changing temperature between the plates. These could
+heavily influence the value of the capacitor, when what we actually
+wanted to know was the displacement of the membrane. As we
+measure absolute values, this system is very environmentally
+dependent. It would be best if we were able to use relative values. This
+is exactly what we do in the next example.
+5
+Variable differential capacitor sensor: Definition
+ε ε 𝐴
+(cid:2868) (cid:3045)
+C1 𝐶 (cid:2869) =
+𝑑 −𝑥
+x After calculation:
+d
+d
+ε ε 𝐴
+(cid:2868) (cid:3045)
+𝐶 =
+C2 (cid:2870)
+𝑑 +𝑥 𝑥 𝐶 −𝐶
+(cid:2869) (cid:2870)
+=
+𝑑 𝐶 +𝐶
+(cid:2869) (cid:2870)
+6
+This is a more interesting example. Why?
+Because this is all about relative measurements which are much easier and
+more accurate to measure. In the same sensor, we have a double capacitor
+(C1 and C2). The membrane will be in between the two plates that will move
+up and down. Without displacement we have d distance which is the middle
+between the two plates (where the membrane is to start with) and x will be
+the displacement that occurs between the standard position and the current
+location.
+Thus, when x changes, both the values of C1 and C2 will also change. We
+can calculate C1-C2 divided by C1+C2. What is this? It is the relative change
+of our capacitor. Moreover, x/d is the relative movement of our membrane.
+What would happen if the temperature changes for instance? Will the
+measurement be affected? Both capacitors will be affected, so the relative
+relation will not change. Of course, we will need to measure that differential
+capacitor. How could we do this?
+6
+Variable differential capacitor sensor: Measurement
+𝑋 𝑋
+(cid:3030)(cid:2872) (cid:3030)(cid:2869)
+𝑉 = 𝑉( − )
+(cid:2868) (cid:3036) 𝑋 +𝑋 𝑋 +𝑋
+(cid:3030)(cid:2872) (cid:3030)(cid:2871) (cid:3030)(cid:2869) (cid:3030)(cid:2870)
+Balance
+When 𝐶 is trimmed so that 𝐶 = 𝐶 then:
+(cid:2871) (cid:2871) (cid:2872)
+1
+1 (cid:3415) 𝑗ω𝐶
+𝑉 = 𝑉( − (cid:2869) )
+(cid:2868) (cid:3036) 2 1 (cid:3415) +1 (cid:3415)
+𝑗ω𝐶 𝑗ω𝐶
+(cid:2869) (cid:2870)
+1 𝐶
+(cid:2870)
+𝑉 = 𝑉( − )
+(cid:2868) (cid:3036) 2 𝐶 +𝐶
+(cid:2869) (cid:2870)
+𝐶 (cid:2869)−𝐶 (cid:2870) =(cid:3051) (from prev. slide)
+𝑉 = 𝑉 (cid:3031)
+(cid:2868) (cid:3036)2(𝐶 +𝐶 )
+(cid:2869) (cid:2870)
+𝑉 𝑉 𝑉
+𝑉 = (cid:3036) 𝑥 (cid:2868) = (cid:3036)
+(cid:2868) 2𝑑 𝑥 2𝑑
+7
+We will need to use a wheastonebridge. How does this work?
+We will put the two variable capacitors C1 and C2 and two dummy
+capacitors C3, and C4 of the same value. In case that C1 and C2 are not the
+same, we could use an extra variable capacitor C3 to balance them out so
+that when the beginning of the measurement starts, we have the same
+value. Now we can do exactly what we did for the resistors but now it will be
+with capacitors. Thus, we will work with impedances. The impedance of a
+capacitor is 1/jwC. The excitation voltage is of course an AC (we need a
+certain frequency).
+If we do the calculations and make sure than C3 and C4 are the same, we
+get to this thing that we saw in the previous slide C1-C2/C1+C2, we can
+replace it by x/d. This means that we have a very nice and very linear
+relation between excitation voltage and output voltage, where the sensitivity
+is dependent on the excitation voltage, and the distance between the plates
+and it is proportional.
+Watch out again that these are AC voltages, this means that what we have
+here is a relation between the amplitudes. If x increases the amplitude of the
+output will increase.
+Now, what happens if x is negative? The relation will be the same, but the
+sign will be minus. What does this mean? That my input and output will not
+be in phase but in counterphase.
+What does this mean for the measuring system? We will need a
+synchronous detector (like in the previous lecture with inductive sensors)
+where we can input the excitation voltage and compare the phases. If the
+sinusoids are in phase, we know that the displacement is positive. If they are
+in counter phase, we will know it is negative.
+7
+Variable differential capacitor sensor: Properties
+Properties:
+• Pro
+Small mass
+o
+Broad frequency spectrum
+o
+Linear
+o
+Small hysteresis
+o
+Dynamic and static measurements possible
+o
+Temp sensitivity
+o
+• Con:
+AC excitation
+o
+Electronic processing (i.e., synchronous detector)
+o
+High output impedance (amplifier very close by or in-sensor)
+o
+8
+What are the properties of these differential capacitors. If we compare them
+to the inductive sensors of last week, we can see that they are comparable
+with the LVDTs.
+One first difference is that this one have a very light mass, while in the other
+one we had to change the core that goes through the three coils. Here we
+only need to change the membrane. It is perhaps a little bit less robust and
+more vulnerable to vibration.
+It has a very broad frequency spectrum (it depends on the membrane).
+It is linear, and with a small hysteresis.
+It can measure both static and dynamic movements, which is a big
+advantage. Some of the next sensors, can only measure dynamic
+movements.
+We have temperature sensitivity but way less with the differential capacitor
+as the change will be relative.
+However:
+It requires AC excitation, electronic processing (for the detection, for
+instance) and it has high output impedance. This means it is quite sensitive
+to noise. It will be best to put the amplifier very close to the sensor. In a lot of
+cases the amplifier will already be implemented in the sensor.
+8
+Variable differential capacitor sensor: Example
+9
+These differential capacitors can be very verysmall. For instance, in this
+case we can have dimensions in the micro meter order, where the
+membrane is in the middle and the two ends create the capacitors.
+9
+Monopolar capacitive sensor
+Changing the permittivity…
+10
+So, we have changed already the distance between the plates. Alternatively,
+we could change the permittivity. We could use another dielectricalmaterial
+while changing the permittivity. How would this work?
+We have one plate of the capacitor (the internal) and we have the other plate
+(external). In between we will have a shield. As such, the electric field is
+forced to go around it not in between (as there is the shield). Thus, if there is
+an object (something else than air) the epsilon r will be change, so will my
+electric field. This can be calibrated of course to understand the degree in
+which it is disturbed. There could be for instance probes, which could be
+used to measure distance. Another example is a parking detector use to
+measure the distance to the wall.
+10
+Linear bridge capacitive position sensor
+Example 𝐶 between 𝐾 and 𝑃
+(cid:2869)
+ε (𝑏 𝐿⁄2+𝑥 )
+(cid:2868)
+𝐶 =
+(cid:2869)
+𝑑
+2𝑥
+𝑉 = 𝑉( )
+(cid:2868) (cid:3036)
+𝐿
+11
+This is one final example. In this case actually what changes is the area
+because we will have moving plates. In order to calculate these, we will need
+to again put them in a full bridge and calculate. You can try to solve this at
+home. For the first Capacitor (between k and p) we would have this formula,
+where the area is b times (L/2 +x) which the area seen. If we do the same for
+all four capacitors we arrive to the solution that V0 is equal to Vi times 2x/L.
+Again very nice and depending on the varying length. With these we finish
+the capacitive sensors and we move one to the piezoelectric ones.
+11
+Piezoelectric sensors
+12
+Piezoelectric sensor = charge generator
+13
+What are piezoelectric sensors? They will take advantage of the
+The piezoelectric effect is the generation
+piezoelectric effect (
+of electric charge by a crystalline material upon
+subjecting it to stress. The effect exists in natural
+crystals, such as quartz (chemical formula SiO2), and
+poled (artificially polarized) man-made ceramics and
+some polymers).
+First of all, a piezoelectric sensor is a charge generator.
+It does not produce voltages or currents but charges.
+This is of course an electrical output as well, which we
+will transform in current or voltage, but the output is
+charges.
+Can any material work as piezoelectric? No, this is
+related to materials in nature such as quartz, but
+actually there are also some synthetic materials to do
+this.
+13
+Here there is this example, a plate which is of
+course completely isolated.
+13
+Piezoelectric sensor
+• Charge generator
+• Different modes exist to mechanical deforming the piezoelectric material:
+Thickness changes
+o
+Expansion
+o
+Transversal shear
+o
+• Typical values for k are 2,3 pC/N for quartz and 140 pC/N for barium titanate.
+NOTE: Sensitivity is in pC/N instead of pC/m (displacement sensor)
+BUT:
+• Manufacturers consider deformation as a consequence of force
+• Force and displacement are proportional
+14
+What happens?
+When we push on the material (we put force on it) and due to the elasticity
+there will be a change (linear) with the force. That displacement will cause a
+certain charge generation (e.g., if we bend it there would be positive charges
+at the top and negative at the bottom). Only charges!
+What can we do with these charges?
+From the moment that we want to measure it, there will be a current. We
+cannot measure anything without a current. However, in the moment that we
+have a current, we will lose these charges. This means that we will need to
+keep bending the material (up and down) to keep generating charges and we
+will need a way to store those chargers (such as with a capacitor).
+14
+Piezoelectric sensors - Example
+For a piezoelectric sensor of 1𝑐𝑚(cid:2870) area and 1𝑚𝑚 thickness with an applied force
+due to a 10-g weight.
+The generated voltage e is 0.23mV for the quartz and 14mV for barium titanite
+crystals – Voltages are relatively large!
+15
+Here we can get an idea about what type of voltages can be derived from the
+charges.
+If we actually have a piezoelectric sensor of 1cm2 and a thickness of 1 mm.
+We can calculate the capacitor if we know the sensitivity. If we put 10gr of
+weight on that capacitor/crystal, we can actually generate 230 microvolt for
+quartz and 14mv for a synthetic material. Just with 10 gr. This is not a
+negligible voltage and could be easily amplified.
+The problem of course is that it cannot be measured, because in the moment
+it is measured, it is gone.
+15
+Piezoelectric sensor: Equations
+Charge generator 𝑞 =𝐾𝑥
+𝑑𝑞 𝑑𝑥
+𝑖 = =𝐾
+𝑑𝑡 𝑑𝑡
+Suppose there is no current going
+to the amplifier:
+𝑖 =𝑖 +𝑖
+(cid:3030) (cid:3019)
+So that:
+𝑑𝑥 𝑣 1
+𝑖 =𝐾 − (cid:2868) 𝑎𝑛𝑑 𝑉 =𝑉 = (cid:3505)𝑖 𝑑𝑡
+(cid:3030) 𝑑𝑡 𝑅 (cid:3030) (cid:2868) 𝐶 (cid:3030)
+𝑣 (𝑗ω) 𝑗ω𝑅𝐶
+(cid:2868)
+=𝐾
+𝑥(𝑗ω) (cid:3046)1+𝑗ω𝑅𝐶
+where:
+𝐾 =𝐾⁄𝐶:𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦 (𝑉⁄𝑚)
+(cid:3046)
+16
+So, we have this nice material where when we put some pressure on, in
+generates a voltage, but we cannot really measure it. What do we do?
+Let’s take a crystal and connect it to an oscilloscope with a coax cable and
+we can just observe in the screen of the oscilloscope what happens. Will this
+be a good setup?
+Let’s try to make the equivalent circuit of the total system.
+• We will have the charge generator, which means that we will have charges
+appearing from displacement multiplied by a constant k or sensitivity
+(linear with the displacement).
+• We will in addition have the resistor Rs of the substractof the quartz
+crystal.
+• We will also have the capacitor of the crystal.
+• We will have the capacitor of the cable, if we put a cable, we have a
+capacitor.
+• We will also have them the input capacitor of the amplifier (an oscilloscope
+in this case)
+• And the input impedance of the oscilloscope.
+Now, will we see the change of charges in my oscilloscope? For it, we will
+need to set up a current.
+A current is the derivative of the charges in time, right, so the derivative of
+the displacement multiplied by K. This is already something that provides us
+with a bit of information. In order to see the change, and to actually have a
+current, we need not that the displacement just happens once and stays in
+its place, but I need that the charges keep on changing (that there is
+movement up and down). We cannot keep the current if x is a constant.
+16
+If we assume that there is no current going through the amplifier, the
+current will be equal to the current going through the resistors and the
+current going through the capacitors. Now, we could calculate the
+current that goes through the capacitor. And we know that the Vcor Vo
+is the integral of the current.
+This is a differential equation that we can solve in the frequency domain
+and we get this transfer function.
+What do we see?
+First of all, we need for the movement to have a frequency (omega). If
+we do not have a frequency, we have a 0 voltage.
+Second of all, this is a filter, high pass filter, meaning that when we go to
+higher frequencies, we will have a linear relation of Ks. Actually this
+starts from the cut-off frequency.
+16
+Piezoelectric sensors: Behavior
+𝐾
+(cid:3046)
+1
+𝑓 =
+(cid:2868) 2π𝑅𝐶
+17
+Here we can see the relationship, for very low frequencies or 0, the system
+has a 0 response as we go over the cutoff frequency, we have a high pass
+filter with a Ks response, where Ks is the sensitivity of the capacitors
+together relative to the over all sensitivity (Ks = K/C). Then, we will have a
+linear region.
+Of course, this is a mechanical system so it can go into oscillation
+(resonance) and this is also an unusable region. In summary, we will have a
+usable region beyond my cut off frequency and below my resonance.
+17
+Piezoelectric sensors: Cut-off frequency vs Sensitivity
+A piezoelectric sensor with an internal capacity of 400𝑝𝐹 and a
+cable+amplifiercapacitance of 100𝑝𝐹 is connected to an amplifier
+with input resistance of 1𝑀Ω.
+1 𝐾
+𝑓 = =320 𝐻𝑧 𝐾 = =2 𝑚𝑉/μ𝑚
+(cid:2868) 2π𝑅𝐶 (cid:3046) 𝐶
+(cid:3021) (cid:3021)
+The sensitivity will drop by 20% and the high pass frequency will
+be 320Hz
+If we increase the amplifier input resistance to 500𝑀Ωand using
+a shunt of 500𝑝𝐹
+1 𝐾
+𝑓 = =0.3 𝐻𝑧 𝐾 = =1 𝑚𝑉/μ𝑚
+(cid:2868) 2π𝑅(𝐶 +𝐶 ) (cid:3046) (𝐶 +𝐶 )
+(cid:3021) (cid:3046)(cid:3035)(cid:3048)(cid:3041)(cid:3047) (cid:3021) (cid:3046)(cid:3035)(cid:3048)(cid:3041)(cid:3047)
+The cut-off frequency will drop to 0,3𝐻𝑧 and the sensitivity
+will decrease by 60%
+Special “load amplifiers” will solve these problems
+18
+Let’s do a calculation. We have this example and we calculate the cut-off
+frequency. Is this good? Well, 320Hz means that we have to move this
+crystal 320 times per second for a linear relation. That’s not very easy to do,
+right? We will want something is easy to manipulate.
+The sensitivity is about 20% which is ok. But the cut off frequency is very
+high.
+How could we solve this?
+Instead of a simple oscilloscope, we could use a buffer amplifier that has a
+higher input impedance (500 MOhm). Moreover, we could add another
+capacitor. The sensitivity will indeed decrease, but by adding the capacitor
+the dynamic properties might increase. If we do the calculation, the cut off
+frequency is now 0.3 Hz. It works even under one cycle per second which is
+pretty nice. However, the sensitivity drops by 60%. We only have 1
+mV/micrometer. This sensitivity is enough for most of the applications.
+We can build special load amplifiers to solve these issues.
+18
+Piezoelectric sensors: Remarks & Properties
+• No static displacement → Vibration detector
+• When ω𝑅𝐶 ≫ 1: linear relationship between displacement and gen. voltage
+• C and R amplifier need to be very big
+• Properties:
+o Pro:
+• Good for medium to high frequencies
+• Relatively big output voltage
+• No excitation voltage (passive sensor)
+o Con:
+• Temperature sensitive
+• No static measurements
+• High impedance output
+• Difficult amplification
+19
+As we have seen, it is not possible to use this as a static displacement
+sensor. It is actually used very often as a vibration sensor.
+And as we saw, we need a high input resistance and capacity to actually
+have something useful.
+It is good for:
+Medium to high frequencies
+Relatively big output voltage
+No excitation voltage
+Against:
+Temperature sensitive,
+No static measurements,
+High impedance
+And difficult amplification
+19
+Optical encoders
+20
+Optical encoders
+21
+This sensor is very much off-the-shelf. It is used in most labs and research
+centers. It measures displacement by means of rotation.
+We have a light source and a detector. In the middle, we will have an optical
+disk with a shaft and small holes (at a certain period-pitch) that will rotate.
+When it rotates, it will let the light through those wholes at a certain speed.
+Thus, it can detect the displacement of the disk.
+In summary, it is an incremental displacement sensor.
+21
+Optical encoders (2)
+Incremental optical encoder
+COUNTER
+22
+Here we can see the front view. If the disk moves, we get a pulse train at the
+other end. We can count these pulses. We need a counter on the other side
+to detect these pulses. We can have for instance 360 slots in the disk, so a
+resolution of 1 degree. If we measure 30 pulses we know we had a
+displacement of 30 degrees. This is incremental because we do not know
+the exact position. We only know where the pulse is as we will see in the
+next slide.
+22
+Optical encoders (3)
+• Output signal of a single optical encoder
+• Properties:
+Resolution from 100 to 65000 with an absolute precision of 30 angle/ seconds
+o
+No direction information
+o
+Second light added for direction information (reset to 0 or initial position)
+o
+23
+These can be very low resolution or very high resolution but they do not
+provide any information of the location, only about the rotation. We cannot
+even know if we are turning left or right as we do not have a reference
+position.
+These set ups are called A setups because we only have one row of pulses.
+Most of these encoders actually will have at least two lights, such as shown
+in the previous slide. We could have the A counter we saw, and then a Z
+counter that allows for providing an absolute value. If the detector sees the Z
+light, it means that it can reset the counter to 0 and start again. Then we get
+at least an absolute position within the disk. This of course, will only work if
+the wheel only turns one way.
+23
+Optical encoders (4)
+For direction information:
+• a second light source is placed on 1/4 of the distance of the former (quadrature)
+• 3th one to detect a total revolution.
+A
+B
+Z
+24
+What about if we would want to count both up and down? We could have a
+third set of pulses (three light sources and detectors). In this case we will
+have the A, B and Z. A and B are shifted 1/4thof a pitch (the period of the
+pulses coming out), in quadrature. In this case I can detect the direction.
+24
+Optical encoders: Detection Modes
+• Modes 1, 2 and 4……
+H L H L H L L H L H
+L H L H L H H L H L H
++ + + - - - Mode 1
++ + + + + + - - - - - Mode 2
++ + + + + + + + + + + + - - - - - - - - - - Mode 4
+25
+Optical encoders allow for different optical modes for detection by the
+computer. Imagine this situation in which we have A and B for data and Z for
+the direction
+Mode 1 would work as follows (red):
+If we are counting clock wise-We see a rising edge in A and B is low, we
+count up(increment)
+Now, if we are counting counter clockwise–We see a rising edge in A and B
+is high, we count down (decrement)
+Most of the researchers only use this mode. We have an encoder of 360
+slots, meaning a resolution of 1 degree.
+We could use the encoder in a more intelligent manner.
+Suppose we can take another algorithm (in software) to increment the
+resolution. How could we do this?
+Mode 2 (green):
+If we go clockwise –We see a rising edge in A and B is lowwe count up(just
+as before). Moreover, if we see a falling edge in A and B is high, we will also
+count up. This means that we can actually counttwice. Instead of 360, 720 in
+our example.
+Counterclockwise –We see the rising edge in A and B is high, we count low
+(just as before). Moreover, if we see a falling edge in A and B is low.
+Thus, for the same sensor we double the precision or half the resolution. We
+coult720 with 360 holes.
+We can even go to mode 4. In it we can take advantage of the four edges
+(combining A and B):
+Clockwise, we count upif:
+• A is rising and B is Low.
+25
+• A is High and B is rising.
+• A is falling and B is High.
+• A is Low and B is falling.
+Counter-clockwise, we count down if:
+• A is rising and B is High.
+• A is High and B is falling.
+• A is falling and B is Low.
+• A is Low and B is rising.
+In this way we have ¼ of the resolution but 4 times the precision.
+25
+Optical encoders: Modes
+• Modes 1, 2 and 4……
+• Properties
+• External counters needed to detect the absolute position.
+• False detection when:
+• 1.Interuption of the power supply.
+• 2.Interference pulse induced
+• 3.Contaminated disc
+26
+These are very promising! What are the properties?
+First of all we need counters to detect the absolute position.
+Suppose we have an interruption of the power supply, we need to restart the
+system or it will not be possible to know the exact position.
+Moreover, it is prone to interferences we could have an error until we have
+the reset. We could also have a contaminated disk, this means we will need
+to protect them from dusts.
+Finally, if there is any vibration in the system, it could provoke again a
+problem and false counter.
+Thus, these are issues for incremental counters. There are some solutions.
+26
+Optical encoders: Absolute optical encoder
+10 light sources
+Absolute coding
+10 light detectors
+Decoding electronics
+Properties:
+• Pro:
+• High precision up to 16 bits (more sensitive to
+vibration)
+• Less sensitive to noise and contamination
+• Gray code
+• Not to expensive
+• Con:
+• Temperature sensitive
+• Shock sensitive
+• Paying under 10 bits
+27
+These are the absolute encoder. Each position has a unique code. We have
+10 different traces, where each of them represents a number which is
+unique.
+If we start the system, the position is known. Even vibration can be
+controlled.
+This is of course very nice but it will be limited in resolution. There are
+limitations in terms of precision
+It is expensive.
+The code is not binary as you can see in the figure, it actually works with
+gray code. Why is this? Because we do not want two outputs to change at
+the same time.
+They can be very high precision (16 bits) but those will be very expensive
+(better to use a resolver),
+Less sensitive for noise and contamination
+It is of course shock sensitive. System vibrating between two numbers.
+27
+Optical encoders: Examples
+28
+These are some examples of encoders
+28
+Optical encoders: Optical bridge
+Four quadrant optical sensor
+29
+This is a sensor which detects the position of the sun. There are 4 photo
+diodes
+29
+Any questions?
+30
+30

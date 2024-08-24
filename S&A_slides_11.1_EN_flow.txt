@@ -1,0 +1,441 @@
+
+SENSORS AND ACTUATORS
+Session 11.1
+Flow sensors
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about … Flow sensors
+Session 11.1 (Se. 5):
+• Anemometers
+• Differential pressure flow sensors
+• Ultrasonic flow sensors
+• Electromagnetic flow sensors
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+What is flow?
+“The action or fact of moving along in a steady, continuous stream”
+• Flow or Q is the amount of cubic meters per second that go through a pipe
+• We can measure flow of:
+Gasses
+o
+Fluids
+o
+(Depending on the application)
+3
+3
+Thermal anemometers
+• Gas flow meter
+• HOT WIRE
+• Second wire for thermal compensation
+• Low Flow possible
+• Not linear
+4
+The first flow sensor is also the cheapest one.
+It is a very simple sensor to measure air flow.
+It is used to measure the inflow of air into the motor of a car to know the
+amount of air sucked into the motor for the explosion.
+The air flows through a string wire which measures the speed of air.
+If we know the cross-section of the pipe, we know the amount the volume
+per second flowing through the pipe.
+This is a hot wire thermal anemometer. How do we measure in the wire? We
+have a resistive wire with a certain resistance (1KOhm, for instance). If we
+heat up this wire, and some air flows over it, it will cool down. There is a
+relation between the speed of air blowing to the wire and the temperature of
+it (because we are cooling down the wire).
+Moreover, as the wire functions as a sort of thermal sensor (thermal
+resistor), we can measure the resistance of the wire and it will be a
+measurement of the amount of the speed of air going through that wire.
+Of course, the change of resistance is too small to measure with an Ohm
+meter so we can use again a Wheatstone bridge.
+Then, we can see that the current will change with the temperature and with
+the flow. Thus, we can find a relation between the current and the velocity of
+the air flow (square of the current and root of the velocity). It is not at all
+linearbut we could calibrate it.
+The problem with this system is the one we have already seen multiple
+times. This system is measuring absolute values. Moreover, we are not
+taking into accountthe temperature or the composition of the air (wet or dry).
+How could we make a better system? We would need to make it differential.
+For it, we could just take two hot wires instead of one. Then we pass a
+4
+current (big enough) through those wires to heat them up. Now we
+could put one wire on the stream of air and the other completely out of it
+(same temperature, same air). Thus, we have one with flow and one
+without. Then, we have a differential measurement of the effect of the
+flow of air on the resistance. The measurement will not be linear
+(external factors)but we could calibrate them.
+4
+Variable-Pressure-Drop Meter with Sharp-Edge orifice
+"Obstruction" Meters – Fluid Flow measurement
+5
+This is perhaps the most used flow sensor in industry to measure fluids.
+We have a pipeand we will put an obstruction (a plate with a small orifice at
+the center). Thus, we will have two sections (the pipe and the orifice).
+What happens with the flow then? If we have a flow through the pipe, we will
+have a certain flow pattern as it goes through the orifice. Behind the
+obstruction we will have some turbulence, which will force the flow to go in a
+certain shape.
+This shape is difference from the orifice section or the tube section.
+Moreover, we will have a pressure drop before and after the orifice. This
+change of pressure is what will give use the value of the flow. If the flow is
+very fast, the pressure will drop more.
+We can see this in the plot. We have the static pressure,we enter through
+the orifice and the pressure drops. We can measure the change of pressure
+between the two points to have a differential pressure sensor (before and
+after the orifice).
+However, there is a drawback. We will have a certain permanent drops.
+5
+Variable-Pressure-Drop Meter with Sharp-Edge orifice:
+Different types
+6
+There are different options depending on how the structure used, where the
+flange taps is the most widely used.
+6
+Variable-Pressure-Drop Meter with Sharp-Edge orifice:
+Theoretical Flow
+𝐴 𝐴
+(cid:2869)(cid:3033) (cid:2870)(cid:3033)
+Drop of pressure
+Theoretical flow (Pa)
+rate (m3/s)
+𝐴 2(𝑃 −𝑃 )
+(cid:2870)(cid:3033) (cid:2869) (cid:2870)
+𝑄 =
+(cid:3047) ρ
+(cid:2870)
+𝐴 Fluid mass
+(cid:2870)(cid:3033)
+1− 𝐴 density (𝑘𝑔/𝑚(cid:2871))
+(cid:2869)(cid:3033)
+Cross-sections
+flow areas (m2)
+7
+What is the relation between the flow and the pressure drop? Is it linear?
+Unfortunatelyit is not. Why? Because it is linked to the turbulences behind
+the orifice. They force the flow into a certain shape.
+Let’s look at the formula.
+We can first see a relation between the theoretical flow Q and the drop of
+pressure. The higher the pressure drop the higher the flow qt (theoretical
+flow rate).
+We will need to take into accountthe mass density and the cross sections of
+the flow areas.
+However, we do not really know the cross-section flow areas, right? We
+know the cross-section of the pipe, of the hole but not of the shape of the
+flow. Thus, there are some issues here.
+But perhaps there is again a relation between flow section area, pipe section
+area and orifice section area.
+7
+Variable-Pressure-Drop Meter with Sharp-Edge orifice:
+Discharge coefficient & Actual Flow
+𝑄
+(cid:3028)
+𝐷𝑖𝑠𝑐ℎ𝑎𝑟𝑔𝑒 𝑐𝑜𝑒𝑓𝑓𝑖𝑐𝑖𝑒𝑛𝑡 𝐶 =
+(cid:3031) 𝑄
+(cid:3047)
+𝐶 𝐴 2(𝑃 −𝑃 )
+(cid:3031) (cid:2870) (cid:2869) (cid:2870)
+𝑄 =
+(cid:3028) ρ
+𝐴 (cid:2870)
+1− (cid:2870)
+𝐴
+(cid:2869)
+𝑄 ; Actualflowrate(m3/s)
+(cid:3028)
+𝑄 ; Theoreticalflowrate(m3/s)
+(cid:3047)
+𝐴 ; Pipecross-sectionarea(m2)
+(cid:2869)
+𝐴 ; Orificecross-sectionarea(m2)
+(cid:2870)
+𝜌∶ Fluidmassdensity(kg/m3)
+𝑃 ,𝑃 Staticpressures (Pa)
+1 2
+𝐶 ; Dischargecoefficient
+(cid:3031)
+8
+That is where we can actually definethe discharge coefficient, which tells us
+the relation between the cross-section of the flow, the pipe, and the orifice.
+Is this a constant coefficient?
+No, because the flow pattern depends on the orifice diameter and on the flow
+itself.
+That is why we need a graph to be able to model the discharge. It relates
+the discharge coefficient and the Reynolds number (the ratio of inertial forces
+to viscous forces within fluid that is subjected to relative internal movement due to
+different fluid velocities-a measurement of the turbulences). Beta is ratio of the
+orifice and the pipe diameters. Thus, the bigger the ratio, the closer in size
+these are.
+In the first case, beta is 0.8. This means that the discharge coefficient is
+almost 1. This is normal as there is nearly no change in section area.
+However, this is only the case for lower values of the Reynolds number or
+low turbulences speeds.
+When the orifice is smaller (0.2), the coefficient becomes more important and
+so is also the diameter of the orifice.
+There is some good news: when the flow is high enough to have enough
+turbulences, the discharge coefficient stabilizes around 0.65, independent of
+the section of the orifice.
+This means that this type of sensor will only be used for big flow velocities.
+For small flows it is too variable.
+We can then have this nice equation. In it we can use the cross section of
+the pipe and the orifice with the discharge coefficient.
+8
+Of course, this is not a linear relation, we still have a square root of the
+pressure drop.
+What did the manufacturers do about the discharge coefficients, and
+pressure permanent drops?
+8
+Variable-Pressure-Drop Meter: Flow Nozzle, Venturi Tube, Dall
+Flow Tube
+9
+They developed their own orifices, which are not sharp-edged anymore.
+We will have three major systems, flow nozzle, venturi tube and dallflow
+tube.
+They have a very important thing in common, they try to simulate the flow
+pattern of the fluid.
+While the sharp edge had a sort of obstruction with a hole, these follow the
+flow of the patterns. This means that the Cd is almost one as the flow pattern
+will be very similar to the flow of the orifice at least for the flow nozzle and
+the venturi tube, the dallflow has other advantages. As the discharge factor
+is close to 1 and nearly constant, these will also work with small flows.
+9
+Variable-Pressure-Drop Meter: Flow Nozzle, Venturi Tube, Dall
+Flow Tube (2)
+P1 P2 P1 P2 P1 P2
+Properties Flow nozzle Venturi Dall-tube
+Correction coefficient 0,94-0,99 idem asFlow nozzle 0,68-0,7
+C Little correction constant over large range
+d
+Pressure drop Same as sharp-edge Small pressure loss Smallest drop <10%
+orifice (10-15%)
+Independent of β
+Clogging Small Best Small
+Accuracy Best
+Long term accuracy better then sharp-edge better then sharp-edge better then sharp-edge
+(after erosion) orifice orifice orifice
+The Differential Pressure Flow Measuring Principle (Orifice-Nozzle-Venturi)
+https://www.youtube.com/watch?v=oUd4WxjoHKY
+10
+Here we can see a comparison of these three sensors. What we see is that
+flow nozzle and venturi have nearly one discharge factor, while the dall-tube
+is more around 0.68. But,it has the smallest permanent pressure drop.
+The clogging could be bad with the sharp edge. In here it is better because
+of the type of orifice.
+Venturi has the best accuracy
+The long termaccuracy is also better that for the sharp edge (as they are
+less affected by erosion).
+Here you can also find a link with a very nice explanation of the flow
+measuring principle with differential pressure.
+10
+Differential pressure flow sensor: Laminar-Flow Elements
+π𝐷(cid:2872)
+𝑄 = Δ𝑃
+128μ𝐿
+Q :volume flow rate (m3/s)
+D :tube inside diameter (m)
+µ :fluid viscosity (N . s/m2)
+L :tube length between pressure taps (m)
+∆P :pressure drop (Pa)
+Gas meter
+11
+This is a special type of differential pressure flow sensor.
+If you have a close look, there is a fine mesh inside (a honeycomb structure),
+where we create a laminar pattern. The flow does not change patternbut it
+goes through the mesh. We will have a pressure drop but in the laminar
+manner.
+While obstruction meters only work in one direction, this one will work both
+way. There are just laminar elements, it has the same shape from both sides.
+Moreover, the pressure drop is proportional to the flow. This is another big
+advantage
+The disadvantage? It will only work for gas. The honeycomb will be much too
+meshed to actually letthrough anything else than gas.
+11
+Ultrasonic flow sensors-Transit time flowmeter
+𝐷
+transit time T=
+𝑥∓𝑣 𝑐𝑜𝑠θ
+(cid:3030)
+This is NO DOPPLER
+12
+This sensor is also used for measuring the flow of fluids. First of all, this
+sensor is not measuring doppler effects.
+We have a pipe where a fluid (water, blood) is flowing. We can measure the
+speed of sound through that pipe, it will actually changewith the speed of the
+fluid. If we put a transmitter (A) and a receiver (B), we transmit a burst. The
+difference on the receiving time will provide the speed of the fluid. We need
+to put them in an angle, where the transit time is in relation to speed of
+sound, the diameter, the distance and angle.
+This is very interesting to measure the blood flow, where we cannot use
+obstruction meters. This instrument can be outside of the blood vessel. An
+example can be seen here. In it, we have the transmitter on the probe that
+can be embracing the vessel. We add a reflectorand we can measure the
+time taken between the transmitted signal and the received one.
+12
+Electromagnetic Flowmeters: Intro
+e : generated voltage (V)
+B : magnetic field strength(T)
+L : conductor length (m)
+v : conductor velocity (m/s)
+B
+Tesla=Wb/m2=Vs/m2
++
+-
+v
+13
+This is the state of the art on flow meters.
+Flow is actually velocitybut do you remember when we talked about how
+difficult it was to measure velocity? As we also said, there is only one
+equation that really relates velocity and voltage. This was the movement of a
+wire through a magnetic field, as we did in Tachometers.
+Can we use this for fluids? Yes!
+We can have a tube, and we make two holes with electrodes (S1, S2). The
+fluid will connect the two electrodes as a wire. Of coursewe will need a
+magnetic field and we will fulfill the law.
+13
+Electromagnetic Flowmeters: Working principles (1)
+14
+Thus, it will look like this. We can create a voltage difference between the
+two electrodes, if we have a magnetic field of a certain length (the diameter
+of the tube) and a certain velocity of the fluid.
+14
+Electromagnetic Flowmeters: Working principles (2)
+15
+It would look like this.
+First, the pipe needs to be plastic. If we had a metal tube, the electrodes
+would be short circuited the whole time.
+In applications it would look like the figure on the left. We have the tube,the
+sensors and the magnetic field is created by means of a permanent magnet
+or a coil.
+15
+Electromagnetic Flowmeters: Industrial application
+16
+For industrial applications it can be used like in the image. We have the coils,
+top and bottom. The electrodes will be catching the voltage due to the fluid
+speed.
+16
+Electromagnetic Flowmeters: Healthcare application
+17
+This is very good for biomedical instrumentation because again it does not
+cause any obstruction.
+17
+Electromagnetic flowmeters: Conductivity of fluid
+(cid:2869)
+• Fluid resistivity: 𝑅 =
+(cid:3033)(cid:3039)(cid:3048)(cid:3036)(cid:3031)
+((cid:2978) (cid:3031))
+(cid:3281)(cid:3287)(cid:3296)(cid:3284)(cid:3279)
+σ : Specific conductivity of the fluid (𝑆⁄𝑚)
+o (cid:3033)(cid:3039)(cid:3048)(cid:3036)(cid:3031)
+𝑑: Electrode diameter (m)
+o
+𝑅 : Fluid resistance (Ω)
+o (cid:3033)(cid:3039)(cid:3048)(cid:3036)(cid:3031)
+• Examples:
+For tap-water 𝜎 = 200μ𝑆⁄𝑐𝑚 / electrode diameter of 0.64 cm -> R = 7800 Ω
+o
+Amplifier input resistance much be much bigger
+o
+Minimum conductivity σ = 5μ𝑆⁄𝑐𝑚
+o (cid:3033)(cid:3039)(cid:3048)(cid:3036)(cid:3031)
+For example, no gasoline or alcohol (10(cid:2879)(cid:2876)μ𝑆⁄𝑐𝑚). For d=5cm => GΩ
+o
+Generated voltage for 6cm tube at flow of 400 l/min is approx. 3mV
+o
+18
+There are of course one drawback to these systems.
+The fluid needs to be a conductoror we will not be able to have any voltage.
+The resistance of the fluid is needed.
+For instance, let’s use the case of tap water which has a conductivity of 200
+microSiemensper cm, for an electrode diameter of 0.64cm, we have a
+resistance of 7800 Ohms. Is thisok? Yes, it is ok. This resistance will be the
+one of the divisor, and if we want to measure it, we will need an amplifier with
+a bigger impedance than this 7800 Ohms, these are usually ok!
+We will therefore need a minimum conductivity of 5 microSiemens/cm
+Thus, no alcohol or gasoline are permitted.
+What type of voltages are we talking about? For 6cm tube at flow of
+400littlers/min, the generated voltage is 3mV, which is good to amplify.
+18
+Electromagnetic Flowmeters: Evolution
+1. DC magnetic field:
+Problem: Polarisation
+2. AC sinus 50Hz field
+No polarization and AC amplification
+Problem: Powerful EM field introduces big interference in the measuring circuit
+3. AC square wave field
+B
+Big interference during switching meting Kleinere steilheid
+Solution: Trapezium magnetic field
+t
+meting
+19
+Why is this a recent evolution when it just requires electromagnetic fields?
+These sensors have been due to an evolution.
+First, the electromagnetic flowmeters were only DC magnetic field. However,
+they would only work for a short time, as the fluid is conducting (maybe salt
+water), the electrodes would become polarized, create deposits of the
+material and after a certain time, the resistance would increase a lot and
+generate some electrochemical reaction.
+Second, as there are some polarization effects, let’s try to change the
+magnetic field with a sinus of 50Hz, with coils of course.
+Polarization is solved but the voltage generated by the wire even with still
+fluids could be much higher than the one that needs to be measured. I was
+acting a bit like a transformer. Thus, there was too much interference.
+Third, let’s try a square wave field. Then, we have a changing DC magnetic
+field. We rule out the problem of the transformer. Unfortunately, magnetic
+fields changing instantaneous provoke a change of flux, which leads to noise
+and interference on the voltage.
+The solution is to have a trapezium magnetic field. This only came as the
+electronics improved. The magnetic field slowly changes to cover the
+transitions of the flux, then the measurement only needs to happen in the
+tops.
+19
+Electromagnetic flowmeters: Properties
+• Pro:
+Linear flow voltage relation
+o
+Accuracy
+o
+Big linear range (100:1)
+o
+2 way measuring
+o
+No pressure loss
+o
+No cluthering or obstruction (bloodflow)
+o
+• Con:
+Expensive
+o
+Complex electronics
+o
+20
+It is linear, accurate, big linear range, two way measuring, no pressure loss,
+no clutheringor obstruction.
+20
+Announcements 06/12/2023
+• Schedule until the end of the semester:
+08/12/2023 – Temperature Sensor
+o
+13/12/2023 – Exercises, exam instructions
+o
+15 and 22/12 – Self study – No class
+o
+20/12/2023 – Possible extra class if questions (online/Toledo/on campus)
+o
+• TO DO students:
+Prepare exercises sheet for 13/12 (available on Toledo from 08/12/2023)
+o
+If you have open questions/issues - Send me questions per email until 17/12:
+o
+• If general questions, I will prepare a lecture summary
+• If no general questions, there will be no lecture
+21
+21
+Any questions?
+22
+22

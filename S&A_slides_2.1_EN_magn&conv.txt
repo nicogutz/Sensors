@@ -1,0 +1,475 @@
+
+SENSORS AND ACTUATORS
+Session 2.1
+Magnetic Circuits & Electromechanical
+conversions
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Previously on Sensors & Actuators …
+Motor Model H, B, and for a ring Inductance and Faraday’s Law
+(cid:3015)(cid:3036) (cid:3015)(cid:3036)
+𝐻 = = [A/m]
+𝑚 (cid:2870)(cid:3095)(cid:3045) (cid:3039)
+(cid:3040) (cid:3040)
+𝐵 =µ .µ .𝐻 [Tesla]
+(cid:3040) 𝑟 0 (cid:3040) 𝑁(cid:2870)
+(cid:3015)(cid:3036) (cid:3015)(cid:3036) (cid:3007) 𝐿 =
+Φ =𝐴 µ = = (cid:3040) 𝑙
+Ampere’s Law 𝑚 𝑚 𝑚(cid:3039) (cid:3040) µ (cid:3288)(cid:3287) (cid:3288) (cid:3250) (cid:3288) ℜ (cid:3040) µ (cid:3040)(cid:3040) 𝐴 (cid:3040)
+With a gap
+dl λ =𝐿 𝑖
+(cid:3040) (cid:3040)
+𝐻 𝑙 +𝐻 𝑙 =𝑁𝑖
+𝑚 𝑚 𝑔 𝑔
+H
+𝐵 =µ .𝐻𝑚 &
+𝑚 𝑚
+𝐵 =µ .𝐻
+𝑔 0 𝑔 𝑁
+𝑖 𝑡 = Φ 𝑡
+𝐿 e 𝑡 =𝐿 (cid:3031) i 𝑡
+∮𝐻. 𝑑𝑙 = ∑𝑖 Φ = (cid:3007) where ℜ= ℜ + ℜ e 𝑡 =𝑁 (cid:3031) Φ 𝑡 (cid:3031)(cid:3047)
+𝑒𝑛𝑐 𝑚 ℜ 𝑚 𝑔 (cid:3031)(cid:3047)
+2
+2
+Today’s session is about …
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+Session 2.1:
+• Introduction to transformers (Ac. Chp. 5)
+• Basic Principles of electromechanical energy conversion (Ac. Chp. 6)
+• Motor structures (Ac. Chp. 6)
+• Energy production (Ac. Chp. 6)
+• Principles of operation (Ac. Chp. 6)
+3
+3
+Introduction to transformers: Equations
+𝒊
+𝒎 (cid:3031)
+𝑒 = 𝑁  (t)
+(cid:2869) ((cid:3047)) (cid:2869) (cid:3040)
+(cid:3031)(cid:3047)
+(cid:3031)
+𝑒 = 𝑁  (t)
+(cid:2870) ((cid:3047)) (cid:2870) (cid:3040)
+(cid:3031)(cid:3047)
+𝑒 𝑡 𝑁
+(cid:2869) (cid:2869)
+=
+𝑒 𝑡 𝑁
+(cid:2870) (cid:2870)
+4
+One concept that will come in handy when we talk about AC and induction motors:
+transformers.
+A transformer is two inductors magnetically coupled. It is often defined by its function.
+In this situation, we have a ring with very high permeability (very low reluctance) so that
+it easily lets flux be generated through and we have two sets of windings: a primary side
+(e1) and a secondary side (e2).
+Now suppose we apply a voltage at the primary side (constant; sinusoidal or squared),
+as a result there will be a flux given by faradays law (a voltage causes a change in the
+flux).
+Together with the flux we will get a current im or magnetizing current (which is
+proportional to the flux and in phase).
+This flux is also going through the secondary side.
+As Faraday goes in both directions, the changing flux will generate a voltage in the
+second set of windings (e2).
+Now, we can divide the two equations, we get the ratio of the voltage is equal to the ratio
+of the number of turns (which is most probably a familiar equation).
+4
+Introduction to transformers: Circuital model
+𝒊
+𝒎
+5
+Now we can look at the model. We have the ideal transformer converting e1 into e2 but
+not taking into account the fact that the magnetizing current goes through an inductor to
+create the flux. This is just a model, where the Lm just signifies that we need a magnetic
+field to create the flux.
+5
+Introduction to transformers: Reflected load (1)
+𝒊
+𝒎 +i ’ e Φ (𝐹𝑎𝑟𝑎𝑑𝑎𝑦)
+2
+Φ ’
+1 𝑚
+2
+Φ e (𝐹𝑎𝑟𝑎𝑑𝑎𝑦)
+𝑚 2
+e i (Ohms)
+2 2
+i Φ (Ampere)
+2 2
+Does this mean that Φ causes e ?
+2 1
+No! Φ i ’
+Φ 2 2
+2
+AND i ’ Φ ’ 𝑠𝑢𝑐ℎ 𝑡ℎ𝑎𝑡 Φ ’ = -Φ
+2 2 2 2
+i ’ 𝑁
+𝑁 i ’ =𝑁 𝑖 2 = (cid:2870)
+(cid:2869)2 (cid:2870) (cid:2870)
+𝑖 𝑁
+(cid:2870) (cid:2869)
+6
+Now we will complicate the system: we will connect a resistive load at the secondary
+side.
+• First, voltage e1 creates a flux fi m.
+• The flux creates a voltage e2 at the secondary side.
+• There is a resistor load, at e2, Ohm’s applies and we get current i2.
+• And what happens when there is a current? A flux is created by Ampere’s law (it goes
+counterclock wise).
+• Now following the same reasoning, the changing flux fi 2 goes to the primary side.
+So, does it cause the voltage e1 because of Faraday? No, it is not possible because
+e1 is an applied voltage and that won’t change.
+• The only thing that can change is that an additional current is created on top of the im
+of before. It will be i2 prime which runs in the primary side. So, it is a secondary
+component of the primary side.
+• What will happen? That this secondary component will create a secondary flux that
+compensates for the primary one. This means in the figure: i2 causes fi 2. Fi 2 causes
+i2 prime, which causes fi2 prime. And fi 2 prime counters fi 2 so that they are in
+balance.
+• How do we know this? Because of Faradays law. If the voltage e1 cannot change, the
+total flux cannot change either so the fi 2 and fi 2 prime cancel each other and the
+total flux stays at fi m.
+• Finally, as the magnetic circuit is the same, the mmfs have to be the same (because
+the flux is the mmf/reluctance). This formula is the opposite of the voltage, and that is
+so because of the conservation of energy, if the voltage is high at the primary side
+6
+and low on the secondary side, the current is the other way around, that’s why the
+relation is opposite for the currents.
+6
+Introduction to transformers: Reflected load (1)
+𝒊
+𝒎 +i ’
+2
+Φ ’
+2
+Φ
+2
+𝑖 𝑡 = 𝑖(cid:4593) 𝑡 + 𝑖 𝑡
+(cid:2869) (cid:2870) (cid:3040)
+Reflected Magnetizing
+load current
+current
+7
+If we look at the model of the real transformer. It is the one of the ideal transformer but
+with the magnetizing inductor. Sometimes, we will just ignore the magnetizing inductor
+assuming infinite permeability. This means infinite inductance, thus, it does not require
+any effort to get the flux over.
+But here, we have the current at primary size, which is the magnetizing current (to
+create the flux) plus the reflected current load (which will always be there).
+7
+Introduction to transformers: Real vs Ideal
+8
+This will come back later when looking at the model of a real transformer. In summary,
+we have the ideal transformer and on top of that, we have the inductance to model the
+magnetizing current (in case the inductance is not infinity). We also have the inductor for
+the leakage, and the resistor for the winding. Finally, we have hysteresis losses (which
+will cause to heat up) and eddy current losses (Rhe),
+8
+Introduction to transformers: Eddy current losses
+9
+In the situation, we have the coil that goes around the ring. A changing flux will cause a
+voltage in any close path (loop). Such at what we see in the first figure.
+A voltage means a current flowing through the path. This means that the magnetic core
+has a non-zero resistivity and it makes a loss.
+To avoid this, we laminate the material of the magnetic core. You will see this in the lab
+as well. So, we slice them, we put a bit of barnish (an insulator) and we glue them
+together. In this way, the loop becomes smaller, the flux becomes tinier, making the
+current very small, and so do the loss. So the eddy currents are reduced. In summary
+we laminate to limit the eddy currents. The eddy currents are not always bad. For
+instance, they can be used at the bottom of your pot for cooking with induction.
+9
+Basic Principles of
+Electromechanical Energy
+Conversion
+AC. Chp. 6
+10
+Monitoring vs Generating modes
+Electrical Electrical Mechanical
+System Machine/Motor System
+(Actuator)
+Motoring mode: P P
+elec mech
+Generating mode: P P
+elec mech
+11
+Electric machines (or motors) convert electrical power input into mechanical output.
+These machines may be operated solely as motors, but they can also enter a generating
+mode when slowing down (during generative breaking), where the power flow is
+reversed. We will explain this later today.
+11
+Basic structures of motors (1)
+Stator
+Air Gap
+Rotor
+12
+We often describe electric machines by viewing a cross-section, as if the machine were
+cut by a plane perpendicular to the shaft axis and viewed from one side.
+Because of symmetry, this cross-section can be taken anywhere along the shaft axis.
+In the second figure, we can see that all machines have a stationary part (called the
+stator), a rotating part (call the rotor), separated by an air gap, thereby allowing the rotor
+to rotate freely on a shaft (supported by bearings).
+The stator is firmly affixed to a foundation to prevent it from turning.
+12
+Basic structures of motors
+13
+In order to require small ampere-turns to create flux lines crossing the gap (figure a),
+both the rotor and the stator are made up of high-permeability ferromagnetic materials,
+and the length of the air gap is kept as small as possible.
+The stator-produced flux distribution of figure a is shown for a 2-pole machine where the
+field distribution corresponds to a combination of a single north pole and a single short
+pole (figure a). This is the most common situation.
+Often there are more than 2 poles, for example 4 or 6. This is the case of the figure b.
+Due to complete symmetry around the periphery of the airgap, it is sufficient to consider
+only one pole pair consisting of adjacent north and south poles. Other pole pairs have
+identical conditions of magnetic fields and currents.
+Finally, if the rotor and the stator are perfectly round, the air gap is uniform, and the
+reluctance in the path of flux lines crossing the air gap is uniform. Machines with such
+structures are called non-salient pole machines.
+Sometimes, the machines are purposely designed to have saliency so that the magnetic
+reluctance is unequal along various paths as shown in Figure c. This saliency is called
+reluctance torque and it is a significant means of producing torque.
+13
+Production of magnetic field: H, F, B?
+∮𝐻. 𝑑𝑙 = ∑𝑖
+-H
+s 𝑒𝑛𝑐
+1. Direction H is radial
+2.  =  so H = 0 A/m
+iron iron
+2 .𝐻 .𝑙 =𝑁 𝑖
+(cid:3046) (cid:3034) (cid:3046) (cid:3046)
++H s 𝐻 (cid:3046)=𝑁 2(cid:3046)
+𝑙
+(cid:3034)𝑖 (cid:3046) 𝑎𝑛𝑑 𝐵 (cid:3046)= 0𝑁 2(cid:3046)
+𝑙
+(cid:3034)𝑖 (cid:3046) 𝑎𝑛𝑑 𝐹 (cid:3046)=𝑁 2(cid:3046)𝑖 (cid:3046)
+14
+Let’s see how coils produce magnetic fields in electric machines.
+A concentrated coil of Ns turns is placed in two stator slots 180 degrees (full-pitch)
+apart. There is one current coming in and at the other side it is coming out. This current
+will generate a magnetic field.
+Let’s consider the magnetizing flux lines that completely cross the two air gaps. What
+are the H and B? Let’s apply Ampére.
+The path looks a bit difficult to integrate. But, we need two considerations:
+1. The permeability of the iron is assumed to be infinite, hence the H-fields on the rotor
+and stator are zero
+2. The flux lines in the air gaps are radial, that is in the direction that goes through the
+center of the machine. Because magnetic field choose the path of lowest reluctance
+and in this case it is the shortest path.
+Applying Ampere, we have 2Hslg = Nsis, Why the factor 2? Because for each closed
+loop we need to go through the gap twice. Thus, the magnetic field intensity is equal to
+the number of windings times the current, divided by two times the length of the gap.
+Now, the total mmf acting along the path is Ns is. By symmetry, half of the total ampere-
+turns (Nsis/2) are consumed or acting in making the flux lines cross each air gap length.
+Hence, the mmf Fs on each air gap is Nsis/2.
+Associated with Hs, the flux density Bs is multiplied by the permeability of the air.
+What can we say of the value of B close to the gap but in the iron? It should be almost
+the same. Because there is only one flux in total, the same everywhere. The equation of
+B is valid everywhere as we did not take position of the airgap into account.
+All quantities directed away from the center are considered positive
+14
+In the figure b:
+• we see the developed view as if the circular cross-section were flat. The field
+distribution is a square wave . All three stator produced field quantities are
+proportional to the instantaneous value of the stator current is(t). Therefore, in the
+figure, all three characteristics can be represented with different scales.
+• In the structure we can consider the theta 0 as the axis (the magnetic axis of the
+winding). It goes through the center of the machine in the direction of the flux lines
+produced by a positive value of the winding current and it is perpendicular to the
+plane in which the winding is located.
+• We see the variation of B in position theta relative to the axis. The flux is constant
+until it changes sign. Why? Because it changes direction. It happens at pi/2. Now
+suppose mu is not infinite? How would the figure change? And where would B be
+higher? Close to the conductor, the flux will be the highest ( shortest path). Higher
+at pi/2 and lower at 0.
+14
+Basic principles of operation
+1. An electromagnetic force is produced on a current-carrying
+conductor when it is subjected to an externally-established
+magnetic field
+2. An emf is induced in a conductor moving in a magnetic field
+15
+So, how can we make the motor move? It is a combination of electrical currents and
+magnetic fields. Two principles are fundamental:
+1. From the first one, the current in the rotor is combined with a magnetic field
+externally. We need a current and we need a magnetic field and they will generate a
+force.
+2. The second shows that an emf is induced in a conductor in a magnetic field
+15
+1. Electromagnetic force: An electromagnetic force is produced
+on a current-carrying conductor when it is subjected to an
+externally-established magnetic field
+is related to LORENTZ FORCE 𝐹⃗ = 𝑞𝐸 + 𝑞𝑣⃗𝑥𝐵
+(cid:3032)(cid:3040)
+Left hand rule
+16
+The electromagnetic force is related to the lorentz forces, which relates electrical and
+magnetic fields to a force.
+In this course we will only focus on the magnetic field part, where qv represent the
+current which is vectorially multiplied by the magnetic field density B.
+In order to maximize the product, i and B are perpendicular. As such the fem is B times i
+times l and in the ortogonal plane formed by B and I.
+You notice that the length of the conductor plays a role. Why is that? Because the longer
+the conductor the more space the electrons have to move in it.
+To know the direction you can use the left hand side rule fbi as shown in the picture.
+16
+Electric force on a current-carrying conductor in a magnetic
+field
+17
+As shown in the first figure, the direction of the force is perpendicular to the direction of
+both i and B.
+To obtain the direction of the force, we will superimpose the flux lines produced by the
+conductor current (figure b).
+The flux lines add up to the right side of the conductor and subtracts on the left side
+(Figure c).
+So, the force fem acts from the higher concentration of flux lines to the lower one.
+17
+Question: What is the direction of the electromagnetic force in
+this case
+18
+The conductor is carrying a current into the paper plane in the presence of an external
+uniform field. Solution: the flux lines are clockwise and add up on the upper-right side,
+hence , the direction of the fem is to the lower left side.
+18
+2. Induced emf: An emf is induced in a conductor moving in a
+magnetic field
+is related to LORENTZ FORCE and FARADAY’S LAW
++
+𝑓
+𝑓 (cid:3044)(cid:2878)
+(cid:3044)(cid:2878)
+B into the paper
+𝑢
+𝑙
+𝑓
+(cid:3044)(cid:2879) u
+-
+𝑑 𝑑(𝐵.𝐴) 𝑑𝐴 𝑑(𝑙.𝑥) 𝑑𝑥
+𝑥
+𝑒 = = = 𝐵 = 𝐵 = 𝐵.𝑙 = 𝐵.𝑙.𝑢
+𝑑𝑡 𝑑𝑡 𝑑𝑡 𝑑𝑡 𝑑𝑡
+19
+A conductor of length l is moving to the right at a speed u with charges. The B field is
+uniform and isin perpendicular direction into the paper. So we can use the FBI rule
+here. In practice conductors move into a cylinder not a plane.
+What speed is the highest? The one induced by the current or the conductor moving
+(u)? It is the one of the u, which is much higher than the induced one.
+So, lets use faradays law. When the conductor moves, we assume a rectangle (shown
+in blue).
+The conductor moving makes the rectangle larger and larger. We can look at faraday.
+The flux is B times the area. B is assumed constant so it is the derivative of the area,
+which moves in the x axis, so l is also a constant. The derivative of the x on time is the
+speed, so this means B times l times u. This is a simplified form of faradays law. We
+have a conductor moving through a magnetic field, irrespective of the current through
+that conductor we get a voltage. This is actually where the back emf comes from. In
+motors a voltage is generated because we have conductors moving in a magnetic field.
+Also important, the polarity of the voltage is independent from the current running in the
+conductor.
+19
+Extra notes on the left-hand rule
+To determine F (and T ): To determine emf:
+em em
+Middle finger follows I Middle finger follows 
+(the electricalcurrent) (rotation of positivecharge)
+emf
+
+20
+20
+Question: What is the polarity of the induced emf?
+21
+Here we have a conductor in a magnetic field moving at a certain speed. What is the
+polarity ? In the first one, polarity is towards us, In the other one it is the other way
+around.
+21
+Application of basic principles
+For 1 conductor:
+𝑇 = 𝑓 𝑟 = 𝐵 .𝑖 .𝑙.𝑟
+(cid:3032)(cid:3040) (cid:3032)(cid:3040) (cid:3046) (cid:3045)
+𝐸 =𝐵 .𝑙.𝑟. ω
+(cid:3030)(cid:3042)(cid:3041)(cid:3031) (cid:3046) (cid:3040)
+For 2N conductors:
+r
+𝑇 =2.𝑁 .𝐵 .𝑖 .𝑙.𝑟
+(cid:3032)(cid:3040) (cid:3045) (cid:3046) (cid:3045)
+𝑒 =2.𝑁 .𝐵 .𝑙.𝑟. ω
+(cid:3045) (cid:3045) (cid:3046) (cid:3040)
+22
+Here we see the cross section of the motor; stator outside rotor inside.
+The dashed lines are the magnetic field. This means we have magnetic field through the
+air gap, and it is perpendicular to the rotor.
+We also have conductors in the rotor.
+Moreover, we assume a current source ir at the rotor.
+The current is generated in the electrical system and the voltage er is an induced
+voltage (the back emf).
+We also have a torque counterclockwise because of the forces. As a result the rotor will
+rotate at a certain speed omega m.
+When the conductor moves around the shaft at a certain point it ends up 180 degrees
+further and the current has to reverse ( to have the torque in the same direction and
+constant). This is what we see in the graph. The first 180 degrees the current is positive
+and the second part it needs to be reversed. We need a mechanism that ensures this.
+Second; the induced voltage also changes polarity, why? Because the conductor is
+moving; u does not change but the direction of the magnetic field does. The torque is
+kept constant.
+Lets see with the equations. We can do the torque for one conductor, it is the fem times
+the radios of the rotor. Now for the 2 N conductors, N is the number of windings and as
+for each one we have two conductors, it is time 2. All the forces of each of the windings
+add up and we have 2N. We can do the same for the induced voltage. Now, torque is
+the multiplication of a set of parameters of which only the current is variable. So, as we
+already said last week, the torque is proportional to the current. Similar, for the voltage,
+it is proportional to the angular speed. Note that the constant is the same, and it is called
+22
+machine constant.
+22
+Energy conversion of 2N
+r
+𝑇 = 2.𝑁 .𝐵 .𝑖 .𝑙.𝑟 𝑒 = 2.𝑁 .𝐵 .𝑙.𝑟. ω
+(cid:3032)(cid:3040) (cid:3045) (cid:3046) (cid:3045) (cid:3045) (cid:3045) (cid:3046) (cid:3040)
+𝑃 = 𝑒 .𝑖 = 2.𝑁 .𝐵 .𝑙.𝑟.ω 𝑖
+(cid:3032)(cid:3039)(cid:3032)(cid:3030) (cid:3045) (cid:3045) (cid:3045) (cid:3046) (cid:3040) (cid:3045)
+𝑃 = 𝑇 .ω = 2.𝑁 .𝐵 .𝑙.𝑟.ω 𝑖
+(cid:3040)(cid:3032)(cid:3030)(cid:3035) (cid:3032)(cid:3040) (cid:3040) (cid:3045) (cid:3046) (cid:3040) (cid:3045)
+𝑃 = 𝑃
+(cid:3040)(cid:3032)(cid:3030)(cid:3035) (cid:3032)(cid:3039)(cid:3032)(cid:3030)
+23
+Now, we have the two formulas torque and angular velocity. So, calculate the electrical
+power (v times i) and the mechanical power (torque times angular speed). We fill in the
+formulas from before. They are equal! Mechanical power equals electrical power in the
+ideal case.
+23
+Power losses
+ Conduction losses
+ Conduction losses
+ Iron losses
+ Switching losses
+ Friction and windage losses
+ Switching losses
+ Stray/leakage losses
+24
+So what happens in the real world? There are loses in the electrical system, and also in
+the electrical machine.
+24
+Motor mode
+25
+Now we go back to the original figure. What would happen if we change the direction of
+the current not of the rotation. We assume the rotor keeps rotating at omega m because
+of the inertia. You can change the direction of the current very easily. What will change?
+25
+Generator mode
+26
+26
+Safe operation of motors
+27
+Finally it is important to know that every motor has nominal speed and nominal torque
+which will depend on voltage and currents that can be applied. So, in following lectures
+we will learn how to deal with them and take the best out them.
+27
+Any questions?
+28
+28

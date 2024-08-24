@@ -1,0 +1,702 @@
+
+SENSORS AND ACTUATORS
+Session 9.2
+Motion sensors: Hall, velocity and acceleration
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about … Motion sensors
+Session 9.2 (Se. 2B/2.2, 2.C/2.3):
+• Hall displacement sensors
+• Velocity sensors
+• Acceleration sensors
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+Hall effect sensors
+3
+Hall effect magnetic sensors: Introduction
+4
+These sensors became quite cheap and have a lot of potential. They are still
+not widespread usedbut they are rather new and booming. Moreoverthey
+are very small.
+How do hall effect magnetic sensors work?
+A Hall sensor is a sensor which is sensitive to a magnetic field.
+Is this the same as the inductive coil-based sensors?
+Not really, in there we saw sensors for which the output voltage is sensitive
+to the change of magnetic field (faraday’s law). If there is no movement or
+change in the magnetic field, the inductor will not see a voltage.
+Hall sensors can detect a magnetic field, even if there is no movement.
+Thus, they can detect a magnetic field even when it is not change. For
+instance, they can be used to detect the gravitational field around the earth.
+Of course, in order tohave this magnetic field, we will need a current going
+through the sensor. The current will generate the magnetic field (Ampere’s
+law) and a voltage will be created.
+Of course, this condition only happens in very specific materials. In fact, until
+recently, this type of sensors could only be made out ofsome heavy metals
+(such as gold and platinum). Now, there are actually semiconductorsthat
+behave the same way.
+4
+Hall effect magnetic sensors: Definition
+Since V is proportional to magnetic field and not to the rate of
+H
+change in magnetic field like an inductive sensor, the Hall Effect
+provides a more reliable low speed sensor then an inductive
+pickup.
+5
+Thus, and this is important: The Hall voltage is dependent and proportional
+to the magnetic field and not on the change of the magnetic field. It can
+generate voltage out of a DC magnetic field. So, it can provide very low
+speed sensor for inductive pickup.
+5
+Hall effect magnetic sensors: Structure and behavior
++
+𝑉
+(cid:3032)(cid:3051) 𝑉
+(3−6𝑉) (cid:2868)
+-
+6
+Currently, Hall sensors are very small integrated circuits that cost around 1
+euro. They are also very easy to use.
+On two of the legswe connect the excitation voltage (between 3 and 6 V)
+and at the other two legs we can measure the output voltage.
+Moreover, this is a linear sensor, the higher the magnetic field, the higher the
+voltage.
+Very simplistic then, you can install the sensor, you come with a magnetand
+it will generate a voltage.
+The displacement is not exactly in the hall sensor, but we induce it by means
+of a magnet which is brought closer or further to the sensor to generate the
+voltage. Thus, we can measure displacement.
+6
+Hall effect magnetic sensors: Application
+7
+Where can we use these hall sensors?
+For instance, in industrial applications we can use them to detect the rotation
+of a shaft contactlessly. On the shaft we place one or more magnets, and the
+hall sensor close to the magnet. Each time the shaft turnsand the magnet
+comes close to the hall sensor, a pulse will be detected.
+How would we measure the rpms (rotation per minute)? We would put one
+magnet and measure the period between pulses.
+The hall sensor output would need to be amplified a little bit (as it is
+millivolts), and a comparator with hysteresis is needed so that we can obtain
+very nice pulses.
+Is the hall sensor good for position detection?
+Not really, it is very rough as we cannot really put infinite magnets on the
+shaft, but it can actually detectthe displacement of the shaft.
+7
+Hall effect magnetic sensors: Single Gear position (1)
+NPermanent magnet
+Z
+Hall sensor
+Tooth
+Valley
+gear
+rotation
+8
+We can actually dobetter!
+Suppose we have a gear with teeth and valleys.
+It needs to be a gear of a ferromagnetic material as it needs to be able to
+generate a magnetic field. It would not work with plastic, aluminum or
+ceramics but with steel or an iron gear.
+Working principles:
+• We have a shaft and we put a gear on with a certain amount of tooth and
+valleys.
+• We can put our hall sensor on top (the white block).
+• On top of the hall sensorwe attach a permanent magnet.
+• Now there is a tooth and a valley coming by. What will happen? As the
+gear is made of steel or iron, it will conduct the magnetic field of the
+permanent magnet.
+8
+Hall effect magnetic sensors: Single Gear position (2)
+9
+If we have a tooth coming by, the signal with be low, because we will lose the
+flux within the gear (iron or steel).
+On the other hand, if there is a valley coming by, the complete magnetic field
+will be close around the hall sensor. Thus, it will be high.
+In summary, we have a change of flux concentration in the sequence of teeth
+and valleys.
+In industrial applications, this will be nicely packaged, so that it could also be
+put on the water. These could also be used on bikes or motorbikes to detect
+movement.
+Same as for optical encoders, we can count the number of teeth going
+around, as to know the position and the speed of the gear.
+9
+Hall effect magnetic sensors: Differential gear position
+Differential Hall sensor P Nermanent magnet
+Z
+Magnetic gap
+field 1
+tooth
+Displacement
+Magnetic
+field 2
+Gear
+Displacement
+Output
+differential
+Hall sensor
+0
+Displacement
+10
+However, as the permanent magnet constantly generates a magnetic field.
+The value of the hall voltage on the teeth or the valleys, will only vary a little
+bit. This can be seen in the first two lines. Therefore, counting the pulses
+becomes very difficult and not easy to measure with standard systems.
+Moreover, when we move the sensor slightly closer or further away from the
+shaftwe will see that the floating line (the base line of voltage) will just float
+up and down. This will make it virtually impossible to detect. We need
+something that is more robust that can work whenever required.
+The way to solve it is to create a differential hall sensor, where two hall
+sensors are connected to one magnetand we get two outputs (fields 1 and
+2). Now, we can substractthe two outputs and get the differential graph. This
+signal will be easy to detect the difference between valley and tooth. It will be
+much better for long term.
+Why is this good? It does not matter the real position of the teeth. And we
+can detect relatives.
+10
+Hall effect magnetic sensors: Direction detection
+Diff Hall sensor 1
+1
+0
+Displacement
+Diff Hall sensor 2
+1
+0
+Displacement
+direction
+1
+CW CCW
+0
+Output logic (D-Flip flop) Displacement
+11
+Of course, this differential sensor will only be able to measure in one
+direction (same as optical encoders) as if we turn the other way around, it
+will be exactly the same.
+To detect the direction, we need to have two differential hall sensors where
+the second one will be located ¼ of a pitch later (as in optical encoders).
+Then, we can do exactly the samething as we did with the optical encoders.
+How many hall sensors would we need for this?
+We could do this with 4 hall sensors connected to the same permanent
+magnet. Alternatively, we could use 3 hall sensors in which we use the
+output of the second 2 times.
+11
+Hall effect magnetic sensor: Angular Hall Bridge
+12
+As we were saying, nowadays hall sensor technology is getting very popular
+and a lot of industrial applications have risen.
+The example here is from the company Austriamicrosystemswhich
+specializes in hall sensor technologies. We have 1 chip with four hall
+sensors. We can put this chip in front of a shaft such as in the figure and on
+the shaftwe put a permanent magnet.
+As the four Hall sensors are in quadrature, what they see from the magnetic
+field will change all the time. Thus, their differential outputs can be used to
+be able to detect absolute positions of the shaft.
+12
+Hall effect magnetic sensor: Magnetic multipole
+13
+There are other type of applications, such as here, with a multipole
+permanent magnet. Here the displacement can also be measured
+longitudinally instead of rotation.
+13
+Ultrasonic sensors
+• Piezoelectric crystal (very high frequency)
+• Ultrasonic=f(surface angle, reflective surface, temp, humidity,…)
+• Not affected by vibration, IR
+𝑡
+• Single or double sensor (send/receive) 𝑟 = 𝑐 ∗
+2
+• Attenuation 𝐼 = 𝐼 𝑒(cid:2879)(cid:3028)(cid:3051)
+(cid:2868)
+14
+To conclude with the displacement sensors, we have one final system which
+measures displacement by means of ultra sound.
+• It works around 40KHz.
+• It requires a transmitter/receiver on very high frequency.
+• A pulse on 40KHz is sent through the transmitter (like a burst of 40KHz on
+a loudspeaker).
+• We wait until the pulse comes back.
+• The time difference will determine the distance.
+This system has quite some drawback:
+• This system is not precissedat all. Why? We require to point in one
+directionbut we depend on the speed of sound, which is 300m/s.
+However, this speed is only at one specific temperatureand it will change
+heavily with it. Moreover, it is humidity dependent and environment
+parameters.
+• In addition, the attenuation is very strongand we can only properly
+measure for a few meter
+• Finally, we are heavily dependent on the structure of the reflecting surface.
+If this one is very absorbing, not much will come back.
+In summary, these sensors are good if we want to have an approximate idea
+of if something is close to usbut it is not a good idea as a measurement
+system.
+14
+Velocity sensors
+15
+Introduction to Velocity sensors
+Measuring range of velocity Bandwidth Type of sensor
+of the velo.
+Slow <1Hz Displacement
+(eliminates fast accelerations) (mean velocity)
+Medium <1KHz Velocity
+Fast >1KHz Acceleration
+(good for detection of fast accelerations)
+16
+We finished the displacement sensors. These are a key for a lot of
+applications as often we will transduce other property into displacement and
+this displacement will be measured by the sensor.
+Now we can do velocity. This is very common on our daily life (in cars, etc.)
+While we are very familiar with velocity, we do not pay so much attention on
+how the sensors work.
+The reason for this is that there are actually not many velocity sensors which
+would indicate the instantaneous velocity. Most of the times, when we
+measure velocitywe would work more on the average velocity. This is just
+measured as the displacement divided by the time passed.
+However, this measurement could be that is not correct. Imagine we want to
+measure the average velocity between Brussels and Gent. We calculate the
+displacement and divide it by the time spent. That should be correct, right?
+But, if we do the same exercise, but we will go first to Brugge, we would
+have more time spent, but the displacement would be the same (starting-
+finishing point). This would not be correct.
+Thus, depending on the type of movement, we will need to measure velocity
+in a different manner.
+We can define three categories:
+• If the change of the velocity is very veryslow (the acceleration is very
+small). We can measure the displacement and divide it by time. This will
+be a mean velocity. Differentiate displacement to measure velocity.
+• If the velocity is changing more during the measurement, the average will
+be wrong. In that case, we can measure momentary velocity which is a bit
+less obvious.
+• In the extreme case, the velocity changes very fast, then it is best to
+16
+measure acceleration and integrate acceleration to know velocity.
+16
+Slow velocity - Relative velocity by electrical differentiation of
+displacement voltage signals
+BUT:
+• The main problem is that differentiation accentuates any low-amplitude,
+high-frequency noise present in the displacement signal.
+• Accurate time reference is necessary
+• No real time velocity information –Mean velocity
+17
+For the first case, we will differentiate the response of any of the
+displacement sensors we have seen so far.
+But,there are several problems:
+• First, the differentiation will introduce noise. This means we might need to
+filter it out.
+• Moreover, we will need very accurate time reference, which is not very
+easy.
+• Finally, this is the mean velocity not instantaneous.
+How could we measure instantaneous velocity? Velocity dedicated sensors
+17
+Medium velocity - Direct measurement of relative velocity
+• 𝑒:𝑜𝑢𝑡𝑝𝑢𝑡 𝑣𝑜𝑙𝑡𝑎𝑔𝑒 𝑉
+• 𝐵:𝑚𝑎𝑔𝑛𝑒𝑡𝑖𝑐 𝑓𝑖𝑒𝑙𝑑 𝑠𝑡𝑟𝑒𝑛𝑔𝑡ℎ 𝑇 𝑇𝑒𝑠𝑙𝑎 = 𝑊𝑏⁄𝑚(cid:2870)
+• 𝑣:𝑠𝑝𝑒𝑒𝑑 𝑜𝑓 𝑎 𝑤𝑖𝑟𝑒 𝑚⁄𝑠
+• 𝐼:𝑙𝑒𝑛𝑔𝑡ℎ 𝑜𝑓 𝑡ℎ𝑒 𝑤𝑖𝑟𝑒 (𝑚)
+18
+In order tohave a velocity sensor, we need to find a law of physics which
+relates velocity with an electrical property. However, there are not a lot of
+laws of physics that relate velocity, which could be used for a sensor.
+There is actually one. Does anyone remember the second rule that we
+defined for electro mechanicalconversion (generator rule)?
+When we displace a wire in a magnetic field, we will generate a voltage into
+the wire or how we said for motors, if we have a movement, we will have a
+back-emf or voltage generated.
+This was e = Blv, where v is actually thevelocity!
+The faster we move the wire, the higher the voltage. These type of sensors
+are called Tachometers.
+18
+DC- Tachometers
+
+e(out)
+tijd
+e(out)
+tijd
+
+• Just like a DC motor working as a generator
+• The polarity changes if direction changes.
+• Typical output voltage: 7V/1000rpm on 5000rpm with an accuracy of 0,07%.
+• Special DC-generators are developed with high sensitivity : 500V/1000rpm to
+30.000V/1000rpm
+19
+What is a Tachometer? It is a motor!
+In its simplest form, we could take a DC motor, which can be reversed as a
+generator. The faster we turn, the higher the generated voltage.
+We have a direct angular velocity (rotation) sensor which provides an
+immediate measurement of the speed. The voltage coming out will be linear
+with the angular velocity.
+DC tachometers can generate voltages at a very low rotation speed.
+19
+AC-Tachometers
+
+e(ex AC)
+tijd
+e(out)
+e(out)
+ 180° tijd
+fazedraai
+• AC motor in generator mode
+• One phase is excited with AC
+• At the second phase an AC voltage is generated with the same frequency.
+• The amplitude is 0V when no movement and is proportional to the angle
+velocity.
+• Phase sensitive demodulation is required to detect direction.
+• Frequency response is limited to 1/10 tot 1/5 of the from the excitation
+frequency
+20
+There are also AC Tachometers or alternators (which is the opposite of an
+AC motor).
+In this case, if it turns, an AC voltage is generatedand the amplitude of the
+voltage is proportional to the speed. If we turn the other way around, the
+voltage we will be opposite polarity.
+AC tachometers can be a bit less expensive, as we do not need
+commutation. However, the detection is a bit more complicated.
+This is the ONLY way to measure instantaneous velocity. If we, however,
+have a very strong acceleration, it might be that this system is not fast
+enough for this. Do you remember the inertia that makes the system not to
+change speed very fast?
+For very fast acceleration, the inertia can be a problem. If the bandwidth is
+more than one 1KHz, we will need to use acceleration.
+20
+Variable reluctance speed sensor
+• When a target feature (such as a gear tooth) is moved close to the sensor, the flux is at a maximum.
+• The moving target results in a time-varying flux that induces a proportional voltage in the coil.
+• Pro:
+• No excitation (passive sensor)
+• Low cost (except electronics)
+• Use at high temperatures (up till 300°C)
+• Very robust
+• Con:
+• Not for low speed
+• Sub sequentially not for position sensing
+21
+This is a very special case of movement sensor, but as it detects velocity, we
+add it here.
+This is the variable reluctance speed sensor. Often used in automotive
+technology.
+We have a coil and a magnet core.
+If the magnet is fixed, we will not generate any voltage on that coil, right?
+Now, we could move the magnet inside the coil, and there will be generated
+a voltage that will be depending on the speed of movement of the core within
+the coil. This changes the fluxand the change of flux generates a voltage. If
+we move a metal bar (target) in front of that magnet, the flux will actually
+change.
+We will need a movement of that gear or target into the sensor.
+Very robust, and can have very high temperatures with very simple
+electronics output
+It is passive! It generates its on voltage. We will need a minimum speed in
+order togenerate the voltage or we will not be able to generate anything. It is
+not possible to use as a position sensor
+21
+Average relative velocity measurement example
+Average Relative Velocity From Measured ∆x And ∆t
+22
+We can also find velocity sensors in a place like the wheel of a motorbike. In
+it, we will have an ABS, that allows for the wheel not to block for very sudden
+stops. If the speed is zero, it will release the wheel. If it does not generate
+pulses, the wheel is not moving anymore.
+22
+Gyroscopes – Absolute Angular Rate sensors
+• Absolute Angular Rate Sensors
+MEMS technology
+digital cameras
+23
+Finally, we have the gyroscope. It measures the pitch, yaw and roll of a
+plane.
+However, it is not measuring the angle, it is measuring the angular speed.
+We will discuss further next week with the MEMs technology, but the most
+important thing is that this is not a displacement, but a speed sensor.
+23
+Acceleration sensors
+We just said that for velocity we have an issue that we could not really
+measure instantaneous velocity but rather average one by means of
+displacement.
+Acceleration sensors encounter also an issue.
+It is not that easy to measure it because of the influence of the gravity force
+(or acceleration). So, any accelerometer that we can build it will always
+measure the gravity force or acceleration, where we actually wantto
+measure is the relative acceleration of a device.
+We will then need to differentiate between absolute acceleration and relative
+acceleration sensors.
+24
+Relative Acceleration
+• Gravity force => gravity acceleration????
+• Possibilities for relative-acceleration measurement include graphical or electrical
+differentiation of displacement or velocity signals.
+• The double differentiation required of displacement records or voltages can
+rarely be performed accurately except with very smooth signals.
+• Single differentiation of velocity signals may be practical in some instances.
+25
+Let’s start with the relative acceleration.
+Is it actually easyto measure relative acceleration? Actually, notat all, as we
+always get the influence of the gravity.
+Are there possibilities to measure only gravity acceleration? Actually, there
+exist no accelerometer only measuring gravity or relative acceleration.
+But,we can calculate it offline by means of knowing the second differential of
+displacement. However, as we said in velocitywe have problems on
+understanding the exact timing and the noise.
+If we have a tachometers, we can differentiate ones, which simplifies.
+There are of course some tricks we can actually takeas we know the gravity
+force.
+We know that the gravity force is actually aDC component. Thus, if we have
+an absolute accelerometer that measures everything, we could remove the
+DC component and analysethe AC component, which will be the relative
+acceleration.
+Of course, this means that the relative acceleration needs to be dynamic, if
+we have an acceleration which is constant, it will be very difficult to
+distinguish from the gravitational force.
+Alternatively, if we want to get the value of the relative acceleration on a
+perpendicular direction to the gravity force, it can be eliminated.
+If an accelerometer moves horizontally, the gravity will not have any effect. If
+the sensor is only sensitive on the perpendicular directions, the influence can
+be removed.
+However, we will need to measure absolutes.
+25
+Seismic- (Absolute-) Acceleration Accelerometers: Applications
+The most important pickup for
+vibration, shock, and general-
+purpose absolute motion
+measurement is the
+accelerometer.
+26
+The first accelerometer that we are going to discuss is the seismic absolute
+accelerometer. It measures absolute acceleration.
+Where is it used? It is used in shock (airbag systems-very strong
+deceleration), or in vibration technology. Vibration always generates
+accelerations and decelerations.
+26
+Seismic- (Absolute-) Acceleration Accelerometers: Principles
+𝐹 = 𝑘𝑥
+(cid:3051)
+𝐹
+𝑎 = (cid:3028) 𝐹 (cid:3051) = 𝐹 (cid:3028)
+𝑀
+𝑎𝑀 = 𝑘𝑥
+𝐹 (cid:3051) 𝐹 (cid:3028)
+𝑀
+𝑥 = 𝑎
+𝑘
+27
+All accelerometers work with the same principles.
+A mass-spring system (which we saw last year).
+How does it work?
+• We need a seismic mass
+• We subject it to an acceleration a
+• Due to the acceleration, a Force Fa appears on the mass, opposite to the
+acceleration which will be related to the acceleration
+• What is then the value of a? a will be Fa/M
+• This will provoke for the spring to shrink and to create an opposite force
+Fxtowards the mass. This force will be the spring constant times the
+displacement
+• As the forces are the same and oppositewe can see that aM= kxor x =a
+M/k
+This means that we transduce the acceleration into a displacement, and we
+will just need a displacement sensor to measure it.
+This is the reason why a lot of the accelerometers take the name from their
+displacement counterpart.
+27
+Deflection- Type Accelerometers: Second order system
+𝑥 𝑥 𝐾
+(cid:2868) (cid:2868)
+𝐷 = 𝐷 =
+𝐷(cid:2870)𝑥 𝑎 𝐷(cid:2870) 2ζ𝐷 We will need a damper!
+(cid:3036) (cid:3036) + +1
+ω(cid:2870) ω
+(cid:3041) (cid:3041)
+• 𝑥 : 𝐷𝑖𝑠𝑝𝑙𝑎𝑐𝑒𝑚𝑒𝑛𝑡 𝑜𝑓 𝑡ℎ𝑒 𝑟𝑒𝑙𝑎𝑡𝑖𝑣𝑒 𝑑𝑖𝑠𝑝𝑙𝑎𝑐𝑒𝑚𝑒𝑛𝑡 𝑠𝑒𝑛𝑠𝑜𝑟 𝑚
+(cid:2868)
+• 𝑥 :𝐷𝑖𝑠𝑝𝑙𝑎𝑐𝑒𝑚𝑒𝑛𝑡 𝑜𝑓 𝑡ℎ𝑒 𝑎𝑐𝑐𝑒𝑙𝑒𝑟𝑜𝑚𝑒𝑡𝑒𝑟 (𝑚)
+(cid:3036)
+• 𝑎 :𝐴𝑐𝑐𝑒𝑙𝑒𝑟𝑎𝑡𝑖𝑜𝑛 𝑜𝑓 𝑡ℎ𝑒 𝑠𝑒𝑛𝑠𝑜𝑟 (𝑚⁄𝑠(cid:2870))
+(cid:3036)
+• ω :2π𝑓 (𝑟𝑎𝑑⁄𝑠(cid:2870))
+(cid:3041) (cid:3041)
+• 𝑓 :𝑁𝑎𝑡𝑢𝑟𝑎𝑙 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 𝑜𝑓 𝑡ℎ𝑒 𝑠𝑒𝑛𝑠𝑜𝑟 𝐻𝑧
+(cid:3041)
+• ζ:𝐷𝑎𝑚𝑝𝑖𝑛𝑔 𝑐𝑜𝑒𝑓𝑓𝑖𝑐𝑖𝑒𝑛𝑡
+28
+Now, of course, if we use a spring as we have seen already many times, we
+actually havea second order system. Thus, there could be some instability,
+that is the reason why we need a damper.
+28
+Deflection- Type Accelerometers: Types
+• Accelerometers Using Resistive Potentiometers
+• Unbounded Strain-Gage Accelerometers
+• Bounded-Strain-Gage Accelerometers
+• Differential-Transformer Accelerometers
+SG -R a
+• Capacitive Accelerometer
+M
+• Piezoelectric Accelerometer F →Δ𝑥 →Δ𝑅
+29
+These are the main types of accelerometers. As we can see, they are based
+on their displacement counter parts.
+For instance, how would an unbounded strain-gage accelerometer work?
+We would have the SG connected to a mass. There is some acceleration,
+and the mass reacts with an opposite force, the displacement changes and
+the resistance changes as well.
+Let’s discuss a couple of other cases.
+29
+Bounded-Strain-Gage Accelerometers
++Δ𝑅
+𝑎
+𝐹
+−Δ𝑅
+30
+Here we can see the case of the bounded strain-gage accelerometer. How
+does this work?
+We have the gaging elements (sg resistors) on top and bottom of both sides
+and mounted on top of what we could call springs.
+When there is an acceleration, the mass in the middle will get a force and
+due to that, the SG will be elongated or shrunk. Top ones are elongating,
+bottom ones are shrinking.
+It is only sensitive in that direction (parallel to the gravity).
+One important note is that this is a seismic accelerometer. This means that
+even if there is no movement, it will measure the gravitational acceleration,
+as the mass will be pushed by the gravity.
+If we turn it over it will just measure the gravity negative.
+30
+Capacitor Accelerometers
+𝑪 𝑪
+M
+Dampers
+Springs
+31
+This one is an accelerometer built on a differential capacitor (from last
+session).
+Let’s try to see if we can identify all the elements. If you remember from a
+differential capacitorwe had two conductor plates and a membrane in the
+middle.
+The two plates (electrodes) are the conducting plates
+The membrane will be the seismic element
+Now for the accelerometer, we need to identify some extra elements:
+• Mass
+• Spring
+• And maybe the dampers.
+These can be found on the middle piece or seismic element:
+• The mass would be the middle of the disk.
+• The springs are connected to the mass. These are the open lines that will
+allow for the mass to go up and down.
+• The dampers would be the wholes
+How would this work? As we get an acceleration on the system, the mass
+reacts with a Force, the springs help move the membrane (seismic element)
+and the capacitors value change due to the displacement.
+31
+Piezoelectric Accelerometer (1)
+a
+F
+𝑽
+𝟎
+32
+This is a very special accelerometer.
+If you remember from Wednesday, a piezoelectric material was a crystal
+quartz that was generating charges.
+It can only generate the current as long aswe have a frequency. As long as
+there is a frequencywe are finebut it will not be able to detect a DC
+acceleration!
+The middle is the mass, connected to the springs s, and the P piezoelectric
+material. When we have an acceleration, the mass will be pushed down, on
+the piezoelectric material and will generate a voltage, which can be detected
+outside.
+Suppose we have a DC acceleration. We have a constant force, constant
+displacement, so it would not generate a voltage anymore. So, it is not
+suitable.
+Perhaps we could think that as it does not measure DC acceleration (not
+sensitive to DC acceleration), it could be a good example for detecting
+relative acceleration.
+But it is not true, it eliminates not only the gravitational accelerationbut it will
+also eliminate any kind of DC acceleration. Any constant acceleration will not
+change the thickness. It can only measure dynamic changes of acceleration.
+It eliminates a bit TOO much.
+Why is this useful? It would be useful for vibrations which will have
+acceleration and deceleration. It is The chosen sensor for this.
+32
+Piezoelectric Accelerometers (2)
+33
+We can have different types of configurations. We have analyzed the
+simplest case (a). What are the disadvantages of the first config? It will only
+measure acceleration in one directionbut it can actually movein every
+direction, this could cause some noise.
+B on the other hand, has a pin going through the mass so it can only move in
+one direction.
+The third one is very similar
+The fourth one is actually aninteresting case of shear movement.
+In All cases we will have a pre-force on the mass, so that it cannot move on
+the crystal.
+You should be able to interpret this graph as we discussed on the last
+session.
+33
+Piezoelectric Accelerometer: Iepe sensors
+I
+34
+We remember the problem regarding the amplification of piezoelectric
+materials, where we had to increase the impedance and adding the shunt
+capacitor.
+However, making the input impedance very high has a problem.
+Increasing impedance decreases the current (which it would be our purpose
+as it allows to increase the measurement). However, this could make the
+sensor more vulnerable to external magnetic and electrostatic fields. This will
+cause noise which will interfere with the signal as the signal will very small
+(in picoamp).
+Thus, the close you put it to the sensor, or in the sensor the amplifier the
+better.
+Here, we can see the amplifier inside the sensor. This technology is called
+Iepeaccelerometer. It will already change the charge into amplified current.
+Of course, the issue comes with the following. My piezoelectric sensor was
+passive, if you remember, where we do not need a power supply for it.
+However, now we have an amplifier inside which will require power on its
+own.
+Would we need three cables entering the sensor (DC, signal and ground)?
+Actually not, as my piezoelectric only measures AC, it is possible to transport
+on the same cable both the DC supply for the amplifier and the signal. Then,
+we just need a capacitor which will make sure only the AC signal gets
+measured.
+34
+Piezoelectric Accelerometer: Iepe sensors (2)
+• What is the mounted frequency for piezoelectric accelerometers
+35
+There are different manners to put this sensor on the surface of a machine.
+The manner in whichis connected will unfortunately affect the resonance
+frequency.
+The simplest manner is a magnetic connection. However, there will be an air
+gap between magnet and sensor, it will not be able to detect very high
+frequency.
+It is also possible to add an adhesive, for instance wax, it can eliminate the
+air gap and increase the resonance.
+The other two are for definitive mounting,
+Quickfitand the stud requires drilling.
+The most permanent the solution, the higher the resonance frequency.
+35
+Null-Balance- (Servo-) Type Accelerometers - MEMs
+MEMs- Micro-Electro-
+mechanical systems
+Case
+Mass
+Relative
+Displacement
+sensor
+Amplifier
+Displacement
+accelerometer
+Mechanical
+Electrical coil connection
+Base
+36
+This is the last accelerometer. This is the next step in electronics. This tries
+to make the whole accelerometer and inside a chip. This means we need to
+use a very small sensor and very small variation.
+A chip where a mass is moving is not very easy. This will need to be done by
+means of MEMs that we will see next week.
+We can see the mass, now the spring is actually a coil as you can see with a
+core inside.
+Now if we put a current into a coil by F=Bli, we get a Force. The higher the
+current, the more force I put on the core.
+36
+Any questions?
+37
+37

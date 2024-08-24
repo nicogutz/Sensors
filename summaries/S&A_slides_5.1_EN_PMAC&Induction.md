@@ -1,0 +1,71 @@
+# Sensors and Actuators - Session 5.1: Sinusoidal-waveform PMAC Motor Drive and Induction Motors
+
+## Overview
+### Topics Covered
+- PMAC: Flux and Torque production
+- PMAC: Equivalent circuit
+- Induction motor principles
+- Comparison to transformers
+- Flux creation
+- Back-emf and slip frequency
+- Torque and Torque-speed characteristics
+
+## Types of AC Motors
+- **PMAC Motors**
+- **Induction Motors**
+
+## Principle of Operation: Rotor-Produced Flux
+- The stator employs a three-phase system creating a rotating magnetic field.
+- The rotor contains a permanent magnet with defined north and south poles.
+- The angular position θ of the rotor varies with time as the rotor rotates.
+- The flux density vector of the rotor remains constant in magnitude but changes in angle as the rotor spins.
+
+## Torque Production
+### Electrical Relationships
+- Torque production is linked to the interactions between the rotor's magnetic flux and the stator's rotating magnetic field.
+- The space vector of the current in the stator must be at a 90-degree angle to the rotor's magnetic field for maximum torque.
+
+### Importance of 90-Degree Angle
+- A 90-degree angle ensures the maximum torque production as it optimizes the interaction between B (magnetic flux) and I (current), resulting in optimal force production.
+
+## Torque Calculation in the Stator
+- The differential torque can be calculated using \( \tau = Bli \), integrating over the length and configuration of the rotor for all conductors yields:
+  - \( T = K I_s^2 \)
+- Here, \( K \) represents a constant characteristic of the machine.
+
+### Generator Mode
+- To operate as a generator, the current must be phase-shifted by 180 degrees, thus controlling the operational mode based on rotor position.
+
+## Equivalent Circuit and Back-EMF
+- The equivalent circuit consists of resistive and inductive components with a back-emf produced due to the rotor's rotation within the stator's magnetic field.
+- Back-emf increases with the rotor's speed, a concept derived from Faraday's law of electromagnetic induction.
+
+## Sinusoidal-waveform Permanent Magnet AC (PMAC)
+- A utility AC voltage is rectified into DC, which is then used to generate the three-phase currents driving the PMAC motor.
+- A position sensor is crucial for maintaining the correct phase relationship to achieve efficient motor operation.
+
+## Controller and PPU Design
+- The design of the power processing unit (PPU) starts from a desired torque or speed, guiding the generation of appropriate phase currents for motor operation.
+- Controllers must ensure the maintained 90-degree phase alignment to facilitate efficient motor performance.
+
+## Induction Motors
+- Unlike PMAC motors with permanent magnets, induction motors use a squirrel cage rotor.
+- In induction motors, the torque is generated through induced currents in the rotor due to the rotating magnetic field produced by the stator.
+
+## Principles of Operation
+- The stator generates three sinusoidal voltages that induce currents in the rotor bars.
+- The interaction of these induced currents results in torque generation through Lorentz forces.
+
+## Comparison between Induction Motors and Transformers
+- The basic principles of induction machines share similarities with transformers wherein the primary side corresponds to the stator, and the induced currents and fields represent the secondary side.
+
+## Slip and Electromagnetic Torque
+- The slip in induction motors is the difference between synchronous speed and rotor speed, influencing induced currents and ultimately electromagnetic torque:
+  - \( T = \pi k I^2 \)
+- Torque-speed characteristics derivative show the responsiveness of torque to changes in load and slip frequency.
+
+## Operation of Induction Motors
+- Induction motors self-start and achieve steady-state performance through adjustments in slip to match the load requirements.
+
+## Conclusion
+- Key insights include the importance of maintaining phase relationships for optimal motor performance and the unique characteristics of both PMAC and induction motors in electrical and industrial applications. Degrees of slip and torque-speed relationships are essential for practical implementations and control strategies in motor systems.

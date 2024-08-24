@@ -1,0 +1,500 @@
+
+SENSORS AND ACTUATORS
+Session 8.2
+Motion sensors: Induction
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about …
+Session 8.2 (Se. 2C):
+• Induction definition
+• Differential Transformer (LVDT)
+• Resolver sensor
+• Inductosyns
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+2
+Definition of Induction
+Where:
+n: number windings
+G: form factor (length and width)
+µ: permeability of medium
+3
+Now, we start with the inductive displacement sensors. There is one mayor
+difference: in resistive sensors we needed to have contact in order to have
+an action, contact leads to friction and therefore erosion. In inductive sensors
+we do not need a contact but we can use a magnetic field. If you remember
+from the first lecture of the course, if in a conductor there is a current, a
+magnetic field appears (Ampere’s Law). The idea of inductive sensors is then
+to use this magnetic field (or fluctuations of it) to measure the displacement,
+where, of course, the biggest advantage is that it is contactless.
+This equation will steer the interactions.
+In it, L is the self induction and it will depend on the number of windings, on
+the geometric form factor, and the permeability of the medium.
+What could we do to measure displacement? We could vary one of these
+components:
+• Changing the number of windings might be difficult as it belongs to the
+structure. This is not so obvious!
+• We could deform the material to change the form factor
+• Or, we could induce a certain core in and out, and by changing the core,
+we can change the permeability of the medium of the inductor.
+As we will see today, the biggest challenge is to understand how to measure
+the displacement from the variation of magnetic field!
+•
+3
+Self induction sensors
+2 coils in series Inducing with a
+core Properties:
+• Pros:
+• Simple concept
+• Very compact systems
+• Cons:
+• Self induction is not linear with
+displacement (𝐿 =𝑛(cid:2870)𝐺μ)
+• Use in telemetry where the coil is part of
+a LC oscillator
+1
+𝑓 =
+(cid:2868)
+2π 𝐿𝐶
+Distance = L
+4
+Now, we can go through a few examples where you will understand what we
+mean.
+Here we see one first example: Self induction sensors:
+• Two coils in series. By changing the distance between the two coils, the
+self-inductance of the total coil will change. The closer together the higher
+the self inductance. (Change of the form factor)
+• Another option is inducing the core of one coil. (change of permeability)
+These are very simple systems (wire around a conductor)
+But the self induction is not linear with the displacement which can become
+very tricky.
+Howeverit can be measuredand it is reproducible.
+How do we measure this change in self inductance?
+We can put it in an oscillator. What is an oscillator? This a system composed
+by a capacitor and an inductor. Due to these, an oscillation frequency will be
+generated meaning that it will oscillate. This frequency will be dependent on
+the self inductance. If we take a fixed capacitor, the change on self
+inductance will provoke a change in frequency. Of course, this relation is not
+linearbut it can be calibrated and make very simple systems.
+There is one interesting application to these devices: ingestiblesto measure
+in body conditions. if we use this oscillating frequency as the transmitting
+system of a transmitter. Imagine we could put this small device in an
+ingestible to measure pressure inside our body and a receiver nearby. This
+system will emit its frequency and if there is a displacement, it will change
+and it will be detected by the receptor. And as it is contactlesswe can
+actually crossthe barrier of the skin.
+4
+Mutual induction sensors (1)
+𝐼 Properties
+(cid:3032)(cid:3051)
+• No Contact
+ϕ 𝑉 • Used with breathing detectors for
+(cid:3032)(cid:3051)
+babies
+ϕ 𝑉
+(cid:3036)(cid:3041)(cid:3031) (cid:2868)
+5
+Another type of inductive sensors are the mutual induction sensors. How
+would these work?
+The primary coil gets a V excitation, due to it, there is a current that goes
+through the coil and creates a magnetic field (Ampere). This magnetic field is
+induced in the secondary coil, where we can measure an output voltage (like
+in a transformer). Depending on the distance between the two coils the
+induced voltage will change, where it will be larger as the coils get closer
+together.
+Moreover, this induced voltage in the secondary coil is
+a function of the geometry of the coils (separation and
+axial alignment), the number of primary and secondary
+turns, and the frequency and amplitude of the
+excitation voltage. Thus, it is not linear.
+Alternatively, and more used nowadays, it is possible to
+put a conductive core between the two coils. With the
+movement of this core, the secondary coil will detect
+more or less of the excitation magnetic field. This
+second option can also be used for preventing SIDS.
+The primary coil would be somewhere under the bed,
+the secondary coil (as receiver) could be set on the
+night stand and the core (piezo electric material) could
+5
+be placed on the baby. The breathing would be
+detected as the regular change of magnetic field on
+the receiving side. If the change does not occur, we
+know that the baby is not breathing.
+5
+Mutual induction sensors (2)
+6
+Here we can see the non linear behabiour. The primary
+side is excited by a sinusoidal (AC) voltage. The
+amplitude of the received voltage looks like shown on
+the slide, where the plot shows the maximum
+amplitude of V0. If the core is exactly in the middle, V0
+is maximum, if the core is moved in different directions
+(closer to the primary or to the secondary sides), the
+amplitude of V0 decreases.
+Thus, the induced voltage in the secondary coil is a
+nonlinear function of the separation of the coils or the
+position of the core.
+To maximize the output signal, a frequency is selected
+that causes the secondary coil (tuned circuit) to be in
+resonance. The output voltage is detected with
+standard demodulator and amplifier circuits. These
+simple setups are often, though not always, used as
+detectors rather than measurements because the
+nonlinear behavior. Furthermore, they are contactless
+so no wear, friction nor force, very long life time.
+6
+As these systems are non linear, there is a need for
+linearizing them.
+6
+Differential transformer or LVDT sensors (1)
+Linear Variable Differential Transformer
+7
+The differential transformer or Linear Variable Differential Transformer comes
+exactly to do that, to linearize the relation between voltage and
+displacement.
+In a differential transformer, we have three coils, a primary and two
+secondaries. A moving core is set in the middle. These two secondary coils
+will pick up the magnetic field from the primary coil.
+Here we can also see the construction, primary coil, two secondary coils and
+the core which is in motion between the primary and the secondary coils.
+Moreover, we can see the outputs of the different coils. If we have the
+primary excitation sinusoidal like shown in the figure, we can see the
+responses of the two secondary coils. In them, we can see that they are in
+anti phase. One of them is in phase the other one will be in counterphase
+(dephased180 degrees). Why is this the case?
+7
+Differential transformer or LVDT sensors (2)
+Sec. +
+𝑉 is 0
+((cid:3042)(cid:3048)(cid:3047))
+v(out)
+𝑉 in phase with 𝑉
+((cid:3042)(cid:3048)(cid:3047)) (cid:3032)(cid:3051)
+sinus
+𝑉 in anti-phase with 𝑉
+((cid:3042)(cid:3048)(cid:3047)) (cid:3032)(cid:3051)
+Sec. -
+8
+Thus, we have the primary coil connected to the sinusoidal excitation
+voltage, and the secondary coils which are in anti series. What does this
+mean? This means that if we have the core in the middle, we will have
+maximum voltage on both the secondary coils but of opposite sign.
+What does it mean for the output? If the bar is in the middle from the two.
+Their outputs are maximum but opposite, which means that Vout=0.
+Now, imagine if we move the core upwards: If we move the core upwards,
+the upper voltage will increase and the down one will decrease. If we sum up
+these two, we will get voltage that is in phase with the excitation voltage.
+If, on the other hand, we move the core down, the upper voltage decreases
+and the down voltage increases. Therefore, the output voltage will be in anti
+phase (opposite) with the excitation voltage.
+In summary, if we move up, the increase is in phase, if down it is in
+antiphase. This means that we need synchronous detection where when the
+two signals are in phasewe have a positive signal and when they are in anti
+phasewe have a negative signal. We will see this in the detection system
+later.
+8
+Differential transformer or LVDT sensors (3)
+9
+Here we see the summary of what we were discussing. The red coil is in
+phase, the red curve is the behaviourof the secondary coil in phase, the
+green one shows the one of the secondary coil in antiphase. What we can
+see here is that by putting the two coils in opposite direction and the core in
+the middle, we actually getto have a linear behaviourwhich is something
+very nice. The key will be to be able to detect this signal.
+9
+LVDT sensors: Synchronous detection (1)
+• The phase sensitive detector (PSD)
+10
+We will need a phase sensitive detector to detect the signal and be able to
+understand it. In the figure we see the architecture of such a detector. The
+input signal is just the reference signal. This system works in the following
+manner, when the sinusoidal is greater than 0, the phase is positive and the
+amplifier just amplifies the lobe, on the other hand, when it is negative, the
+inverting amplifier takes charge as to invert the signal. This signal is then
+rectified. Alternatively, if the core moves in the other direction, the line will be
+rectified in the negative direction. We can see it in the video in the next slide.
+10
+LVDT sensors: Synchronous detection (2)
+11
+Here we have the excitation signal in the middle, and the inducted signal on
+the two secondary coils left and right. When nothing happens, we have the
+two signals equal and opposite, and we sum themand the output is 0 (as
+expected).
+Now, we can slowly start moving the core to the blue (positive) side (16 sec
+in the video). In it, we see the effect of the core moved to that side, where
+the output after detection (without rectification) is shown in red and the
+output of the system is the one in purple.
+We can move the core in the other direction (29 seconds in the video)and
+we see the opposite behavior.
+By the way, whatwe see on the clock is the displacement.
+There is one problem (40 seconds in the video). Suppose that in time, the
+excitation voltage decreases (for instance, due to temperature or other
+issues in the input voltage). What will happen in this case? Both secondary
+coils will actually alsodecrease in terms of voltageand this could lead to
+errors. Meaning that the displacement detected (red) is different than the real
+one (purple).
+11
+Differential transformer or LVDT sensors (5) –Detection circuit
+12
+How could we solve this dependence on the excitation voltage? We could
+make calculation relative instead of absolute.
+We actually cando this by using a simple circuit such as the one here
+(AD598). This circuit has the three coils with the core. They are connected to
+a circuit. Now, instead of just doing the standard A-B, what it does is to also
+divide it by A+B. As such, we are making the relation relative and as we saw
+with the resistive systems, by making the relation relative, we avoid problems
+derived by temperature. This can be seen in the previous video (second 35)
+where we see that the purple line is still detecting the correct position, as the
+detection is performed with the relative calculation.
+12
+Differential transformer or LVDT sensors (5)
+Properties:
+• Pro
+o Linear over a large range:0,25%
+o Faze shifting on zero crossing
+o Displacement can be defined in two directions
+o Very sensitive
+o 0.5 to 2mV/0,01mm/V (much bigger then strain gages)
+o Displacement range 0,1 to 250mm
+o No contact possible
+o Very high precision
+o Long lifetime, small hysteresis
+• Con:
+o AC supply
+o Detection circuit necessary
+13
+To sum up, these are the properties of the LVDT (pros and cons).
+Moreover, on the side we can see a picture of a LVDT, the three coils are
+inside the tube, you can also see the core which moves up and down
+(related to pressure, for instance). We see a sealed connector. This means
+that these types of systems can be used also under water.
+13
+Resolver sensor (1)
+rotor angle: θ
+R1 S4
+𝑉 𝑆2−𝑆4
+=𝑉𝑠𝑖𝑛ω𝑡𝑠𝑖𝑛 θ+90
+Rotor Stator
+=𝑉𝑠𝑖𝑛ω𝑡𝑐𝑜𝑠θ
+S2
+R2
+Roterende
+𝑉𝑠𝑖𝑛ω𝑡
+transformator Stator S1
+𝑉 𝑆1−𝑆3
+=𝑉𝑠𝑖𝑛ω𝑡𝑠𝑖𝑛θ
+S3
+Resolver zonder borstelcontact
+14
+This sensor is for rotational displacement where we need to know the
+rotation of the shaft. This system might ring some bells of similarity with the
+first part of the course, because what we actually havehere is a motor, with
+a stator and a rotor. The stator is outsideand we have a rotating system or
+rotor (exactly like in all the motors we have seen).
+Now, how does it work?
+In the electrical diagram we can see the coil of the rotor, and the two coils of
+the stators. Why do we need two?
+Let’s first focus on the perpendicular stator.
+The rotor induces an AC magnetic field (through an excitation voltage). Now,
+imagine we have the rotor excitation voltage and the stator perpendicular to
+it. If the rotor is in position 0, there will not be any voltage induced into it.
+However, as the rotor starts rotating, we will start having a magnetic field in
+the stator until a maximum. If I have a 90 degrees turn in my rotor, it will
+have a maximum voltage on the stator. Thus, the induced voltage will have
+a dependency on the theta or position. Now, this means that we have a
+voltage that changes sinusoidally with the position. But,we need a voltage
+that would be constant, in order tobe able to measure it.
+How do we solve this? We add a second coil parallel to the rotor (90 degrees
+dephasedfrom the other one). As such, when one of them is maximum the
+other one is 0 and viceversa. We will have the sine theta and the cosine
+theta, meaning that we will have everything we need to know about the
+position at any point in space.
+There is still one problem. As an inductive sensor, we want to ensure that it
+is contactless where I do not need any force to rotate it. However, to produce
+the excitation voltage in the rotor, we will need to find a way in which this
+excitation gets to the rotating rotor (without breaking it or brushing it). We will
+14
+use a rotating transformer! An excitation voltage is input to the rotating
+transformer, and that is what the rotor uses as excitation voltage.
+In summary, the working principles are:
+• an AC reference voltage, at frequencies up to a
+few kHz, excites the rotor winding.
+• The magnitude of the voltage induced in any
+stator winding is proportional to the sine of the
+angle θ, between the rotor coil axis and the
+stator coil axis.
+• If we have the two perpendicular stators, we
+obtain a constant value.
+14
+Resolver sensor (2)
+Resolver
+Rotating transformer
+15
+In here we can see the two parts, the rotating transformer and the resolver
+sensor. We can also see in real applications,on the top we see a bit of an
+older version with the different parts. The lower example is more modern,
+where the left part (the stator) is fixed somewhere, and the rotor can be
+placed inside it without touching in order toget an understanding of the
+position.
+15
+Resolver sensor (3)
+Properties
+• Pros:
+Long life time depending on the bearings
+o
+Absolute angle measurement
+o
+Not expensive for this high precision (compare with optical encoders)
+o
+Small dimension
+o
+Very robust
+o
+Electronic processing standard available
+o
+• Cons:
+Electronic processing necessary
+o
+16
+On its advantages:
+It is very robust, there is no friction or anything so very long life time
+It is not very expensive as compared to the type of precision that it provides
+small dimensions
+However, as we have two signals that need to be understood in order toget
+the absolute value, there will be a bit of signal processing required.
+16
+Resolver sensor (4)
+amplitude
+Voltage controlled oscillator:
+f = kV
+out in
+17
+There are quite some good news here, as there is a circuit able to convert
+the resolver signals to digital.
+How does it work?
+Begin by assuming that the current state of the up/down counter is a digital
+number representing a trial angle, ϕ.
+The converter seeks to adjust the digital angle, ϕ, continuously to become equal to,
+and to track θ, the analog angle being measured.
+The two outputs of the resolver are applied to cosine
+and sine multipliers. These multipliers incorporate sine
+and cosine lookup tables and function as multiplying
+digital-to-analog converters.
+The resolver's stator output voltages are written as:
+V1 = V sinωt sinθ
+V2 = V sinωt cosθ
+θ is the angle of the resolver's rotor.
+The digital angle ϕ is applied to the cosine multiplier,
+and its cosine is multiplied by V1 to produce the term:
+V sinωt sinθ cosϕ.
+17
+The digital angle ϕ is also applied to the sine
+multiplier and multiplied by V2 to product the term:
+V sinωt cosθ sinϕ.
+These two signals are subtracted from each other
+by the error amplifier to yield an AC error signal of
+the form:
+V sinωt [sinθ cosϕ – cosθ sinϕ].
+Using a simple trigonometric identity, this reduces
+to:
+V sinωt [sin (θ –ϕ)].
+The detector synchronously demodulates this AC
+error signal, using the resolver's rotor voltage as a
+reference.
+This results in a DC error signal proportional to sin
+(θ–ϕ).
+The DC error signal feeds an integrator, the output
+of which drives a voltage-controlled-oscillator
+(VCO). The VCO, in turn, causes the up/down
+counter to count in the proper direction to cause:
+sin (θ – ϕ) → 0
+When this is achieved,
+(θ – ϕ) =0
+and therefore
+θ = ϕ
+within one count. Hence, the counter's digital
+output, ϕ, represents the angle θ.
+The latches enable this data to be transferred
+externally without interrupting the loop's tracking.
+17
+As an extra output is the value of the velocity of the
+resolver turning.
+17
+Resolver sensor (4)
+18
+This is the same schematic with some graphs on top. When we start the
+system there is no error because phi and theta are 0. Now we increase the
+angle theta (but we have not turned on the feedback signal so that phi
+follows it). Now if we increase the value of theta, we start seeing the error in
+the signal. This can be seen in the detector block (similar tothe LVDT)
+We can then manually change the value of phi to a very close value to theta
+and we see that the value of the error signals decrease.
+Then, we can power up the feedback loop so that phi follows theta and as
+you can see, the measurement of phi follows very nicely the change in theta.
+Moreover, we get access to the velocity of the turning.
+18
+Inductosyns sensors (1)
+19
+The inductosynsprovide a very similar application as the resolver but in the
+longitudinal direction. It can measure very accurately the movement.
+In a pcb, we can make a trace in the longitudinal style (gray in the figures).
+On top of that we will have a glider (also on a pcb) which floats about 1mm
+on top of the pcbwith the same pattern but shorter. This is what we can see
+in red on top of it. It will have the same pitch (same period). Now we connect
+on the basic an excitation voltage (V1) which will produce a magnetic field.
+Due to this magnetic field, a magnetic field will be induced on the glider (the
+red one). We then can glide the glider on top of the windingand this induced
+magnetic field will be picked up by it.
+Thus, we can move the red pcbover the gray one and we can try to detect
+the displacement between the two. In the top case, there is a maximum
+voltage in use because we completely match the system (the period is about
+2mm). Now we move our glider about ¼ of the pitch (equivalent to 90
+degrees). In that case, nothing will be induced. If I go now half a pitch, we
+have maximum but opposite polarity.
+19
+Inductosyns sensor (2)
+If: S: distance between squares (pitch)
+X: displacement of the glider
+𝑉𝑠𝑖𝑛ω𝑡: excitation voltage
+then is:
+𝑉 =𝐾𝑉𝑠𝑖𝑛ω𝑡𝑠𝑖𝑛2π𝑋/𝑆
+((cid:2929)(cid:2919)(cid:2924)(cid:3042)(cid:3048)(cid:3047)(cid:3043)(cid:3048)(cid:3047))
+𝑉 =𝐾𝑉𝑠𝑖𝑛ω𝑡𝑐𝑜𝑠2π𝑋/𝑆
+((cid:2913)(cid:2925)(cid:2929)(cid:3042)(cid:3048)(cid:3047)(cid:3043)(cid:3048)(cid:3047))
+20
+Here we can see what was just said but graphically.
+We have the bottom trace and the slider on top.
+For an excitation of Vsinwt, on the slider we will have induced magnetic field.
+Again, as it was happening in the resolver, we will need to measure two
+points to obtain the sine and the cosine of the displacement x.
+20
+Inductosyns (3)
+21
+How can we measure this displacement? Actuallywe can do it in the same
+way as we were doing for the resolver. Now, instead of theta, we have
+2piX/2. Thus, it now shows a displacement instead of an angle.
+We can talk about the precision. If we have a pitch of 2mm and we can
+measure within the pitch with a precision of the up/downcounter. In most
+cases we will have a precision of 12 bits (which is actually nota lot for these
+systems). This means that it can count from 0 to 4000. This means that
+within a pitch we have a resolution of 2mm/4000. Thus, we can know the
+position with a resolution of 500 nm. This has an enormous potential. Laser
+printers use it. The main issue is that this is a relative position within a pitch.
+Thus, at the start, we will need to bring the slider back to the beginning of the
+support, it will count the pitches until reaching the required one and once in
+the pitch it will detect with very high precision.
+21
+Rotary Inductosyns
+22
+There are also rotary inductosyns. We have two discs. The black one is the
+excitation disc and the white one is the stator or inductive.
+22
+Any questions?
+23
+23

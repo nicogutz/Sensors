@@ -1,0 +1,646 @@
+
+SENSORS AND ACTUATORS
+Session 11.2
+Temperature sensors
+Maria Torres Vega
+Faculty of Engineering Technology
+1
+Today’s session is about … Temperature sensors
+Session 11.2 (Se. 6):
+• Thermocouple sensors
+• RTDs
+• Thermistors
+• Semiconductors
+Sensor
+P P
+elec mech Movement
+Control Electrical Electrical Mechanical
+System System Machine/Motor System
+(Actuator)
+2
+We finally arrived tothe last chapter
+2
+Types of temperature sensors
+THERMOCOUPLE RTD THERMISTOR SEMICONDUCTOR
+Range
+Accuracy and
+linearity
+Active/
+passive
+Best feature
+3
+Here there is a summary of the most used temperature. We will discuss:
+thermocouple, the resistive temperature detector, the thermistor and the
+semiconductor sensor.
+3
+Thermocouples: Intro
+Thermo-electric effect = Seebeck effect
+= generating a voltage over the junction
+when T>0°K
+In standard operation of a thermocouple there are 2 junctions
+Normal operation :1 junction at 0°C
+4
+Let’s start with the thermocouples!
+Why do they exist?
+They exist because If we melt two material (metals) together, we have a
+seebeckeffect.
+This is not a soldering effect.
+This seebeckeffect shows that there is going to be a voltage generated over
+the junction when the temperature is higher than 0 Kelvin, which is -273 C.
+This means that every junction generates a voltage. This can be harmful to
+some equipment, as once we have two metals from a different composition
+that get melted together, there will be a voltage generated. This voltage is
+however relatively small.
+In most standard operations we will need two of these junctions.
+We will go from metal A to metal B (first junction) and then from metal B to
+metal A second junction. Thus, we end up of two of the same materials.
+Because of the voltage difference, one of the junctions will be kept at 0C.
+Why would this be? To measure relative more robust measurements.
+4
+Thermocouples: Most relevant junctions
+Junction materials Typical Nominal ANSI
+useful range sensitivity designation
+(°𝑪) (μ𝑽⁄°𝑪)
+Platinum (6%)/Rhodium- 38 to 1800 7.7 B
+Platinum (30%)/Rhodium
+Tungsten (5%)/Rhenium- 0 to 2300 16 C
+Tungsten (26%)/Rhenium
+Chromel-Constantan 0 to 982 76 E
+Iron-Constantan 0 to 760 55 J
+Chromel-Alumel -184 to 1260 39 K
+Platinum(13%)/Rhodium- 0 to 1593 11.7 R
+Platinum
+Platinum (10%)/Rhodium- 0 to 1538 10.4 S
+Platinum
+Copper-Constantan -184 to 400 45 T
+5
+Here you can see a list of the most relevant junctions. Each is named by a
+letter, so that we do not need the name the whole composition when buying
+them.
+The most popular thermocouple is the J. This is Iron-constantan, it is cheap,
+it has a low temperature range but a very high sensitivity. This sensitivity is
+defined at 0 degrees C.
+The voltage increases with the temperaturebut it will not be linear. Thus, we
+will need some tables to understand the relation between the temperature
+and the output voltage. It might be possible to have a piece wise linear
+approximation but by definition, thisis not a linear relation.
+The second popular thermocouple is the Chromel-Alumel(K), which is more
+expensive but has a very big temperature range, at a cost of a lower
+sensitivity.
+This is standard behaviour: as the range increases, the sensitivity
+decreases. As the amount of voltage generated is the same, the bigger the
+range, the smaller the sensitivity.
+Another interesting but more expensive one, is the S. Which has a yet bigger
+range and smaller sensitivity.
+5
+Thermocouples: output voltages vs temperature
+6
+Here you can see plotted the relation between temperature and output
+voltage for these three cases (J, K, S).
+J has the smallest temperature range but the highest sensitivity.
+These look like straight lines. However, if we would take the first derivative of
+the voltage related to the temperature (the sensitive or seebeckcoefficient)
+we can see that this is not the case.
+6
+Thermocouples: Sensitivity (first derivative)
+7
+This we can see here. If the voltage-temperature curves were straight lines,
+the first derivative would be a flat horizontal line and, they would be linear
+sensors.
+However, as we can see, they are not linear.
+They come however close. For instance, the S is around 10, K is about 40
+and J about 55.
+In summary, we cannot find a formula to calculate the temperature from the
+voltage. The only thing we can do is to calibrate themand the behavior is
+reproducible. Every S thermocouple will generate the same Seebeckvoltage
+with the same temperature. This means, we need just tables to calculate
+this.
+7
+Thermocouples: Basic measurement systems
+8
+What is this voltage? We can see it in A. The voltage is the thermoelectric
+EMF. In this case, we have only one junction, so we have an absolute value.
+We can also have a configuration like in B, where we have two junctions. We
+put one thermocouple at low temperature, one at high temperature, we have
+two voltages, we get a current and we generate power. Unfortunately, this
+power is very verysmall.
+Now, why would we have these two junctions. In V1, we will have a junction
+of A and B while in V2 we will have a junction of B and A. This means that we
+have two of the same material but opposite. If they are both at the same
+temperature, they will generate exactly the samevoltage and the current
+through R will be 0. Which means, no voltage is measured.
+That is why, that in the measurement setup ( C ), we will need two junctions
+for one thermocouple. One of the junctions will be kept at 0 degrees, the
+other one will have the temperature that we want to measure.
+This is still not the final setup. Actually, ifwe connect a data acquisition
+system, it will be connected by means of a metal cable (copper).
+This means that we actually haveyet two more junctions: the original T1, T2
+and the ones with the copper T3 and T4.
+And I want to know the temperature as one of them. Is this possible? Well, if
+we keep T3 and T4 at the same temperature, they are junctions composed
+by the metal and copper. They will generate the same voltage but opposite,
+so they cancel each-others. This means that we can measure the
+temperature of junction T2 with this type of system.
+8
+Thermocouples: Measurement circuit
+9
+Thus, here we can see the full system. We will have one junction at 0
+degrees Celsius (T2) and we can measure in T1. We will have the same
+composition of the material then (two junctions). Of course, the output
+voltage is not linear with temperature. It is calibrated with the voltage at 0
+degrees Celsius. Thus, we are measuring voltages at 0 degrees Celsius.
+The problem is how do we keep one of the junctions at 0 degrees? It is not
+really possibleto just carry a cold bath around, right?
+9
+Thermocouples: cold junction compensation (1)
+10
+This means we need some extra component for temperature compensation.
+Suppose we replace the second junction (theoretically at 0 degrees) for
+another isothermal block which is for instance at 20 degrees. What will
+happen? We will actually makean error, right? Because this T2 generates a
+voltage related to the 20 degrees and not to the 0 degrees that we want. Is
+this really a problem? We will need to compensate it.
+We will need a temperature compensation circuit so that the voltage appears
+to be the one of 0 degrees.
+As this temperature can change, we will need a way to measure the
+temperature and make sure we are compensating for the correct one. That is
+why we need a second temperature sensor.
+Here you can find the equation.
+Why don’t we just use the temperature sensor of the isothermal block as the
+temperature sensor?
+Well, this temp sensor will usually have a very small range (0 to 40 degrees,
+for instance) and it will not be suitable to the requirements of the
+thermocouple (temp of 0 to 1000 degrees).
+10
+Thermocouples: cold junction compensation (2)
+11
+We can simplify the system further. Why not put the two thermocouples
+(metal A and copper) (metal B and copper) in the isothermal block? We could
+compensate for them at once. We will need to know the temperature of those
+thermocouples in order tocompensate it.
+11
+Thermocouples: cold junction compensation – TMP35
+12
+This is the principle used in this circuit. The TMP35 has a small rangeand it
+can be used to measure the isothermal block and compensate it. You do not
+need to know this by heart, just more or less recognize what the elements
+are.
+It will get an output of 10mV/C. Moreover, the system is quasilinear.
+12
+Thermocouples: Cold junction compensation –AD594
+13
+We can go one step further and actually justbuy the whole compensation
+system in an integrated chip.
+We could use a Type J or Type K.
+13
+Types of temperature sensors
+THERMOCOUPLE RTD THERMISTOR SEMICONDUCTOR
+Range -184 °C to +2300°C
+Accuracy and High Accuracy and
+linearity Repeatability
+Active/ Needs Cold
+passive Junction
+Compensation
+Best feature Low-Voltage output
+14
+Thus, the thermocouple has a very large range, it is very accurate, not linear
+but repeatable.
+It is passive, which is very cool, but it requires the cold junction
+compensation. It has a low-voltage output.
+14
+Resistance Temperature Detector (RTD)
+• Resistance changes with temperature
+• Pure metal
+• Platinum is most popular
+• PT100 has a nominal resistance of 100 Ω at 0°C
+15
+This one is an active sensor, more simplistic in electronic requirements than
+the thermocouples.
+The resistance temperature detector or RTD is a wire of pure metal. Usually
+we use platinum.
+We take a platinum wire,we increase the temperature and the resistance
+increases.
+If at 0 Celsius, the resistance is 100 ohm, we have the PT100. Thus, a
+PT1000, would be a sensor that has 1kOhm at 0 degree Celsius.
+These sensors are not linear againbut they are very predictable.
+This means that we can make very accurate measurements as we will know
+the calibration.
+15
+Resistance Temperature Detector (RTD): Temperature range
+• Very wire range: -200 °C to +850°C
+• The construction is the limiting factor:
+Different expansion rates of the resistive material and the
+o
+support will suffer the “strain gage” effect
+16
+They have a very high temperature range, meaning we can have a broad
+variety of applications.
+Can we use the RTD immediately at those temperatures?
+Actually not, because we need to attach the platinum wire to a support, to be
+able to measure it.
+Thus, the limiting factor of these sensors will be the support material. If the
+support changes dimensions, it will get a strain gage effect (elongation). This
+could provoke a resistance change bigger than the one provoked by the
+temperature and would cause noise.
+Moreover, if we solder the sensors, we could also have problems with the
+melting of the soldering.
+Thus, depending on the support and how the platinum is attached, we will
+have different ranges.
+16
+Resistance Temperature Detector: Thin film RTD’s
+• Low cost to produce
+• Have a limited temperature range due
+to “strain gauge” effect.
+• These elements can only operate up to
+300°C.
+17
+This first example has a limiting temperature of around 300 degrees.
+This is due to this strain gage effect that we were discussing.
+As platinum is very expensive, we can make them as thin as possible with a
+certain film and a ceramic support.
+The ceramic support could change dimensions (expansion) with the
+temperature,thus, we will measure also the strain gage effect.
+This is in any case a very useful system. For instance, in ovens or fridges
+where we need to measure the temperature very accurately for a certain
+limited range.
+They are also very low cost!
+17
+Resistance Temperature Detector: Wire wound element
+• Suffer less from the strain
+• Allowing expansion
+• These elements can only operate up to
+660°C.
+18
+To go higher than 300 degrees, we need another type of construction.
+This construction is a wire wound around a certain ceramic support (which
+will work better than plastic-they melt).
+We are almost rid of the strain gage effect because the wire can change in
+the support, it is not attached.
+It will not affect the temperature measurement. As such, they reach 660
+degrees.
+It is still not the 850 degrees. The reason is that we have a support at the
+bottom where the platinum wire needs to be attached. Thus, we will get still
+the effect.
+18
+Resistance Temperature Detector: Coiled elements
+• Hard fired ceramic oxide tube
+• Very finely ground ceramic powder in tube
+to keep good thermal contact without stress
+• These elements can operate up to 850°C.
+19
+The state of the art in platinum sensors PT100 are the coiled elements.
+These sensors are way more expensive (20 euros).
+The sensor is on the top.
+Inside, the wire is freely floating in ceramic dust. Thus, it is not strained
+anymore.
+What changes here is that the sensor is connected by means of 4 wires.
+The second part is just for support.
+19
+Resistance Temperature Detector: Resistance vs Temp
+(cid:3208)
+(cid:3019) (cid:2879)(cid:3019)
+𝛼 = (cid:3117)(cid:3116)(cid:3116) (cid:3116) 𝑖𝑛 ((cid:3208))= 0.003925 Ω/Ω/°C
+(cid:2869)(cid:2868)(cid:2868)(cid:3019) °(cid:3004)
+(cid:3116)
+20
+How does the relation look like.
+On the left y axiswe have the temperature coefficient. It is positive, which
+means that increases with the temperature. However, it is not linear, if it
+were, it would be a flat line.
+If we compare with a thermocouple this is a predictable behavior.
+Moreover, even if it not a flat line, the relation is a straight line. A derivative of
+a straight-line is a constant. This means, that not the first derivative but the
+second derivative will be constant.
+What kind of formula should be used if the second derivative is a constant?
+It will be a second order equation, right? If we have y = a +bx + cx2, we do
+the second derivative, y’’ = c.
+Thus, we can incorporate the relationship between resistance and
+temperature in a second order formula and we can quite simply program it.
+20
+Resistance Temperature Detector: Formulas
+The Callendar-Van-Dusen equation provides us a more accurate estimation of the
+resistance temperature relationship of a PT100
+For positive temperatures:
+𝑅 = 𝑅 1+ 𝐴𝑇 +𝐵𝑇(cid:2870) (0°𝐶 ≤ 𝑇 < 850 °𝐶)
+(cid:3021) (cid:2868)
+𝐴 = 3.9083𝑥10(cid:2879)(cid:2871)°𝐶(cid:2879)(cid:2869)
+𝐵 = −5.775𝑥10(cid:2879)(cid:2875)°𝐶(cid:2879)(cid:2870)
+For temperatures below zero:
+𝑅 = 𝑅 1+𝐴𝑇 +𝐵𝑇(cid:2870) +𝐶𝑇(cid:2871) 𝑇 −100 −200°𝐶 < 𝑇 < 0°𝐶 ,
+(cid:3021) (cid:2868)
+𝐶 = −4.183𝑥10(cid:2879)(cid:2869)(cid:2870)°𝐶(cid:2879)(cid:2871)
+21
+In fact, the Callendar-Van-Dusenequation provides such an estimation which
+is very accurate. For positive temperatures we actually havesomething like
+this. This means that with a formula, I can clearly relate temperature and
+resistance.
+R0 is 100 Ohm, because it is a PT100.
+As we can see the factor B is already very small, which means that if we do
+not need extremely accurate measurement, we could consider it linear
+Moreover, for temperatures bellow zero, we get a cubic relation. Again, C is
+even smaller than B. Thusthey could be neglected.
+21
+Resistance Temperature Detector: Quality and tolerances
+Class AA : ±( 0.10 + 0.0017 * | t | ) °C
+Class A : ±( 0.15 + 0.0020 * | t | ) °C
+Class B : ±( 0.30 + 0.0050 * | t | ) °C
+Class C : ±( 0.60 + 0.0100 * | t | ) °C
+Example:
+Tolerance at 0°C for a Class AA is 0.1°C and for a Class C is 0.6°C
+Tolerance at 200°C for a Class AA is 0.44°C and for a Class C is 2.6°C
+22
+We can buy the sensors in different qualities, which will also lead to different
+tolerances. The lowest quality is the C class, where the best quality is the
+AA.
+For instance, if we buy a class AA, we will have at 0 degree Celsius a
+maximum of 0.1 variation while the tolerance is 0.6 for the class C.
+For a higher temperature, the tolerance will be 0.44 for class AA and of 2.6
+for class C.
+22
+Resistance Temperature Detector: Self-heating
+• Minimum current should be used for the required system resolution
+• Largest RTD value chosen that results in acceptable response time
+• Most of the PT100 are specified to be operated with a current of 1mA or less
+• It will result in a small voltage drop (1𝑚𝐴𝑥100Ω = 100𝑚𝑉)
+• Duty-cycling solution
+23
+How do we measure the resistance?
+As this is an active sensor, we will need an excitation voltage, right?
+However, as we want to measure the resistance value with an outside
+source, we will need to put a certain current through the resistor (R=V/I).
+This means we will have power that will be dissipated in our resistance.
+Therefore, we will have a self-heating effect while measuring.
+For this reason, we will need to limit the amount of current and voltage that
+go through the resistor.
+Most of the PT100 are specified to be operated with a current of 1mA or less,
+which results on a drop of 100mV, but it will still heat up.
+The only real way to limit the self-heating effect will be by means of duty-
+cylingthe current. In it, we will input an excitation which will only provide a
+high value of current for the measuring window. For instance, if the limit is
+1mA, we could decide to use a 10% duty cycle which means that 10% of the
+time we could provide 10mA and the rest 1mA and we would be fine.
+23
+Resistance Temperature Detector: Leads
+55°error
+24
+One final problem arises from the fact that we will have wires leading to the
+RTD, as it can be shown in the first figure. The wires will have their own
+resistance. Thus, measuring the resistance through the wires means that we
+will also get an influence of the wires’ resistance. This is then, a very bad
+way to measure RTDs leading to errors close to 50 degrees.
+A better way to measure will be to use the four-wire or Kelvin connection.
+This is the reason we saw the four wires in the previous example
+(professional PT100). We will use two wires to induce a current, this is a
+constant current. Why a constant current source? Everywhere the current is
+the same. On the other side, we will put the measuring system. There is no
+current flowing on that side and therefore there is nearly no drop of voltage
+(the resistance of the wires will not matter). Thus, we have the force leads
+(to send the excitation)and the sense leads will be just to measure (no
+current).
+24
+Types of temperature sensors
+THERMOCOUPLE RTD THERMISTOR SEMICONDUCTOR
+Range -184 °C to +2300°C -200 °C to +850°C
+Accuracy and High Accuracy and Fair linearity
+linearity Repeatability
+Active/ Needs Cold Requires
+passive Junction excitation
+Compensation
+Best feature Low-Voltage output Low Cost
+25
+Thus, RTDs have also a very broad range, with a fairly linearbehavior.
+Moreover, it is very lowcost.
+However, it requires excitation which can lead to self heating.
+25
+Thermistors
+(cid:2869) (cid:2869)
+[(cid:2962) (cid:2879) ]
+𝑅 = 𝑅 𝑥𝑒 (cid:3021) (cid:3021) (cid:3116)
+(cid:2868)
+26
+This is the cheapest temperature sensor. You have used it in labs. A
+thermistor is not a pure metal but a composition of material to make it
+cheaper and more sensitive.
+Here you can see the relationship between temperature and resistance
+which is again not linear.
+T0 is the temperature for which it is calibrated. It is usually set to 25 degrees
+Celsius (room temperature).
+R0 is the resistance at 25 degrees, for instance 10KOhm
+Beta determines the sensitivity (go to next slide).
+While these are non-linear, they are predictable and cheap, meaning that
+they are broadly used for a plethora of applications.
+If we know T0, R0 and T0, we will just need to calculate the output
+temperature.
+26
+Thermistors: Beta
+27
+The value of beta we can see here, for instance. We can take the 10K Ohm
+resistor at 25 degrees has a resistance of 10, with a value of beta of 3950. If
+we check at 0 degrees it is 100 KOhm, which means this is an NTC system.
+(Resistance decreases with the temperature)
+27
+Thermistors: Resistance vs Temperature
+28
+Indeed, this is a very non-linear relation where when the temperature rises,
+the resistors drops. We will need calibration and computer calculations
+28
+Thermistors: Temperature coefficient
+29
+Moreover, the temperature coefficient is actually very high, much higher than
+for the previous cases. This means it is very easy to implement.
+29
+Thermistors: Linearization
+30
+And actuallyit is possible to add a linearization resistor to linearize the
+behavior.As such, we introduce the parallel combination of the two resistors
+and we linearize the system. It becomes a bit easier to implement.
+Thus, this NTC thermistor is very good for low accuracies but very cheap
+systems or systems.
+30
+Types of temperature sensors
+THERMOCOUPLE RTD THERMISTOR SEMICONDUCTOR
+Range -184 °C to +2300°C -200 °C to +850°C 0 °C to +100°C
+Accuracy and High Accuracy and Fair linearity Poor linearity
+linearity Repeatability
+Active/ Needs Cold Requires Requires excitation
+passive Junction excitation
+Compensation
+Best feature Low-Voltage output Low Cost High Sensitivity
+31
+Thus, it is not linear (except for the linearization resistance) but it has very
+high sensitivity.
+31
+Semiconductors Temperature Sensors: Intro
+• Ebers Moll equation (relationship between diode current and diode voltage):
+(cid:3023) (cid:3044)
+(cid:3253)
+𝐼 = 𝐼 𝑒 (cid:3038)(cid:3021)
+(cid:3005) (cid:3046)
+• In transistors we have a very similar relationship between 𝑉 and 𝐼 :
+(cid:3029)(cid:3032) (cid:3030)
+(cid:3023) (cid:3044)
+(cid:3251)(cid:3254)
+𝐼 = 𝐼 𝑒 (cid:3038)(cid:3021)
+(cid:3030) (cid:3020)
+𝐼
+(cid:3030)
+Where:
+o
+• 𝐼 : constant for a semiconductor type
+(cid:3046)
+• 𝑞: charge of an electron
+• 𝑘: Boltzman constant
+• 𝑇: absolute temperature
+32
+The last temperature sensor that we will discuss is the semiconductor
+temperature sensor.
+If you remember from the electronic course on the first year, for a diode we
+can find a relationship between the current and the voltage that go through it.
+The same relation exists between VbeandIc, where Is isconstant
+depending on the semiconductor type, k is the boltzmanconstant, T the
+absolute temperature and q the charge of an electron
+This means the higher the Vbe, the higher the current Ic. Same at it
+happened with the diodes.
+32
+Semiconductor Temperature sensors: V-T relationship
+𝑘𝑇 𝐼 𝑘𝑇 𝐼
+(cid:3030) (cid:3030)
+𝑉 = ln( ) 𝑉 = ln( )
+(cid:3003)(cid:3006) 𝑞 𝐼 (cid:3015) 𝑞 𝑁.𝐼
+(cid:3046) (cid:3046)
+33
+Now, if we change the relation to Vberespect to the current, we will have
+something very interesting, which is that from the change of Temperature, we
+get a voltage change right?
+This means that we could use this transistor to measure temperature.
+For that, we can use the following circuit. In it, we have instead of one
+transistor we have N transistors, all connected in parallel. The formula can
+just be transformed, where the factor N just appears in the denominator. The
+current is just divided into all the stages.
+33
+Semiconductor Temperature Sensors: Equations
+𝑘𝑇 𝐼 𝑘𝑇 𝐼
+(cid:3030) (cid:3030)
+Δ𝑉 =𝑉 −𝑉 = ln − ln
+(cid:3003)(cid:3006) (cid:3003)(cid:3006) (cid:3015) 𝑞 𝐼 𝑞 𝑁𝐼
+(cid:3046) (cid:3046)
+𝑘𝑇 𝐼 𝐼
+(cid:3030) (cid:3030)
+Δ𝑉 =𝑉 −𝑉 = ln −ln
+(cid:3003)(cid:3006) (cid:3003)(cid:3006) (cid:3015) 𝑞 𝐼 𝑁𝐼
+(cid:3046) (cid:3046)
+𝐼
+(cid:3030)(cid:3415)
+𝑘𝑇 𝐼 𝑘𝑇
+Δ𝑉 =𝑉 −𝑉 = ln (cid:3046) = ln(𝑁)
+(cid:3003)(cid:3006) (cid:3003)(cid:3006) (cid:3015) 𝑞 𝐼 (cid:3030)(cid:3415) 𝑞
+𝑁𝐼
+(cid:3046)
+Proportional to the absolute
+temperature (ptat)
+34
+Now, let’s substractthe voltage of one transistor to the voltage of N ones.
+The output is something that is ONLY dependent on the absolute
+temperature. In fact, it is proportional to the absolute temperature (ptat).
+34
+Semiconductor Temperature Sensors: V-T relationship
+𝑘𝑇
+Δ𝑉 = 𝑉 −𝑉 = ln𝑁
+(cid:3003)(cid:3006) (cid:3003)(cid:3006) (cid:3015)
+𝑞
+35
+We can go back to our previous figure, we are independent of Ic, Is.
+35
+Semiconductor Temperature Sensors: Bandgap
+𝑅1𝑘𝑇
+𝑉 = 2 ln𝑁
+(cid:3017)(cid:3021)(cid:3002)(cid:3021)
+𝑅2 𝑞
+36
+This can be nicely integrated into a chip. We can get this formula of Vptat,
+you can do it on your own to see if you get to the solution. Againthe voltage
+is proportional to the input temperature.
+36
+Semiconductor Temperature Sensors: AD592, TMP17
+37
+These are relatively expensive (10 euros). They are active sensors of
+course. You can have a look at the characteristics here.
+37
+Semiconductor Temperature Sensors: TMP35-36-37
+38
+These are other examples. They are very good to measure outside
+temperature. They are linear and very nice to use. Moreover, the supply
+voltages are not that critical.
+38
+Types of temperature sensors
+THERMOCOUPLE RTD THERMISTOR SEMICONDUCTOR
+Range -184 °C to +2300°C -200 °C to +850°C 0 °C to +100°C -55 °C to +150°C
+Accuracy and High Accuracy and Fair linearity Poor linearity Linearity: 1°C
+linearity Repeatability Accuracy: 1°C
+Active/ Needs Cold Requires Requires excitation Requires excitation
+passive Junction excitation
+Compensation
+Best feature Low-Voltage output Low Cost High Sensitivity 10𝑚𝑉⁄𝐾,20 𝑚𝑉⁄𝐾,
+𝑜𝑟 1 μ𝐴⁄𝐾Typical
+output
+39
+Now we have the four types. We can first see that the thermocouple is the
+one that will have the broadest range by far.
+Of course, it will not be the cheapest.
+The thermocouple is the only one that is a passive sensor, no need for
+excitation voltage
+RTDs as compared to thermistors, they are both very cheap.
+39
+Which temperature sensors to use for what?
+NTC Thermistor Platinum RTD Thermocouple Semiconductor Based
+Temperature -50 to 250 °C -200 to 600 °C -200 to 1750 °C, -70 to 150 °C
+Range depending upon type
+Stability Epoxy Coated: 0.2 °C/year Film: 0.05 °C/year Full >1 °C/year 2 °C/year
+Hermetically Sealed: 0.02 wire: 0.002°C/year
+°C/year
+Output -4.4%/°C, flexible as output 0.00385 ohm/°C 10 to 40 mV/°C Various (since output is digital,
+can be used as resistance or it can be anything), Common
+voltage nominal resistance
+Linearity Exponential, requires Fairly linear Non-linear Linear
+linearization
+Power Source Any constant voltage or Any constant voltage or Self-powered 4-30 V DC
+current current
+Typical Fast: 0.12 to10 s Very Slow: 1 to 50 s Slow: 0.2 to 20 s Very Slow: 5 to 60+ s
+Response
+Time
+Accuracy 0.05 to 1.5 °C 0.1 to 1 °C 0.5 to 5 °C 1 to 5 °C
+Susceptibility Very low Very low Extreme, especially if Dependent upon board layout
+to Electrical cold junction
+Noise
+Effect of lead Very low Highly susceptible, USE None n/a
+resistance on 3-and 4-wire
+Accuracy configurations
+Cost (-50 to Low to moderate, Hermetically High, up to $6 Medium, $0.50 Medium, $0.90
+250 °C range) sealed <$.50, Not sealed But more expensive
+<$0.10 signal conditioning
+40
+Finally, here you can see a very nice concrete comparison of which sensor to
+use when depending on the application.
+40
+Announcements 08/12/2023
+• Schedule until the end of the semester:
+08/12/2023 – Temperature Sensor
+o
+13/12/2023 – Exercises, exam instructions
+o
+15 and 22/12 – Self study – No class
+o
+20/12/2023 – Possible extra class if questions (online/Toledo/on campus)
+o
+• TO DO students:
+Prepare exercises sheet for 13/12 (available on Toledo in Exercises)
+o
+If you have open questions/issues - Send me questions per email until 17/12:
+o
+• If general questions, I will prepare a lecture summary
+• If no general questions, there will be no lecture
+41
+41
+Any questions?
+42
+42
