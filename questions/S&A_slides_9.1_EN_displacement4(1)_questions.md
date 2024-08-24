@@ -1,0 +1,211 @@
+```markdown
+## Motion Sensors: Capacitive, Piezoelectric and Optical - Quiz Questions
+
+### Question 1
+What type of sensors are discussed in this session?
+- A) Resistive, Inductive, and Optical Sensors
+- B) Capacitive, Piezoelectric, and Optical Sensors 
+- C) Optical, Magnetic, and Thermal Sensors
+- D) Inductive, Thermal, and Capacitive Sensors
+
+<details>
+<summary>Answer</summary>
+B) Capacitive, Piezoelectric, and Optical Sensors
+</details>
+
+---
+
+### Question 2
+Which of the following components is NOT a primary parameter affecting capacitance in capacitive sensors?
+- A) Surface area of the plates (A)
+- B) Distance between the plates (x)
+- C) Electrical permittivity (ε)
+- D) Thickness of the plates
+
+<details>
+<summary>Answer</summary>
+D) Thickness of the plates
+</details>
+
+---
+
+### Question 3
+In capacitive sensors, the capacitance is proportional to which of the following?
+- A) Distance between the plates 
+- B) Area of the plates and dielectrical constant
+- C) Voltage applied across the plates
+- D) Resistance of the plates
+
+<details>
+<summary>Answer</summary>
+B) Area of the plates and dielectrical constant
+</details>
+
+---
+
+### Question 4
+What is the output relationship in a basic capacitive sensor circuit?
+- A) Output impedance divided by input impedance
+- B) Output voltage divided by input voltage
+- C) Input voltage divided by output impedance
+- D) Capacitance value divided by distance
+
+<details>
+<summary>Answer</summary>
+A) Output impedance divided by input impedance
+</details>
+
+---
+
+### Question 5
+Which of the following is a downside of capacitive sensors?
+- A) They can measure both dynamic and static movements.
+- B) They are sensitive to environmental changes like moisture.
+- C) They require less relative measurement for accuracy.
+- D) They have a small mass and broad frequency spectrum.
+
+<details>
+<summary>Answer</summary>
+B) They are sensitive to environmental changes like moisture.
+</details>
+
+---
+
+### Question 6
+What is the function of a Wheatstone bridge in the measurement of variable differential capacitive sensors?
+- A) To amplify the output voltage
+- B) To create a balanced measurement of capacitance changes
+- C) To provide an absolute measurement of displacement
+- D) To convert capacitance values into frequency
+
+<details>
+<summary>Answer</summary>
+B) To create a balanced measurement of capacitance changes
+</details>
+
+---
+
+### Question 7
+What property makes piezoelectric sensors advantageous in many applications?
+- A) They generate voltage.
+- B) They produce static displacement measurements.
+- C) They can measure dynamic occurrences without requiring external excitation.
+- D) They function solely in low-frequency ranges.
+
+<details>
+<summary>Answer</summary>
+C) They can measure dynamic occurrences without requiring external excitation.
+</details>
+
+---
+
+### Question 8
+What type of output do piezoelectric sensors primarily generate?
+- A) Voltage
+- B) Current
+- C) Charge
+- D) Resistance
+
+<details>
+<summary>Answer</summary>
+C) Charge
+</details>
+
+---
+
+### Question 9
+The piezoelectric effect is characterized by which of the following?
+- A) Generation of voltage when a transverse force is applied
+- B) Generation of charge when a crystalline material is subjected to stress
+- C) Production of resistance in response to mechanical stress
+- D) Creation of displacement under electrical excitation
+
+<details>
+<summary>Answer</summary>
+B) Generation of charge when a crystalline material is subjected to stress
+</details>
+
+---
+
+### Question 10
+Which material is NOT typically used as a piezoelectric sensor?
+- A) Quartz
+- B) Barium Titanate
+- C) Rubber
+- D) Synthetic ceramics
+
+<details>
+<summary>Answer</summary>
+C) Rubber
+</details>
+
+---
+
+### Question 11
+In the context of optical encoders, what does the term "incremental" imply?
+- A) The sensor provides absolute position information.
+- B) The output signal is continuously variable.
+- C) The sensor measures displacement but does not keep track of movement direction.
+- D) The sensor uses multiple light sources for measurement.
+
+<details>
+<summary>Answer</summary>
+C) The sensor measures displacement but does not keep track of movement direction.
+</details>
+
+---
+
+### Question 12
+What is a common problem encountered with incremental optical encoders?
+- A) They offer high precision and low cost.
+- B) They are not susceptible to external noise.
+- C) They require regular calibration for accurate positioning.
+- D) They can provide inaccurate counts due to interruptions in power supply.
+
+<details>
+<summary>Answer</summary>
+D) They can provide inaccurate counts due to interruptions in power supply.
+</details>
+
+---
+
+### Question 13
+Which feature allows for distinguishing the rotation direction in optical encoders?
+- A) The number of light sources.
+- B) The arrangement of holes on the sensing disk.
+- C) The use of quadrature signals from multiple light sources.
+- D) The speed of the light passing through the holes.
+
+<details>
+<summary>Answer</summary>
+C) The use of quadrature signals from multiple light sources.
+</details>
+
+---
+
+### Question 14
+What distinguishes absolute optical encoders from incremental ones?
+- A) They use fewer light sources.
+- B) They can measure both static and dynamic positions.
+- C) They provide unique codes for each absolute position.
+- D) They are less expensive to manufacture.
+
+<details>
+<summary>Answer</summary>
+C) They provide unique codes for each absolute position.
+</details>
+
+---
+
+### Question 15
+What effect does temperature have on piezoelectric sensors?
+- A) They operate better at higher temperatures.
+- B) They are temperature insensitive and stable.
+- C) Temperature changes can affect output readings negatively.
+- D) They require a specific temperature range to function.
+
+<details>
+<summary>Answer</summary>
+C) Temperature changes can affect output readings negatively.
+</details>
+```

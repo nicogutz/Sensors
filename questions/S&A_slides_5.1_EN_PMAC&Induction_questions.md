@@ -1,0 +1,159 @@
+```markdown
+## Multiple Choice Questions on Sinusoidal-waveform PMAC Motor Drive and Induction Motors
+
+### Question 1
+What does the equation $F(\theta, t) = N \cdot I_t \cdot \cos(\theta)$ represent in the context of AC motors?
+- A) The relationship between speed and torque in a PMAC motor.
+- B) The per-phase sinusoidal distribution of conductors.
+- C) The induced EMF in a DC motor.
+- D) The current density in a resistive material.
+
+<details>
+<summary>Answer</summary>
+B) The per-phase sinusoidal distribution of conductors.
+</details>
+
+### Question 2
+In the given equations, what does the expression $n(\theta) = \frac{N}{2} \cdot F$ indicate?
+- A) The total current in the system.
+- B) The angular position of the rotor.
+- C) The normalized flux density.
+- D) The component of the magnetic field in the stator.
+
+<details>
+<summary>Answer</summary>
+C) The normalized flux density.
+</details>
+
+### Question 3
+What is the fundamental principle behind the operation of a PMAC motor?
+- A) The rotor rotates freely without interaction with the magnetic field.
+- B) The rotor produces flux that interacts with the magnetic field from the stator.
+- C) The stator only generates heat without producing motion.
+- D) The motor generates power without any moving parts.
+
+<details>
+<summary>Answer</summary>
+B) The rotor produces flux that interacts with the magnetic field from the stator.
+</details>
+
+### Question 4
+Why is it essential for the angle between the rotor's space vector and the stator's current vector to be 90 degrees?
+- A) It maximizes the power consumption in the circuit.
+- B) It creates a magnetic field that is independent of the rotor's speed.
+- C) It results in maximum torque production.
+- D) It decreases the efficiency of the motor.
+
+<details>
+<summary>Answer</summary>
+C) It results in maximum torque production.
+</details>
+
+### Question 5
+What does the term "back-emf" refer to in the operation of an AC motor?
+- A) The frequency of the AC supply.
+- B) The induced voltage in the rotor caused by the stator's rotating magnetic field.
+- C) The maximum current that can flow through the motor windings.
+- D) The minimum energy required to start the rotor.
+
+<details>
+<summary>Answer</summary>
+B) The induced voltage in the rotor caused by the stator's rotating magnetic field.
+</details>
+
+### Question 6
+In PMAC motors, how can the motor be operated as a generator?
+- A) By increasing the voltage supply to the motor.
+- B) By changing the direction of the rotor.
+- C) By de-phasing the current 180 degrees.
+- D) By turning off the power supply to the motor.
+
+<details>
+<summary>Answer</summary>
+C) By de-phasing the current 180 degrees.
+</details>
+
+### Question 7
+What do the three-phase currents in PMAC motors produce in the stator?
+- A) A constant magnetic field.
+- B) A rotating magnetic field.
+- C) A pulsing magnetic field.
+- D) A static electric field.
+
+<details>
+<summary>Answer</summary>
+B) A rotating magnetic field.
+</details>
+
+### Question 8
+How is the torque in induction motors primarily generated?
+- A) By static magnetic fields.
+- B) Through the interaction of induced currents in the rotor with the magnetic field of the stator.
+- C) By mechanical contact with other moving parts.
+- D) By resistive heating in the copper windings.
+
+<details>
+<summary>Answer</summary>
+B) Through the interaction of induced currents in the rotor with the magnetic field of the stator.
+</details>
+
+### Question 9
+What happens to the slip frequency as the rotor speed decreases?
+- A) It increases.
+- B) It decreases.
+- C) It remains constant.
+- D) It becomes negative.
+
+<details>
+<summary>Answer</summary>
+A) It increases.
+</details>
+
+### Question 10
+Which of the following describes the construction of a squirrel cage induction motor?
+- A) It consists of three windings only, with no core.
+- B) It utilizes permanent magnets in the rotor for magnetic field production.
+- C) It has bars of iron that are connected by shortcut rings in the rotor.
+- D) It is built entirely of ceramic materials for heat resistance.
+
+<details>
+<summary>Answer</summary>
+C) It has bars of iron that are connected by shortcut rings in the rotor.
+</details>
+
+### Question 11
+What does the torque-speed characteristic curve plot in an induction motor?
+- A) Voltage vs. current.
+- B) Time vs. temperature.
+- C) Torque vs. speed.
+- D) Frequency vs. power.
+
+<details>
+<summary>Answer</summary>
+C) Torque vs. speed.
+</details>
+
+### Question 12
+During the start-up phase, if the load increases, what happens to the rotor speed and slip frequency?
+- A) Rotor speed remains the same while slip frequency decreases.
+- B) Rotor speed decreases, leading to an increased slip frequency.
+- C) Rotor speed increases and slip frequency increases.
+- D) Both rotor speed and slip frequency remain constant.
+
+<details>
+<summary>Answer</summary>
+B) Rotor speed decreases, leading to an increased slip frequency.
+</details>
+
+### Question 13
+In terms of motor control, why is it important to measure the rotor position in PMAC motors?
+- A) To synchronize the power supply frequency.
+- B) To adjust the input voltage levels.
+- C) To ensure the rotor remains stationary.
+- D) To maintain the required 90-degree phase difference between the rotor and stator currents.
+
+<details>
+<summary>Answer</summary>
+D) To maintain the required 90-degree phase difference between the rotor and stator currents.
+</details>
+```

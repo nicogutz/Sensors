@@ -1,0 +1,153 @@
+```markdown
+### Multiple Choice Questions on Sensors and Actuators
+
+#### Question 1: What is the relationship represented by Faraday's Law?
+A) $H = \frac{N \cdot i}{l}$  
+B) $\Phi = B \cdot A$  
+C) $e = N \frac{d\Phi}{dt}$  
+D) $B = \mu H$  
+<details>
+<summary>Answer</summary>
+C) $e = N \frac{d\Phi}{dt}$
+</details>
+
+#### Question 2: In an ideal transformer, what does the primary voltage $e_1$ relate to the secondary voltage $e_2$?
+A) $\frac{e_1}{e_2} = \frac{N_1}{N_2}$  
+B) $e_1 = e_2$  
+C) $e_1 \cdot N_1 = e_2 \cdot N_2$  
+D) $\frac{e_1}{N_1} = e_2$  
+<details>
+<summary>Answer</summary>
+A) $\frac{e_1}{e_2} = \frac{N_1}{N_2}$
+</details>
+
+#### Question 3: What does an inductor signify in the context of transformers?
+A) It allows for primary winding to create current.  
+B) It signifies the magnetic field needed for creating flux.  
+C) It defines the efficiency of the transformer.  
+D) It measures the voltage across the primary winding.  
+<details>
+<summary>Answer</summary>
+B) It signifies the magnetic field needed for creating flux.
+</details>
+
+#### Question 4: What defines the maximum efficiency of a transformer?
+A) The number of turns in the windings.  
+B) The reluctance of the core material.  
+C) The losses due to hysteresis and eddy currents.  
+D) The constant permeability of the material.  
+<details>
+<summary>Answer</summary>
+C) The losses due to hysteresis and eddy currents.
+</details>
+
+#### Question 5: What is the primary cause of eddy current losses in transformers?
+A) Excessive heat from electrical resistance.  
+B) Magnetizing current not being sufficient.  
+C) A changing magnetic field creating loops of current.  
+D) Insufficient insulation in the windings.  
+<details>
+<summary>Answer</summary>
+C) A changing magnetic field creating loops of current.
+</details>
+
+#### Question 6: In electric machines, what does the term "motoring mode" refer to?
+A) The machine is solely generating energy.  
+B) The machine converts electrical power into mechanical power.  
+C) The machine is idle and not performing any work.  
+D) The machine experiences losses in both electrical and mechanical power.  
+<details>
+<summary>Answer</summary>
+B) The machine converts electrical power into mechanical power.
+</details>
+
+#### Question 7: What components make up a basic electric machine?
+A) Rotor, Stator, Air Gap  
+B) Inductor, Capacitor, Rotor  
+C) Transformer, Hysteresis, Eddy Current  
+D) Resistor, Connector, Statics  
+<details>
+<summary>Answer</summary>
+A) Rotor, Stator, Air Gap
+</details>
+
+#### Question 8: How does the presence of saliency in electric machines affect performance?
+A) It produces equal reluctance in all paths.  
+B) It creates torque due to unequal magnetic reluctance.  
+C) It ensures a uniform air gap.  
+D) It decreases the efficiency of power conversion.  
+<details>
+<summary>Answer</summary>
+B) It creates torque due to unequal magnetic reluctance.
+</details>
+
+#### Question 9: According to the Lorentz force principle, which factors contribute to the electromagnetic force on a current-carrying conductor?
+A) Voltage and current.  
+B) Magnetic field and length of conductor.  
+C) Current, magnetic field, and length of conductor.  
+D) Flux and reluctance.  
+<details>
+<summary>Answer</summary>
+C) Current, magnetic field, and length of conductor.
+</details>
+
+#### Question 10: What is the formula used to calculate the electromagnetic force on a conductor?
+A) $E = B \cdot i$  
+B) $F = qE + qv \times B$  
+C) $F = ma$  
+D) $I = V/R$  
+<details>
+<summary>Answer</summary>
+B) $F = qE + qv \times B$
+</details>
+
+#### Question 11: What does induced emf depend upon when a conductor moves in a magnetic field?
+A) The speed of the conductor.  
+B) The type of transformer used.  
+C) The current flowing through the conductor.  
+D) The area of the cross-section of the conductor.  
+<details>
+<summary>Answer</summary>
+A) The speed of the conductor.
+</details>
+
+#### Question 12: In the context of torque in electric machines, which formula represents the relationship between torque and other factors?
+A) $T = B \cdot i \cdot l$  
+B) $T = \frac{N \cdot \Phi}{R}$  
+C) $T = B \cdot i \cdot \omega$  
+D) $T = e \cdot i$  
+<details>
+<summary>Answer</summary>
+A) $T = B \cdot i \cdot l$
+</details>
+
+#### Question 13: In the generator mode of an electric machine, what happens to the power flow?
+A) It remains constant.  
+B) It is reversed from the motor mode.  
+C) It is doubled.  
+D) It is halved.  
+<details>
+<summary>Answer</summary>
+B) It is reversed from the motor mode.
+</details>
+
+#### Question 14: What is a key design consideration to reduce eddy current losses in transformer cores?
+A) Increasing the thickness of the core.  
+B) Laminating the core material.  
+C) Using a solid core.  
+D) Maximizing the length of the core.  
+<details>
+<summary>Answer</summary>
+B) Laminating the core material.
+</details>
+
+#### Question 15: In the described operation of motors, what happens to the induced voltage as the rotor moves?
+A) It remains constant irrespective of the speed.  
+B) It changes polarity as the rotor changes direction.  
+C) It cannot be changed during operation.  
+D) It is only dependent on the current input.  
+<details>
+<summary>Answer</summary>
+B) It changes polarity as the rotor changes direction.
+</details>
+```

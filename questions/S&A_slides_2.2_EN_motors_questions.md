@@ -1,0 +1,153 @@
+```markdown
+# Multiple Choice Questions on Motors and DC Motors
+
+## 1. What is the equation that represents the electromagnetic force produced by a current-carrying conductor in a magnetic field?
+A. $f = B \cdot i \cdot l$  
+B. $e = B \cdot l \cdot u$  
+C. $T = 2 \cdot N \cdot B \cdot i \cdot l \cdot r$  
+D. $P = T \cdot \omega$  
+<details>
+<summary>Answer</summary>
+A. $f = B \cdot i \cdot l$
+</details>
+
+## 2. What happens to a conductor when it moves in a magnetic field?
+A. It generates torque  
+B. It causes back-emf  
+C. It reduces the magnetic field  
+D. It generates heat  
+<details>
+<summary>Answer</summary>
+B. It causes back-emf
+</details>
+
+## 3. Which of the following is NOT a type of DC motor mentioned in the session?
+A. Induction motor  
+B. Brushless DC motor  
+C. Permanent magnet motor  
+D. Classic DC motor  
+<details>
+<summary>Answer</summary>
+A. Induction motor
+</details>
+
+## 4. What are the two main types of motor classifications discussed?
+A. Thermal and Electrical  
+B. AC and DC  
+C. Synchronous and Asynchronous  
+D. Brushed and Brushless  
+<details>
+<summary>Answer</summary>
+B. AC and DC
+</details>
+
+## 5. What is the main reason DC motors are considered more expensive than AC motors?
+A. They require complex electronics  
+B. They have higher maintenance costs  
+C. They are subject to safety regulations  
+D. They have a more complicated structure  
+<details>
+<summary>Answer</summary>
+C. They are subject to safety regulations
+</details>
+
+## 6. What part of the DC motor does NOT move?
+A. The rotor  
+B. The stator  
+C. The windings  
+D. The brushes  
+<details>
+<summary>Answer</summary>
+B. The stator
+</details>
+
+## 7. What is the mechanism responsible for current entering and exiting the DC motor’s rotor?
+A. Commutation  
+B. Induction  
+C. Resistance  
+D. Reactance  
+<details>
+<summary>Answer</summary>
+A. Commutation
+</details>
+
+## 8. Which configuration can be used in the stator of a DC motor?
+A. Only permanent magnets  
+B. Only field windings  
+C. Either permanent magnets or field windings  
+D. Neither permanent magnets nor field windings  
+<details>
+<summary>Answer</summary>
+C. Either permanent magnets or field windings
+</details>
+
+## 9. At which angle does the current in the conductors reverse polarity due to the magnetic field?
+A. 45 degrees  
+B. 90 degrees  
+C. 180 degrees  
+D. 360 degrees  
+<details>
+<summary>Answer</summary>
+B. 90 degrees
+</details>
+
+## 10. The back-emf generated in a DC motor is directly proportional to which of the following factors?
+A. Current  
+B. Torque  
+C. Angular velocity  
+D. Resistance  
+<details>
+<summary>Answer</summary>
+C. Angular velocity
+</details>
+
+## 11. Which equation describes the torque generated in a DC motor?
+A. $T = k \cdot i$  
+B. $T = R \cdot I$  
+C. $T = R \cdot \omega$  
+D. $T = B \cdot l \cdot i$  
+<details>
+<summary>Answer</summary>
+A. $T = k \cdot i$
+</details>
+
+## 12. In steady state, the relationship between the total applied voltage, back-emf, and resistive voltage drop can be expressed as:
+A. $V = e + R \cdot i$  
+B. $V = e - R \cdot i$  
+C. $V = e \cdot R$  
+D. $V = e / R$  
+<details>
+<summary>Answer</summary>
+A. $V = e + R \cdot i$
+</details>
+
+## 13. What does an increase in applied voltage correlate with in terms of motor behavior?
+A. Higher torque  
+B. Higher current only  
+C. Higher angular velocity  
+D. Lower resistance  
+<details>
+<summary>Answer</summary>
+C. Higher angular velocity
+</details>
+
+## 14. What is the impact of increasing torque on the speed of a DC motor?
+A. Increases speed  
+B. Decreases speed  
+C. Does not affect speed  
+D. Increases efficiency  
+<details>
+<summary>Answer</summary>
+B. Decreases speed
+</details>
+
+## 15. How can the torque and induced voltage fluctuations be minimized during commutation in a DC motor?
+A. By increasing resistance  
+B. By using multiple conductors  
+C. By reducing voltage  
+D. By increasing current  
+<details>
+<summary>Answer</summary>
+B. By using multiple conductors
+</details>
+```

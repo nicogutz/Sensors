@@ -1,0 +1,147 @@
+```markdown
+### Multiple Choice Questions on Sensors and Actuators - Motion Sensors: Induction
+
+#### Question 1
+What is the main advantage of inductive sensors compared to resistive sensors?
+- A) They require less power.
+- B) They provide linear measurements.
+- C) They do not require contact for operation and can measure through a magnetic field.
+- D) They are easier to manufacture.
+
+<details>
+<summary>Answer</summary>
+C) They do not require contact for operation and can measure through a magnetic field.
+</details>
+
+#### Question 2
+In the context of inductive displacement sensors, which component's change can be used to measure displacement?
+- A) The frequency of the power supply.
+- B) The amplitude of the induced voltage.
+- C) The number of windings or the form factor of the medium, or the magnetic permeability.
+- D) The length of the coil.
+
+<details>
+<summary>Answer</summary>
+C) The number of windings or the form factor of the medium, or the magnetic permeability.
+</details>
+
+#### Question 3
+What does the equation $ L = n G \mu $ describe in relation to inductive sensors?
+- A) The linearity of displacement measurement.
+- B) The relationship between self-inductance and certain parameters like number of windings, form factor, and permeability.
+- C) The efficiency of the inductive sensor in noisy environments.
+- D) The operational frequency of the sensor.
+
+<details>
+<summary>Answer</summary>
+B) The relationship between self-inductance and certain parameters like number of windings, form factor, and permeability.
+</details>
+
+#### Question 4
+What is one of the main uses of inductive sensors in medical applications described in the session?
+- A) To measure displacement in medical imaging devices.
+- B) To measure pressure inside the body using ingestibles.
+- C) To monitor the speed of surgical instruments.
+- D) To replace traditional sensors in MRI machines.
+
+<details>
+<summary>Answer</summary>
+B) To measure pressure inside the body using ingestibles.
+</details>
+
+#### Question 5
+What is the primary operational principle of mutual induction sensors?
+- A) Resistance measurement.
+- B) Measuring changes in capacitance.
+- C) Utilizing a primary coil to create a magnetic field which induces voltage in a secondary coil.
+- D) Calculating temperature gradients.
+
+<details>
+<summary>Answer</summary>
+C) Utilizing a primary coil to create a magnetic field which induces voltage in a secondary coil.
+</details>
+
+#### Question 6
+In mutual induction sensors, when the core is placed exactly in the middle of the coils, what happens to the induced voltage?
+- A) It is zero.
+- B) It is maximum.
+- C) It fluctuates rapidly.
+- D) It is half of the potential.
+
+<details>
+<summary>Answer</summary>
+B) It is maximum.
+</details>
+
+#### Question 7
+What is the function of the two secondary coils in a Linear Variable Differential Transformer (LVDT)?
+- A) To increase the frequency of the output signal.
+- B) One measures induction while the other measures resistance.
+- C) To allow for a comparison that yields a zero output when the core is in the center.
+- D) To calculate the temperature of the medium.
+
+<details>
+<summary>Answer</summary>
+C) To allow for a comparison that yields a zero output when the core is in the center.
+</details>
+
+#### Question 8
+What is the typical application of the phase sensitive detector (PSD) in the context of LVDT sensors?
+- A) To convert analog signals to digital.
+- B) To amplify the sinusoidal input without phase inversion.
+- C) To synchronize the signal detection and amplification based on the phase.
+- D) To eliminate noise from the system.
+
+<details>
+<summary>Answer</summary>
+C) To synchronize the signal detection and amplification based on the phase.
+</details>
+
+#### Question 9
+The resolver sensor is primarily used for:
+- A) Measuring linear displacements in machines.
+- B) Measuring rotational displacements of a shaft.
+- C) Sensing pressure variations in liquids.
+- D) Monitoring temperature in an engine.
+
+<details>
+<summary>Answer</summary>
+B) Measuring rotational displacements of a shaft.
+</details>
+
+#### Question 10
+Which of the following is a pro of resolver sensors?
+- A) High cost compared to optical encoders.
+- B) Requires frequent calibration.
+- C) Long lifetime with no friction.
+- D) Limited rotational range.
+
+<details>
+<summary>Answer</summary>
+C) Long lifetime with no friction.
+</details>
+
+#### Question 11
+Inductosyn sensors are used to measure movement in which orientation?
+- A) Rotational.
+- B) Vertical only.
+- C) Longitudinal direction.
+- D) Multidirectional.
+
+<details>
+<summary>Answer</summary>
+C) Longitudinal direction.
+</details>
+
+#### Question 12
+The resolution of the inductosyn system with a pitch of 2mm and a precision of 12 bits allows for a measurement resolution of:
+- A) 100 nm
+- B) 500 nm
+- C) 1 mm
+- D) 1 cm
+
+<details>
+<summary>Answer</summary>
+B) 500 nm
+</details>
+```

@@ -1,0 +1,143 @@
+```markdown
+# Multiple Choice Questions on Motion Sensors
+
+## Hall Effect Sensors
+
+### Question 1
+What principle does a Hall effect sensor operate on?
+- A) It is sensitive to the change of electric field.
+- B) It is sensitive to temperature changes.
+- C) It is sensitive to a magnetic field.
+- D) It operates based on sound waves.
+
+<details>
+<summary>Answer</summary>
+C) It is sensitive to a magnetic field.
+</details>
+
+### Question 2
+Which law describes the generation of a magnetic field by a current in a conductor?
+- A) Faraday's Law
+- B) Ampere's Law
+- C) Newton's Law
+- D) Ohm's Law
+
+<details>
+<summary>Answer</summary>
+B) Ampere's Law
+</details>
+
+### Question 3
+What is required for a Hall sensor to generate a voltage?
+- A) A changing magnetic field
+- B) A DC magnetic field
+- C) A constant electric field
+- D) An infrared light source
+
+<details>
+<summary>Answer</summary>
+B) A DC magnetic field
+</details>
+
+### Question 4
+Which material was traditionally used to manufacture Hall effect sensors?
+- A) Ceramic
+- B) Plastic
+- C) Heavy metals such as gold and platinum
+- D) Silicon
+
+<details>
+<summary>Answer</summary>
+C) Heavy metals such as gold and platinum
+</details>
+
+### Question 5
+What type of output does a Hall sensor provide?
+- A) Analog voltage proportional to temperature
+- B) Digital pulse output
+- C) Analog voltage proportional to magnetic field strength
+- D) Frequency output based on distance
+
+<details>
+<summary>Answer</summary>
+C) Analog voltage proportional to magnetic field strength
+</details>
+
+## Applications of Hall Effect Sensors
+
+### Question 6
+What is a typical application of Hall effect sensors in industrial settings?
+- A) Measuring temperature in furnaces
+- B) Detecting the rotation of a shaft contactlessly
+- C) Monitoring fluid pressure in pipelines
+- D) Measuring humidity in air ducts
+
+<details>
+<summary>Answer</summary>
+B) Detecting the rotation of a shaft contactlessly
+</details>
+
+### Question 7
+How can RPM be measured using a Hall sensor?
+- A) By measuring the displacement of the sensor
+- B) By counting the number of teeth on the gear
+- C) By measuring the time period between detected pulses
+- D) By monitoring the current through the sensor
+
+<details>
+<summary>Answer</summary>
+C) By measuring the time period between detected pulses
+</details>
+
+## Types of Velocity Sensors
+
+### Question 8
+What is the main difference between velocity sensors for different speed ranges?
+- A) Type of magnetic field used
+- B) Measurement principle (e.g., inductive, Hall-effect)
+- C) Bandwidth and measurement range
+- D) Size and portability
+
+<details>
+<summary>Answer</summary>
+C) Bandwidth and measurement range
+</details>
+
+### Question 9
+Which of the following sensors measure instantaneous velocity directly?
+- A) Displacement sensor
+- B) Differential Hall sensor
+- C) AC Tachometer
+- D) Ultrasonic sensor
+
+<details>
+<summary>Answer</summary>
+C) AC Tachometer
+</details>
+
+## Acceleration Sensors
+
+### Question 10
+What is a key challenge when measuring relative acceleration with an accelerometer?
+- A) Measuring only positive acceleration
+- B) The effect of gravity
+- C) The speed of sound
+- D) Electromagnetic interference
+
+<details>
+<summary>Answer</summary>
+B) The effect of gravity
+</details>
+
+### Question 11
+How do seismic accelerometers work?
+- A) They measure velocity by differentiation
+- B) They measure changes in capacitance caused by acceleration
+- C) They transduce acceleration into displacement using a mass-spring system
+- D) They calculate position based on voltage output
+
+<details>
+<summary>Answer</summary>
+C) They transduce acceleration into displacement using a mass-spring system
+</details>
+```

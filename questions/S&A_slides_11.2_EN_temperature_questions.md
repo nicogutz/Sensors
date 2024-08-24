@@ -1,0 +1,183 @@
+```markdown
+### Temperature Sensors - Multiple Choice Questions
+
+#### Question 1
+What is the principle behind thermocouples?
+- A) Resistance change due to temperature
+- B) Voltage generated over two dissimilar materials at high temperatures
+- C) Electrical resistance changes linearly with temperature
+- D) Changes in heat conduction properties of materials
+
+<details>
+<summary>Answer</summary>
+B) Voltage generated over two dissimilar materials at high temperatures
+</details>
+
+#### Question 2
+What is the nominal resistance of a PT100 sensor at 0°C?
+- A) 100 Ω
+- B) 10 Ω
+- C) 1000 Ω
+- D) 50 Ω
+
+<details>
+<summary>Answer</summary>
+A) 100 Ω
+</details>
+
+#### Question 3
+What temperature range can RTDs typically operate within?
+- A) -200°C to +850°C
+- B) -184°C to +2300°C
+- C) 0°C to +100°C
+- D) -55°C to +150°C
+
+<details>
+<summary>Answer</summary>
+A) -200°C to +850°C
+</details>
+
+#### Question 4
+Which temperature sensor generally requires cold junction compensation?
+- A) Thermistor
+- B) RTD
+- C) Thermocouple
+- D) Semiconductor
+
+<details>
+<summary>Answer</summary>
+C) Thermocouple
+</details>
+
+#### Question 5
+Which thermocouple type is known for its high sensitivity at 0°C?
+- A) Type J
+- B) Type K
+- C) Type S
+- D) Type T
+
+<details>
+<summary>Answer</summary>
+A) Type J
+</details>
+
+#### Question 6
+What is the main limitation of thin film RTDs?
+- A) High cost
+- B) Limited temperature range due to “strain gauge” effect
+- C) Requires cold junction compensation
+- D) Poor linearity
+
+<details>
+<summary>Answer</summary>
+B) Limited temperature range due to “strain gauge” effect
+</details>
+
+#### Question 7
+What is the best feature of semiconductor temperature sensors?
+- A) Low Voltage output
+- B) High sensitivity
+- C) Excellent linearity
+- D) Low cost
+
+<details>
+<summary>Answer</summary>
+D) Low cost
+</details>
+
+#### Question 8
+Which of the following types of temperature sensors has a non-linear response that can be linearized?
+- A) Thermocouple
+- B) RTD
+- C) Thermistor
+- D) Semiconductor
+
+<details>
+<summary>Answer</summary>
+C) Thermistor
+</details>
+
+#### Question 9
+What is the output characteristics of a thermocouple?
+- A) Linear output
+- B) Exponential output
+- C) Non-linear output
+- D) Constant output
+
+<details>
+<summary>Answer</summary>
+C) Non-linear output
+</details>
+
+#### Question 10
+In the Callendar-Van-Dusen equation for RTDs, what is the nominal resistance \(R_0\) for a PT100 at 0°C?
+- A) 50 Ω
+- B) 100 Ω
+- C) 1000 Ω
+- D) 150 Ω
+
+<details>
+<summary>Answer</summary>
+B) 100 Ω
+</details>
+
+#### Question 11
+Which type of sensor is known for the “Ebers Moll equation” when discussing semiconductors?
+- A) RTD
+- B) Thermistor
+- C) Thermocouple
+- D) Semiconductor
+
+<details>
+<summary>Answer</summary>
+D) Semiconductor
+</details>
+
+#### Question 12
+What characterizes the temperature coefficient of thermistors?
+- A) Linear
+- B) High
+- C) Constant
+- D) Low
+
+<details>
+<summary>Answer</summary>
+B) High
+</details>
+
+#### Question 13
+Which sensor type typically operates with a current of 1mA or less to minimize self-heating?
+- A) Thermocouple
+- B) RTD
+- C) Thermistor
+- D) Semiconductor
+
+<details>
+<summary>Answer</summary>
+B) RTD
+</details>
+
+#### Question 14
+For what temperature range does a typical thermistor operate?
+- A) -200°C to +850°C
+- B) 0°C to +100°C
+- C) -184°C to +2300°C
+- D) -55°C to +150°C
+
+<details>
+<summary>Answer</summary>
+B) 0°C to +100°C
+</details>
+
+#### Question 15
+What is required for effective measurement using an RTD?
+- A) A cold junction
+- B) An external excitation voltage
+- C) A semiconductor connection
+- D) A digital output
+
+<details>
+<summary>Answer</summary>
+B) An external excitation voltage
+</details>
+```

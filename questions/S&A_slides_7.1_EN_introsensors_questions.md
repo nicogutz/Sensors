@@ -1,0 +1,168 @@
+```markdown
+# Multiple Choice Questions on Sensors and Actuators
+
+1. What is a sensor defined as?
+   - A) A device that produces heat
+   - B) A device that receives a signal or stimulus and responds with an electrical signal
+   - C) A machine used to convert energy
+   - D) A pressure control device
+
+   <details>
+   <summary>Answer</summary>
+   B) A device that receives a signal or stimulus and responds with an electrical signal
+   </details>
+
+2. Which of the following is an example of an active sensor?
+   - A) Thermistor
+   - B) Strain Gage
+   - C) Piezoelectric sensor
+   - D) Linear Variable Differential Transformer (LVDT)
+
+   <details>
+   <summary>Answer</summary>
+   D) Linear Variable Differential Transformer (LVDT)
+   </details>
+
+3. What type of output does a piezoelectric sensor provide?
+   - A) Voltage
+   - B) Current
+   - C) Charge
+   - D) Resistance
+
+   <details>
+   <summary>Answer</summary>
+   C) Charge
+   </details>
+
+4. In a control loop for temperature, what does the output from the temperature sensor first undergo?
+   - A) Digitalization
+   - B) Conditioning
+   - C) Amplification
+   - D) Filtering
+
+   <details>
+   <summary>Answer</summary>
+   B) Conditioning
+   </details>
+
+5. What is a smart sensor capable of?
+   - A) Only measuring environmental changes
+   - B) Self-calibration and linearization
+   - C) Directly interfacing with mechanical systems
+   - D) Only processing analog signals
+
+   <details>
+   <summary>Answer</summary>
+   B) Self-calibration and linearization
+   </details>
+
+6. What are static characteristics of sensors?
+   - A) They are related to the steady state and do not change
+   - B) They are related to the dynamic response of sensors
+   - C) They only apply to active sensors
+   - D) They are only relevant during system initialization
+
+   <details>
+   <summary>Answer</summary>
+   A) They are related to the steady state and do not change
+   </details>
+
+7. The transfer function of a sensor in a static characteristic is linear if expressed as:
+   - A) $O = a + b \cdot \ln(i)$
+   - B) $O = b \cdot i + a$
+   - C) $O = a \cdot i^2 + b$
+   - D) $O = a \cdot e^{b \cdot i}$
+
+   <details>
+   <summary>Answer</summary>
+   B) $O = b \cdot i + a$
+   </details>
+
+8. How is the sensitivity $b$ defined for a specific input value in a nonlinear transfer function?
+   - A) As a constant value
+   - B) As the derivative of the transfer function with respect to the input variable
+   - C) As the slope of the output signal
+   - D) It is not definable for nonlinear functions
+
+   <details>
+   <summary>Answer</summary>
+   B) As the derivative of the transfer function with respect to the input variable
+   </details>
+
+9. What does the full-scale output (FSO) represent?
+   - A) The range of temperature a sensor can measure
+   - B) The difference between the highest and lowest sensor output
+   - C) The maximum input signal a sensor can handle
+   - D) The ideal measurement accuracy
+
+   <details>
+   <summary>Answer</summary>
+   B) The difference between the highest and lowest sensor output
+   </details>
+
+10. What does calibration of a sensor involve?
+    - A) Measuring input against noise
+    - B) Adjusting the physical form of the sensor
+    - C) Finding the individual transfer function and specific variable determination
+    - D) Redesigning the sensor
+
+    <details>
+    <summary>Answer</summary>
+    C) Finding the individual transfer function and specific variable determination
+    </details>
+
+11. In terms of accuracy, what does inaccuracy represent?
+    - A) The precise measurement of the sensor output
+    - B) The highest deviation of a value from ideal or true value
+    - C) The calibration error 
+    - D) The average deviation observed over multiple tests
+
+    <details>
+    <summary>Answer</summary>
+    B) The highest deviation of a value from ideal or true value
+    </details>
+
+12. The term "hysteresis" in sensors refers to what?
+    - A) Constant error in output measurement
+    - B) The difference in output for the same input achieved from different directions
+    - C) Sensor inability to retain calibration values
+    - D) A sensor's response time
+
+    <details>
+    <summary>Answer</summary>
+    B) The difference in output for the same input achieved from different directions
+    </details>
+
+13. Which of the following statements about the dead band of a sensor is true?
+    - A) It denotes the maximum sensitivity value of a sensor
+    - B) It represents the insensitivity range of a sensor's output
+    - C) It is a calibration error
+    - D) It is the range of inputs that a sensor can effectively measure
+
+    <details>
+    <summary>Answer</summary>
+    B) It represents the insensitivity range of a sensor's output
+    </details>
+
+14. What describes the output impedance of a sensor?
+    - A) It should be as low as practical for voltage connections
+    - B) It has no effect on sensor performance
+    - C) It should be zero for current connections
+    - D) It is irrelevant during sensor operation
+
+    <details>
+    <summary>Answer</summary>
+    A) It should be as low as practical for voltage connections
+    </details>
+
+15. What is the damping factor in a second-order sensor?
+    - A) A measure of sensor calibration
+    - B) The ratio of mass to spring constant
+    - C) The ratio of oscillation amplitude to time
+    - D) The ratio of two energy storage components in the sensor
+
+    <details>
+    <summary>Answer</summary>
+    D) The ratio of two energy storage components in the sensor
+    </details>
+``` 
